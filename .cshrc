@@ -15,16 +15,13 @@ if ($?prompt) then
 	else
 		set prompt = "%n@%m[%~]% "
 	endif
-endif
 
-
-######################################################################
-#### Display git-branch on prompt.
-######################################################################
-if (-r ${HOME}/bin/chprompt) then
-   source ${HOME}/bin/chprompt
-   alias cd "cd \!* && source ${HOME}/bin/chprompt"
-   alias git "git \!* && source ${HOME}/bin/chprompt"
+	# Display git-branch on prompt.
+	if (-r ${HOME}/.csh_prompt) then
+		source ${HOME}/.csh_prompt
+		alias cd "cd \!* && source ${HOME}/.csh_prompt"
+		alias git "git \!* && source ${HOME}/.csh_prompt"
+	endif
 endif
 
 
