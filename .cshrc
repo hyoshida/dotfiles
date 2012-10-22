@@ -17,10 +17,15 @@ if ($?prompt) then
 	endif
 
 	# Display git-branch on prompt.
-	if (-r ${HOME}/.csh_prompt) then
-		source ${HOME}/.csh_prompt
-		alias cd "cd \!* && source ${HOME}/.csh_prompt"
-		alias git "git \!* && source ${HOME}/.csh_prompt"
+	if (-r ${HOME}/dotfiles/prompt.tcsh) then
+		source ${HOME}/dotfiles/prompt.tcsh
+		alias cd "cd \!* && source ${HOME}/dotfiles/prompt.tcsh"
+		alias git "git \!* && source ${HOME}/dotfiles/prompt.tcsh"
+	endif
+
+	# Completions
+	if (-r ${HOME}/dotfiles/complete.tcsh) then
+		source ${HOME}/dotfiles/complete.tcsh
 	endif
 endif
 
@@ -64,7 +69,9 @@ setenv LANG	en_US.UTF-8
 ######################################################################
 #### Key binds.
 ######################################################################
-bindkey ^W backward-delete-word
+bindkey "^[f" forward-word
+bindkey "^[b" backward-word
+bindkey ^w backward-delete-word
 bindkey ^r i-search-back
 bindkey ^s i-search-fwd
 bindkey ^p history-search-backward
