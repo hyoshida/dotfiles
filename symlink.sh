@@ -1,9 +1,12 @@
 #!/bin/sh
-cd $(dirname $0)
-for dotfile in .?*
-do
-    if [ $dotfile != '..' ] && [ $dotfile != '.git' ]
-    then
+cd `dirname $0`
+now=`date '+%Y%m%d%H%M%S'`
+mkdir "$PWD/backups/$now"
+for dotfile in .?*; do
+    if [ $dotfile != '..' ] && [ $dotfile != '.git' ]; then
+        if [ -e "$HOME/$dotfile" ]; then
+            mv "$HOME/$dotfile" "$PWD/backups/$now"
+        fi
         ln -Fis "$PWD/$dotfile" $HOME
     fi
 done
