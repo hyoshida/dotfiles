@@ -60,10 +60,10 @@ set laststatus=2
 " ステータス行の内容を変更
 set statusline=%<%f\ %m%r%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l/%L,%v
 
-"filetype off
-"call pathogen#runtime_append_all_bundles()
-"filetype on
-call pathogen#infect()
+""filetype off
+""call pathogen#runtime_append_all_bundles()
+""filetype on
+"call pathogen#infect()
 
 " コメントアウト文字の自動挿入を無効化
 autocmd FileType * setlocal formatoptions-=ro

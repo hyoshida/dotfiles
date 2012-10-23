@@ -2,7 +2,7 @@
 (set-language-environment "japanese")
 (set-default-coding-systems 'euc-jp) ;標準でeucを使う
 ;; スクロールバーを右側にする
-(set-scroll-bar-mode 'right)
+;;(set-scroll-bar-mode 'right)
 ;; 括弧の対応を表示する
 (show-paren-mode t)
 ;; ビープ音の代りに画面を点滅させる
@@ -24,7 +24,7 @@
 ;; C-h で Backspace
 (global-set-key "\C-h" 'delete-backward-char)
 ;; ツールバーを隠す
-(tool-bar-mode -1)
+;;(tool-bar-mode -1)
 ;; メニューバーを隠す
 (menu-bar-mode -1)
 
