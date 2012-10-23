@@ -1,0 +1,6 @@
+#!/bin/csh -f
+if ($?INSTALL_AS_USER) then
+	grep '^'$1 ${LOCALBASE}/usr/ports/INDEX-8 | awk -F'|' '{print $2}'
+else
+	grep '^'$1 /usr/ports/INDEX-8 | awk -F'|' '{print $2}'
+endif

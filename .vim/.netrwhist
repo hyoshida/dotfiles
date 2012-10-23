@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/yoshida/puzpix'
+let g:netrw_dirhist_2='/home/yoshida/puzpix/app/assets/stylesheets'
+let g:netrw_dirhist_3='/home/yoshida/puzpix/app/assets/javascripts/puzzles'
+let g:netrw_dirhist_4='/home/yoshida/puzpix/app/views/puzzles'
+let g:netrw_dirhist_5='/home/yoshida/puzpix/app/assets/javascripts/puzzles'
+let g:netrw_dirhist_6='/home/yoshida/puzpix/app/views/devise/registrations'
+let g:netrw_dirhist_7='/home/yoshida/puzpix/app/assets/javascripts'
+let g:netrw_dirhist_8='/home/yoshida/puzpix/app/views/puzzles'
+let g:netrw_dirhist_9='/home/yoshida/puzpix/app/assets/javascripts'

@@ -1,0 +1,109 @@
+#defbce on
+#attrcolor b ".I"
+#term xterm-256color
+#termcapinfo xterm-256color 'is=^[r^[m^[2J^[H^[?7h^[?1;4;6l'
+#defscrollback 1000
+#altscreen on
+#escape ^Zz
+#vbell off
+#bell_msg "Bell in window %^G"
+#autodetach on
+#shell $SHELL
+#startup_message off
+#logfile "$HOME/.screen/screen-%Y%m%d-%n.log"
+#deflog on
+#shelltitle '$ |bash'
+#caption always "%{= Rk} %?%F%{b kr}%? %?%h%:%t (screen #%n)%? %{-}"
+#hardstatus alwayslastline "%{= Gk} %-Lw%40L>%{b kg} %n %t %{-}%+Lw%-040=%{b km} %l %{.b} %Y/%m/%d %C:%s %A "
+#sorendition "= Rk"
+
+
+# ウィンドウが勝手にリサイズする現象を回避
+# for xterm
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+# for kterm-color
+#termcapinfo kterm-color 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+
+
+# コマンドキーをデフォルトの Ctrl+A から Ctrl+T に変更する
+escape ^Tt
+# ステータス行を常に表示する
+hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
+
+# 256色表示設定
+term xterm-256color
+# スクロールバッファは最大10000行にする
+defscrollback 10000
+# 別画面サポート。Vimやless使うときに便利
+altscreen on
+# ビジュアルベル（画面全体が点滅する）を切る
+vbell off
+# 端末が落ちたら自動的にデタッチする
+autodetach on
+# スタートアップメッセージを消す
+startup_message off
+# ログファイルのファイル名
+logfile "$HOME/.screen/screen-%Y%m%d-%n.log"
+# 標準でログをとる
+deflog on
+# ウィンドウのタイトル指定
+shelltitle '$ |tcsh'
+#メッセージを表示する時間(秒単位)
+msgwait 5
+#次のメッセージを表示するまでの遅延時間(秒単位)
+msgminwait 1
+
+# hardstatus and caption
+hardstatus on
+hardstatus alwayslastline '%{= .b}%H%{-} %L=%-w%45L>%{=u b.}%n %t%{-}%+w %-17<%=%m/%d %02c:%s'
+caption always '%?%F%{= bw}%:%{= wk}%?%2n%f%07=%t%='
+sorendition '+r .b'
+
+
+#ウィンドウ操作モード(^t w でウィンドウを連続的に操作できるようになる)
+bind w eval 'echo "Operate window"' 'command -c operate'
+bind -c operate ^]  command
+bind -c operate j eval 'focus down' 'command -c operate'
+bind -c operate k eval 'focus up' 'command -c operate'
+bind -c operate h eval 'focus left' 'command -c operate'
+bind -c operate l eval 'focus right' 'command -c operate'
+bind -c operate t eval 'focus top' 'command -c operate'
+bind -c operate b eval 'focus bottom' 'command -c operate'
+bind -c operate + eval 'resize -v +1' 'command -c operate'
+bind -c operate - eval 'resize -v -1' 'command -c operate'
+bind -c operate > eval 'resize -h +1' 'command -c operate'
+bind -c operate < eval 'resize -h -1' 'command -c operate'
+bind -c operate = eval 'resize -v =' 'command -c operate'
+bind -c operate + eval 'resize -h =' 'command -c operate'
+bind -c operate s eval 'split' 'command -c operate'
+bind -c operate c eval 'screen' 'command -c operate'
+bind -c operate x eval 'remove' 'command -c operate'
+bind -c operate v eval 'split -v' 'command -c operate'
+bind -c operate 0 eval 'select 0' 'command -c operate'
+bind -c operate 1 eval 'select 1' 'command -c operate'
+bind -c operate 2 eval 'select 2' 'command -c operate'
+bind -c operate 3 eval 'select 3' 'command -c operate'
+bind -c operate 4 eval 'select 4' 'command -c operate'
+bind -c operate 5 eval 'select 5' 'command -c operate'
+bind -c operate 6 eval 'select 6' 'command -c operate'
+bind -c operate 7 eval 'select 7' 'command -c operate'
+bind -c operate 8 eval 'select 8' 'command -c operate'
+bind -c operate 9 eval 'select 9' 'command -c operate'
+
+#通常の操作キー eval 'hoge' になっているのに意味はない
+bind x remove
+bind j eval 'focus down'
+bind k eval 'focus up'
+bind h eval 'focus left'
+bind l eval 'focus right'
+bind + eval 'resize -v +1'
+bind - eval 'resize -v -1'
+bind > eval 'resize -h +1'
+bind < eval 'resize -h -1'
+bind v eval 'split -v' focus screen
+bind s eval 'split' focus screen
+bind = eval 'resize -v ='
+bind + eval 'resize -h +'
+#^t h との誤爆を防ぐために^t ^hは無効にする
+bind ^h
+
