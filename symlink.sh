@@ -3,7 +3,7 @@ cd `dirname $0`
 now=`date '+%Y%m%d%H%M%S'`
 mkdir "$PWD/backups/$now"
 for dotfile in .?*; do
-    if [ $dotfile != '..' ] && [ $dotfile != '.git' ]; then
+    if [ $dotfile != '..' ] && [ $dotfile != '.git' ] && [ $dotfile != '.gitignore' ] ; then
         if [ -e "$HOME/$dotfile" ]; then
             mv "$HOME/$dotfile" "$PWD/backups/$now"
         fi
