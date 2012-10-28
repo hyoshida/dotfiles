@@ -97,14 +97,14 @@ if v:version >= 700
 	endfor
 
 	" 現在のタブを右へ移動
-	nnoremap <silent> tk :TabMoveRight<CR>
-	nnoremap <silent> tl :TabMoveRight<CR>
+	nnoremap <silent> tk :CustomTabMoveRight<CR>
+	nnoremap <silent> tl :CustomTabMoveRight<CR>
 	" 現在のタブを左へ移動
-	nnoremap <silent> tj :TabMoveLeft<CR>
-	nnoremap <silent> th :TabMoveLeft<CR>
+	nnoremap <silent> tj :CustomTabMoveLeft<CR>
+	nnoremap <silent> th :CustomTabMoveLeft<CR>
 
-	command! -count=1 TabMoveRight call CustomTabMove(<count>)
-	command! -count=1 TabMoveLeft  call CustomTabMove(-<count>)
+	command! -count=1 CustomTabMoveRight call CustomTabMove(<count>)
+	command! -count=1 CustomTabMoveLeft  call CustomTabMove(-<count>)
 
 	function! CustomTabMove(c)
 		let current = tabpagenr()
@@ -155,16 +155,19 @@ if v:version >= 700
 			endif
 		endfor
 
-		let label = '%' . a:tabnr . 'T ' . a:tabnr . ':' . filepath . modified . ' '
-		if strlen(label) >= (&columns / tabpagenr('$'))
+		let prefix = a:tabnr . ':'
+		let postfix = modified . ' '
+		let label = prefix . filepath . postfix
+		let width = (&columns / tabpagenr('$'))
+		if strlen(' ' . label) >= width
 			let shortpath = pathshorten(filepath)
-			let pathoffset = strlen(shortpath) - (&columns / tabpagenr('$'))
+			let pathoffset = strlen(' ' . prefix . shortpath . postfix) - width
 			if pathoffset < 0
 				let pathoffset = 0
 			endif 
-			let label = '%' . a:tabnr . 'T ' . a:tabnr . ':' . shortpath[pathoffset : ] . modified . ' '
+			let label = prefix . shortpath[pathoffset : ] . postfix
 		endif
-		return label 
+		return '%' . a:tabnr . 'T ' . label 
 	endfunction
 
 	" When starting Vim, the -p option opens each specified file in a
