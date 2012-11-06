@@ -4,29 +4,29 @@
 #### Setting the prompt.
 ######################################################################
 if ($?prompt) then
-	# Meta charactors:
-	# 	%n <= User name.
-	# 	%m <= Machine name.
-	# 	%c <= Current directory.
-	# 	%~ <= A relative path from ${HOME}.
-	# 	%# <= Super user is #, Normal user is >.
-	if ("_$user" == "_root") then
-		set prompt = "%n@%m[%~]# "
-	else
-		set prompt = "%n@%m[%~]% "
-	endif
+    # Meta charactors:
+    #     %n <= User name.
+    #     %m <= Machine name.
+    #     %c <= Current directory.
+    #     %~ <= A relative path from ${HOME}.
+    #     %# <= Super user is #, Normal user is >.
+    if ("_$user" == "_root") then
+        set prompt = "%n@%m[%~]# "
+    else
+        set prompt = "%n@%m[%~]% "
+    endif
 
-	# Display git-branch on prompt.
-	if (-r ${HOME}/dotfiles/prompt.tcsh) then
-		source ${HOME}/dotfiles/prompt.tcsh
-		alias cd "cd \!* && source ${HOME}/dotfiles/prompt.tcsh"
-		alias git "git \!* && source ${HOME}/dotfiles/prompt.tcsh"
-	endif
+    # Display git-branch on prompt.
+    if (-r ${HOME}/dotfiles/prompt.tcsh) then
+        source ${HOME}/dotfiles/prompt.tcsh
+        alias cd "cd \!* && source ${HOME}/dotfiles/prompt.tcsh"
+        alias git "git \!* && source ${HOME}/dotfiles/prompt.tcsh"
+    endif
 
-	# Completions
-	if (-r ${HOME}/dotfiles/complete.tcsh) then
-		source ${HOME}/dotfiles/complete.tcsh
-	endif
+    # Completions
+    if (-r ${HOME}/dotfiles/complete.tcsh) then
+        source ${HOME}/dotfiles/complete.tcsh
+    endif
 endif
 
 
@@ -59,9 +59,9 @@ set path = ( $path $home/bin $home/.bin . )
 #### Support color for kterm.
 ######################################################################
 if ($?TERM) then
-	if ($TERM == "kterm") then
-		setenv TERM xterm
-	endif
+    if ($TERM == "kterm") then
+        setenv TERM xterm
+    endif
 endif
 
 
