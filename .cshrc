@@ -56,6 +56,15 @@ set path = ( $path $home/bin $home/.bin . )
 
 
 ######################################################################
+#### Support rbenv commands.
+######################################################################
+if ( -x $home/.rbenv/bin/rbenv ) then
+    set path = ( $home/.rbenv/bin $home/.rbenv/shims $path )
+    rbenv rehash
+endif
+
+
+######################################################################
 #### Support color for kterm.
 ######################################################################
 if ($?TERM) then
