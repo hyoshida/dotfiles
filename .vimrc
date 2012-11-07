@@ -1,6 +1,9 @@
 syntax on
 filetype plugin indent on
 
+" カレントディレクトリを自動変更
+set autochdir
+
 " ビープ音を鳴らさない
 set vb t_vb=
 
