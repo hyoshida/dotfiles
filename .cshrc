@@ -113,6 +113,7 @@ alias platex	'repeat 2 platex'
 alias h		history
 alias sc	screen
 alias tm	'tmux attach'
+alias ts	'tmux list-session'
 alias be	'bundle exec'
 
 alias emacs	'env XMODIFIERS=@im=none emacs -nw'
