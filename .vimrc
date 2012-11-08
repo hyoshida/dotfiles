@@ -1,9 +1,6 @@
 syntax on
 filetype plugin indent on
 
-" カレントディレクトリを自動変更
-set autochdir
-
 " ビープ音を鳴らさない
 set vb t_vb=
 
@@ -71,6 +68,13 @@ set statusline=%<%f\ %m%r%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l/%L,%v
 " コメントアウト文字の自動挿入を無効化
 autocmd FileType * setlocal formatoptions-=ro
 
+" expand dir path
+cmap <C-x> <c-r>=expand('%:h')<CR>/
+cmap <C-X> <c-r>=expand('%:p:h')<CR>/
+" expand file path
+cmap <C-z> <c-r>=expand('%')<CR>
+cmap <C-Z> <c-r>=expand('%:p')<CR>
+
 " コマンドモード時にカーソル移動を emacs 形式にする
 cmap <C-a> <Home>
 cmap <C-e> <End>
@@ -83,16 +87,33 @@ if v:version >= 700
 	set showtabline=2
 
 	" タブ操作を簡略化
-	nnoremap <silent> tc :<c-u>tabnew<cr>
-	nnoremap <silent> tx :<c-u>tabclose<cr>
-	nnoremap <silent> te :<c-u>tabedit<cr>
-	nnoremap <silent> tf :<c-u>tabfirst<cr>
-	nnoremap <silent> tl :<c-u>tablast<cr>
-	nnoremap <silent> tn :<c-u>tabnext<cr>
-	nnoremap <silent> tN :<c-u>tabNext<cr>
-	nnoremap <silent> tp :<c-u>tabprevious<cr>
-	"nnoremap <silent> to :<c-u>tabonly<cr>
-	nnoremap <silent> ts :<c-u>tabs<cr>
+	nnoremap <silent> tc :<C-u>tabnew<CR>
+	nnoremap <silent> tx :<C-u>tabclose<CR>
+	nnoremap <silent> te :<C-u>tabedit<CR>
+	nnoremap <silent> tf :<C-u>tabfirst<CR>
+	nnoremap <silent> tl :<C-u>tablast<CR>
+	nnoremap <silent> tn :<C-u>tabnext<CR>
+	nnoremap <silent> tN :<C-u>tabNext<CR>
+	nnoremap <silent> tp :<C-u>tabprevious<CR>
+	"nnoremap <silent> to :<C-u>tabonly<CR>
+	nnoremap <silent> ts :<C-u>tabs<CR>
+	cabbrev te tabe
+
+	"カレントウィンドウを新規タブで開き直す
+	nnoremap <C-w>t :call OpenNewTab()<CR>
+	function! OpenNewTab()
+		let f = expand("%:p")
+		execute ":q"
+		execute ":tabnew " . f
+	endfunction
+
+	"カレントウィンドウのコピーを新規タブで開く
+	nnoremap <silent> tt :call OpenCopyTab()<CR><CR>
+	function! OpenCopyTab()
+		let f = expand("%:p")
+		execute ":tabedit"
+		execute ":edit " . f
+	endfunction
 
 	" 1番目～ 9番目のタブへ移動
 	for i in range(1, 9)
