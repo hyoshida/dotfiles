@@ -79,6 +79,19 @@ cmap <C-e> <End>
 cmap <C-f> <Right>
 cmap <C-b> <Left>
 
+" バッファをタブのように表示する(minibufexpl.vim)
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBuffs = 1
+let g:miniBufExplModSelTarget = 1
+
+"バッファタブにパスを省略してファイル名のみ表示する(buftabs.vim)
+let g:buftabs_only_basename=1
+"バッファタブをステータスライン内に表示する
+let g:buftabs_in_statusline=1
+nmap <Tab> :bnext<CR>
+nmap <S-Tab> :bprev<CR>
+
 " vim7
 if v:version >= 700
 	" タブを常に表示
