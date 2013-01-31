@@ -1,6 +1,6 @@
 ;; 日本語環境にする
 (set-language-environment "japanese")
-(set-default-coding-systems 'euc-jp) ;標準でeucを使う
+(set-default-coding-systems 'utf-8) ;標準でutf-8を使う
 ;; スクロールバーを右側にする
 ;;(set-scroll-bar-mode 'right)
 ;; 括弧の対応を表示する
@@ -16,7 +16,6 @@
 (setq initial-scratch-message "")
 ;; テキストの色を一色にする
 ;;(global-font-lock-mode nil)
-(global-set-key (kbd "C-C C-C") 'byte-compile-file)
 ;;; *.~ とかのバックアップファイルを作らない
 (setq make-backup-files nil)
 ;;; .#* とかのバックアップファイルを作らない
@@ -27,21 +26,27 @@
 ;;(tool-bar-mode -1)
 ;; メニューバーを隠す
 (menu-bar-mode -1)
+;; バイトコンパイル用のキーバインド登録
+(global-set-key (kbd "C-C C-C") 'byte-compile-file)
+;; ハイライトを有効化
+(transient-mark-mode 1)
+;; スクロール量を 1 行分にする
+(setq scroll-step 1)
 
 ;; anthy との共存
-(cond (window-system
-       (require 'scim-bridge-ja)
-       (add-hook 'after-init-hook 'scim-mode-on)
-       ; C-SPC は Set Mark に使う
-       ;(scim-define-common-key ?\C-\s nil)
-       ; C-/ は Undo に使う
-       (scim-define-common-key ?\C-/ nil)))
+;(cond (window-system
+;        (require 'scim-bridge-ja)
+;        (add-hook 'after-init-hook 'scim-mode-on)
+;        ; C-SPC は Set Mark に使う
+;        ;(scim-define-common-key ?\C-\s nil)
+;        ; C-/ は Undo に使う
+;        (scim-define-common-key ?\C-/ nil)))
 
 ;; ~/.emacs.d/site-lisp を load-path に追加
 (let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
-    (add-to-list 'load-path default-directory)
-      (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-              (normal-top-level-add-subdirs-to-load-path)))
+  (add-to-list 'load-path default-directory)
+  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
+    (normal-top-level-add-subdirs-to-load-path)))
 
 ;; auto-install
 ;(require 'auto-install)
@@ -59,14 +64,14 @@
 
 ;; tabbar.el
 (when (require 'tabbar nil t)
-    (tabbar-mode))
+  (tabbar-mode))
 ;; 例: 全バッファを一つのグループにしまう
 (setq tabbar-buffer-groups-function nil)
 ;;
 ;; 左に表示されるボタンを無効化
 (dolist (btn '(tabbar-buffer-home-button
-               tabbar-scroll-left-button
-               tabbar-scroll-right-button))
+                tabbar-scroll-left-button
+                tabbar-scroll-right-button))
   (set btn (cons (cons "" nil)
                  (cons "" nil))))
 ;; タブをスクロールさせずに省略して表示
@@ -74,34 +79,34 @@
 ;; タブの長さ
 (setq tabbar-separator '(1.5))
 ;; 色設定
- (set-face-attribute
-   'tabbar-default nil
-   :background "gray90")
-  (set-face-attribute
-   'tabbar-unselected nil
-   :background "gray90"
-   :foreground "black"
-   :box '(:line-width 1 :color "white" :style released-button))
-  (set-face-attribute
-   'tabbar-selected nil
-   :background "black"
-   :foreground "white"
-   :box '(:line-width 1 :color "white" :style pressed-button))
-  (set-face-attribute
-   'tabbar-button nil
-   :box '(:line-width 1 :color "gray72" :style released-button))
-  (set-face-attribute
-   'tabbar-separator nil
-   :height 0.7)
+(set-face-attribute
+  'tabbar-default nil
+  :background "gray90")
+(set-face-attribute
+  'tabbar-unselected nil
+  :background "gray90"
+  :foreground "black"
+  :box '(:line-width 1 :color "white" :style released-button))
+(set-face-attribute
+  'tabbar-selected nil
+  :background "black"
+  :foreground "white"
+  :box '(:line-width 1 :color "white" :style pressed-button))
+(set-face-attribute
+  'tabbar-button nil
+  :box '(:line-width 1 :color "gray72" :style released-button))
+(set-face-attribute
+  'tabbar-separator nil
+  :height 0.7)
 
 (defvar my-tabbar-displayed-buffers
   '("*scratch*")
   "*Regexps matches buffer names always included tabs.")
 (defun my-tabbar-buffer-list ()
   "Return the list of buffers to show in tabs.
-Exclude buffers whose name starts with a space or an asterisk.
-The current buffer and buffers matches `my-tabbar-displayed-buffers'
-are always included."
+  Exclude buffers whose name starts with a space or an asterisk.
+  The current buffer and buffers matches `my-tabbar-displayed-buffers'
+  are always included."
   (let* ((hides (list ?\  ?\*))
          (re (regexp-opt my-tabbar-displayed-buffers))
          (cur-buf (current-buffer))
@@ -113,11 +118,11 @@ are always included."
                                    buf)))
                              (buffer-list)))))
     ;; Always include the current buffer.
-        (if (memq cur-buf tabs)
-                tabs
-                      (cons cur-buf tabs))))
+    (if (memq cur-buf tabs)
+      tabs
+      (cons cur-buf tabs))))
 
-                      (setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
+(setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
 
 
 
@@ -129,10 +134,10 @@ are always included."
 ;; Invoke ruby with '-c' to get syntax checking
 (defun flymake-ruby-init ()
   (let* ((temp-file   (flymake-init-create-temp-buffer-copy
-                       'flymake-create-temp-inplace))
+                        'flymake-create-temp-inplace))
          (local-file  (file-relative-name
-                       temp-file
-                       (file-name-directory buffer-file-name))))
+                        temp-file
+                        (file-name-directory buffer-file-name))))
     (list "ruby" (list "-c" local-file))))
 (push '(".+\\.rb$" flymake-ruby-init) flymake-allowed-file-name-masks)
 (push '("Rakefile$" flymake-ruby-init) flymake-allowed-file-name-masks)
@@ -140,7 +145,19 @@ are always included."
 
 
 (add-hook
- 'ruby-mode-hook
- '(lambda ()
-    ;; Don't want flymake mode for ruby regions in rhtml files
-    (if (not (null buffer-file-name)) (flymake-mode))))
+  'ruby-mode-hook
+  '(lambda ()
+     ;; Don't want flymake mode for ruby regions in rhtml files
+     (if (not (null buffer-file-name)) (flymake-mode))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(frame-background-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
