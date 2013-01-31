@@ -72,7 +72,8 @@ autocmd FileType * setlocal formatoptions-=ro
 cmap <C-x> <c-r>=expand('%:h')<CR>/
 " expand file path
 cmap <C-z> <c-r>=expand('%')<CR>
-
+" paste in command mode
+cmap <C-y> <C-r>"
 " コマンドモード時にカーソル移動を emacs 形式にする
 cmap <C-a> <Home>
 cmap <C-e> <End>
