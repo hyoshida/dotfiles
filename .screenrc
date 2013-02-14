@@ -1,5 +1,5 @@
 #defbce on
-#attrcolor b ".I"
+# attrcolor b ".I"
 #term xterm-256color
 #termcapinfo xterm-256color 'is=^[r^[m^[2J^[H^[?7h^[?1;4;6l'
 #defscrollback 1000
@@ -62,7 +62,7 @@ sorendition '+r .b'
 
 #ウィンドウ操作モード(^t w でウィンドウを連続的に操作できるようになる)
 bind w eval 'echo "Operate window"' 'command -c operate'
-bind -c operate ^]  command
+bind -c operate ^] command
 bind -c operate j eval 'focus down' 'command -c operate'
 bind -c operate k eval 'focus up' 'command -c operate'
 bind -c operate h eval 'focus left' 'command -c operate'
@@ -76,9 +76,9 @@ bind -c operate < eval 'resize -h -1' 'command -c operate'
 bind -c operate = eval 'resize -v =' 'command -c operate'
 bind -c operate + eval 'resize -h =' 'command -c operate'
 bind -c operate s eval 'split' 'command -c operate'
+bind -c operate v eval 'split -v' 'command -c operate'
 bind -c operate c eval 'screen' 'command -c operate'
 bind -c operate x eval 'remove' 'command -c operate'
-bind -c operate v eval 'split -v' 'command -c operate'
 bind -c operate 0 eval 'select 0' 'command -c operate'
 bind -c operate 1 eval 'select 1' 'command -c operate'
 bind -c operate 2 eval 'select 2' 'command -c operate'
@@ -100,10 +100,26 @@ bind + eval 'resize -v +1'
 bind - eval 'resize -v -1'
 bind > eval 'resize -h +1'
 bind < eval 'resize -h -1'
-bind v eval 'split -v' focus screen
-bind s eval 'split' focus screen
 bind = eval 'resize -v ='
 bind + eval 'resize -h +'
 #^t h との誤爆を防ぐために^t ^hは無効にする
 bind ^h
 
+# ウィンドウ番号を1番からにする
+screen 1
+bind c eval 'screen 1'
+bind s eval 'split' 'focus' 'screen 1'
+bind v eval 'split -v' 'focus' 'screen 1'
+
+# Emacs風キーバインド
+bind x command -c emacs
+bind -c emacs o eval 'focus down' 'command -c operate'
+bind -c emacs p eval 'focus up' 'command -c operate'
+bind -c emacs 0 eval 'remove' 'command -c operate'
+bind -c emacs 1 eval 'only' 'command -c operate'
+bind -c emacs 2 eval 'split' 'command -c operate'
+bind -c emacs 3 eval 'split -v' 'command -c operate'
+bind -c emacs \^ eval 'resize +2' 'command -c operate'
+bind -c emacs } eval 'resize +2' 'command -c operate'
+bind -c emacs { eval 'resize -2' 'command -c operate'
+bind -c emacs g command
