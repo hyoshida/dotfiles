@@ -19,6 +19,8 @@ set ignorecase
 set smartcase
 " 最後まで検索したら先頭に戻る
 set wrapscan
+" インクリメンタルサーチを有効にする
+set incsearch
 " 検索結果文字列のハイライトを有効にする
 set hlsearch
 " <Esc> 連打でハイライト解除
@@ -88,6 +90,20 @@ let g:buftabs_in_statusline=1
 " Tabでバッファ移動
 nmap <Tab> :bnext \| redraw<CR>
 nmap <S-Tab> :bprev \| redraw<CR>
+
+" レジスタの内容を置き換えずにペースト
+" I haven't found how to hide this function (yet)
+function! RestoreRegister()
+	let @" = s:restore_reg
+	return ''
+endfunction
+function! s:Repl()
+	let s:restore_reg = @"
+	return "p@=RestoreRegister()\<cr>"
+endfunction
+" NB: this supports "rp that replaces the selection by the
+" contents of @r
+vnoremap <silent> <expr> =p <sid>Repl()
 
 " vim7
 if v:version >= 700
