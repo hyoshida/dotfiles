@@ -32,6 +32,8 @@
 (transient-mark-mode 1)
 ;; スクロール量を 1 行分にする
 (setq scroll-step 1)
+;; タイトルバーにファイルのフルパスを表示
+(setq frame-title-format "%f")
 
 ;; anthy との共存
 ;(cond (window-system
