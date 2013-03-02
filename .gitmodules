@@ -16,3 +16,9 @@
 [submodule ".vim/bundle/vim-coffee-script"]
 	path = .vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule ".vim/bundle/vim-matchit"]
+	path = .vim/bundle/vim-matchit
+	url = git://github.com/tsaleh/vim-matchit.git
+[submodule ".vim/bundle/buftabs"]
+	path = .vim/bundle/buftabs
+	url = git://github.com/vim-scripts/buftabs.git
