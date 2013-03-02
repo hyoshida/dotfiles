@@ -265,3 +265,23 @@ function! s:unite_my_settings()"{{{
 	nnoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
 	inoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
 endfunction"}}}
+
+"インサートモード時のキーバインドをemacs風にする
+" カーソル移動
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-e> <End>
+inoremap <C-a> <Home>
+inoremap <C-d> <Del>
+" カーソルのある行を画面中央に
+inoremap <C-l> <C-o>zz
+" カーソルより前の文字を削除
+inoremap <C-u> <C-o>d0
+" カーソルより後の文字を削除
+inoremap <C-k> <c-o>D
+" アンドゥ（「C-_」は「Ctrl+/」を意味する）
+inoremap <C-_> <C-o>u
+" 貼りつけ
+inoremap <C-y> <C-o>P
