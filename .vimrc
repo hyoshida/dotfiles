@@ -233,26 +233,26 @@ nmap <Space>f [unite]
 "file_mruの表示フォーマットを指定。空にすると表示スピードが高速化される
 let g:unite_source_file_mru_filename_format = ''
 " 入力モードで開始する
-" let g:unite_enable_start_insert=1
+let g:unite_enable_start_insert=1
 " バッファ一覧
-nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
+nnoremap <silent> [unite]b :<C-u>Unite -no-split buffer<CR>
 " ファイル一覧
-nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -no-split -buffer-name=files file<CR>
 " レジスタ一覧
-nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> [unite]r :<C-u>Unite -no-split -buffer-name=register register<CR>
 " 最近使用したファイル一覧
-nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
+nnoremap <silent> [unite]m :<C-u>Unite -no-split file_mru<CR>
 " 常用セット
-nnoremap <silent> [unite]u :<C-u>Unite buffer file_mru<CR>
+nnoremap <silent> [unite]u :<C-u>Unite -no-split buffer file_mru<CR>
 " 全部乗せ
-nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -no-split -buffer-name=files buffer file_mru bookmark file<CR>
 " カラースキーム選択
 nnoremap <silent> [unite]c :<C-u>Unite colorscheme -auto-preview<CR>
 "uniteを開いている間のキーマッピング
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
 	"ESCでuniteを終了
-	" nmap <buffer> <ESC> <Plug>(unite_exit)
+	nmap <buffer> <ESC> <Plug>(unite_exit)
 	"入力モードのときctrl+wでバックスラッシュも削除
 	imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
 	"ctrl+jで縦に分割して開く
