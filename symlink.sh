@@ -10,3 +10,4 @@ for dotfile in .?*; do
         ln -Fis "$PWD/$dotfile" $HOME
     fi
 done
+git submodule update --init
