@@ -59,6 +59,7 @@ set path = ( $home/bin $home/.bin $path . )
 #### Support rbenv commands.
 ######################################################################
 if ( -x $home/.rbenv/bin/rbenv ) then
+    alias rbenv 'env MAKE=gmake rbenv'
     set path = ( $home/.rbenv/bin $home/.rbenv/shims $path )
     rbenv rehash
 endif

@@ -11,3 +11,4 @@ for dotfile in .?*; do
     fi
 done
 git submodule update --init
+ln -s .rbenv_plugins .rbenv/plugins
