@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/buftabs"]
 	path = .vim/bundle/buftabs
 	url = git://github.com/vim-scripts/buftabs.git
+[submodule ".vim/bundle/unite.vim"]
+	path = .vim/bundle/unite.vim
+	url = git://github.com/Shougo/unite.vim.git
