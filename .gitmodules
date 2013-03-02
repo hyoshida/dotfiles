@@ -25,3 +25,15 @@
 [submodule ".vim/bundle/unite.vim"]
 	path = .vim/bundle/unite.vim
 	url = git://github.com/Shougo/unite.vim.git
+[submodule ".vim/bundle/unite-colorscheme"]
+	path = .vim/bundle/unite-colorscheme
+	url = git://github.com/ujihisa/unite-colorscheme.git
+[submodule ".vim/bundle/jellybeans.vim"]
+	path = .vim/bundle/jellybeans.vim
+	url = git://github.com/nanotech/jellybeans.vim
+[submodule ".vim/bundle/vim-hybrid"]
+	path = .vim/bundle/vim-hybrid
+	url = git://github.com/w0ng/vim-hybrid
+[submodule ".vim/bundle/vim-railscasts-theme"]
+	path = .vim/bundle/vim-railscasts-theme
+	url = git://github.com/jpo/vim-railscasts-theme

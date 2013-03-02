@@ -2,6 +2,10 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" カラースキーマに hybrid を利用
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
+
 " ビープ音を鳴らさない
 set vb t_vb=
 
@@ -242,6 +246,8 @@ nnoremap <silent> [unite]m :<C-u>Unite file_mru<CR>
 nnoremap <silent> [unite]u :<C-u>Unite buffer file_mru<CR>
 " 全部乗せ
 nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+" カラースキーム選択
+nnoremap <silent> [unite]c :<C-u>Unite colorscheme -auto-preview<CR>
 "uniteを開いている間のキーマッピング
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
