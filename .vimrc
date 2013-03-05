@@ -3,8 +3,8 @@ syntax on
 filetype plugin indent on
 
 " カラースキーマに hybrid を利用
-let g:hybrid_use_Xresources = 1
-colorscheme hybrid
+"let g:hybrid_use_Xresources = 1
+"colorscheme evening
 
 " ビープ音を鳴らさない
 set vb t_vb=
