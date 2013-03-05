@@ -70,6 +70,9 @@ set statusline=%<%f\ %m%r%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l/%L,%v
 "" ファイルへの相対パスを表示する
 let g:Powerline_stl_path_style = 'relative'
 
+" 256色で表示
+set t_Co=256
+
 " コメントアウト文字の自動挿入を無効化
 autocmd FileType * setlocal formatoptions-=ro
 
