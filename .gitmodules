@@ -19,9 +19,6 @@
 [submodule ".vim/bundle/vim-matchit"]
 	path = .vim/bundle/vim-matchit
 	url = git://github.com/tsaleh/vim-matchit.git
-[submodule ".vim/bundle/buftabs"]
-	path = .vim/bundle/buftabs
-	url = git://github.com/vim-scripts/buftabs.git
 [submodule ".vim/bundle/unite.vim"]
 	path = .vim/bundle/unite.vim
 	url = git://github.com/Shougo/unite.vim.git
@@ -37,3 +34,6 @@
 [submodule ".vim/bundle/vim-railscasts-theme"]
 	path = .vim/bundle/vim-railscasts-theme
 	url = git://github.com/jpo/vim-railscasts-theme
+[submodule ".vim/bundle/vim-powerline"]
+	path = .vim/bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline

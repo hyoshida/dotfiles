@@ -66,6 +66,9 @@ set fileencodings=iso-2022-jp,euc-jp,utf-8,sjis
 set laststatus=2
 " ステータス行の内容を変更
 set statusline=%<%f\ %m%r%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l/%L,%v
+"set statusline=%{expand('%:p:t')}\ %<[%{expand('%:p:h')}]%=\ %m%r%y%w[%{&fenc!=''?&fenc:&enc}][%{&ff}][%3l,%3c,%3p]
+"" ファイルへの相対パスを表示する
+let g:Powerline_stl_path_style = 'relative'
 
 " コメントアウト文字の自動挿入を無効化
 autocmd FileType * setlocal formatoptions-=ro
@@ -82,11 +85,6 @@ cmap <C-e> <End>
 cmap <C-f> <Right>
 cmap <C-b> <Left>
 
-" buftabs.vim
-" バッファタブにパスを省略してファイル名のみ表示する
-let g:buftabs_only_basename=1
-" バッファタブをステータスライン内に表示する
-let g:buftabs_in_statusline=1
 " Tabでバッファ移動
 nmap <Tab> :bnext \| redraw<CR>
 nmap <S-Tab> :bprev \| redraw<CR>
