@@ -307,3 +307,6 @@ call tinymode#Map("winsize", "<C-k>", "5wincmd -")
 call tinymode#Map("winsize", "<C-l>", "5wincmd >")
 call tinymode#Map("winsize", "<C-h>", "5wincmd <")
 call tinymode#ModeMsg("winsize", "window resizing with C-hjkl")
+
+" ウィンドウ分割(水平)
+nmap <silent> <C-w>h :sp<CR>
