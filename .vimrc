@@ -256,6 +256,8 @@ function! s:unite_my_settings()"{{{
 	nmap <buffer> <ESC> <Plug>(unite_exit)
 	"入力モードのときctrl+wでバックスラッシュも削除
 	imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
+	"入力モードのときTabでファイル選択
+	imap <buffer> <Tab> <CR>
 	"ctrl+jで縦に分割して開く
 	nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
 	inoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
