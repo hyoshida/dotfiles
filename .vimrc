@@ -1,4 +1,14 @@
+" pathogen
+" 特定プラグインを無効化
+let g:pathogen_disabled = []
+if v:version <= 700
+	call add(g:pathogen_disabled, 'neocomplcache')
+	call add(g:pathogen_disabled, 'unite.vim')
+	call add(g:pathogen_disabled, 'vim-snipmate')
+endif
+" pathogen を実行
 execute pathogen#infect()
+
 syntax on
 filetype plugin indent on
 
