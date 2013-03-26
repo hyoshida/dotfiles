@@ -67,6 +67,9 @@ set noexpandtab
 "	filetype plugin indent on
 "endif
 
+" 自動折りたたみを無効化
+set foldlevel=100
+
 " デフォルトの文字コード(短縮名 'enc')
 set encoding=utf-8
 " 文字コード自動判別のためのリスト(短縮名 'fencs')
@@ -322,3 +325,4 @@ call tinymode#ModeMsg("winsize", "window resizing with C-hjkl")
 
 " ウィンドウ分割(水平)
 nmap <silent> <C-w>h :sp<CR>
+
