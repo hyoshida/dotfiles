@@ -67,6 +67,9 @@ set noexpandtab
 "	filetype plugin indent on
 "endif
 
+" タブ幅は拡張子を問わずに統一
+au BufNewFile,BufRead * setlocal tabstop=8 shiftwidth=8
+
 " 自動折りたたみを無効化
 set foldlevel=100
 
@@ -325,4 +328,3 @@ call tinymode#ModeMsg("winsize", "window resizing with C-hjkl")
 
 " ウィンドウ分割(水平)
 nmap <silent> <C-w>h :sp<CR>
-
