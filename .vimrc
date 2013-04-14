@@ -128,7 +128,7 @@ if v:version >= 700
 	set showtabline=2
 
 	" タブ操作を簡略化
-	nnoremap <silent> tc :<C-u>tabnew<CR>
+	"nnoremap <silent> tc :<C-u>tabnew<CR>
 	nnoremap <silent> tx :<C-u>tabclose<CR>
 	nnoremap <silent> te :<C-u>tabedit<CR>
 	nnoremap <silent> tf :<C-u>tabfirst<CR>
@@ -149,7 +149,7 @@ if v:version >= 700
 	endfunction
 
 	"カレントウィンドウのコピーを新規タブで開く
-	nnoremap <silent> tt :call OpenCopyTab()<CR><CR>
+	nnoremap <silent> tc :call OpenCopyTab()<CR><CR>
 	function! OpenCopyTab()
 		let f = expand("%:p")
 		execute ":tabedit"
