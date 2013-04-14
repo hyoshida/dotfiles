@@ -118,6 +118,7 @@ alias tm	'tmux attach'
 alias ts	'tmux list-session'
 alias be	'bundle exec'
 alias gl	"git log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit"
+alias csv	"awk -F, -f ${HOME}/.bin/transposed_matrix.awk"
 
 alias emacs	'env XMODIFIERS=@im=none emacs -nw'
 alias euc	'env LANG=ja_JP.eucJP'
