@@ -38,6 +38,8 @@ set wrapscan
 set incsearch
 " 検索結果文字列のハイライトを有効にする
 set hlsearch
+" <Esc> で素早くノーマルモードに移行
+set timeout timeoutlen=1000 ttimeoutlen=0
 " <Esc> 連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " コメント文の色を変更
