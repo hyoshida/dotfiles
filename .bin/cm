@@ -1,0 +1,6 @@
+#!/bin/sh
+SCREEN=`which screen`
+CMUS=`which cmus`
+if ! ${SCREEN} -r -D cmus > /dev/null; then
+  ${SCREEN} -S cmus -c /dev/null ${CMUS} "$@"
+fi
