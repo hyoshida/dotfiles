@@ -1,7 +1,9 @@
 backups/*
 !backups/.gitkeep
 .vim/.netrwhist
-.moc/last_directory
-.moc/pid
-.moc/playlist.m3u
-.moc/tags_cache
+.moc/*
+!.moc/config
+!.moc/keymap
+!.moc/themes/*
+.cmus/*
+!.cmus/rc
