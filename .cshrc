@@ -114,6 +114,7 @@ alias ipaddr	"egrep -o '[0-9]+(\.[0-9]+){3}'"
 alias platex	'repeat 2 platex'
 alias h		history
 alias sc	screen
+alias tmux	'tmux -2'
 alias tm	'tmux attach'
 alias ts	'tmux list-session'
 alias be	'bundle exec'
