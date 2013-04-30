@@ -54,8 +54,8 @@ set show_hidden=false
 set show_remaining_time=false
 set shuffle=false
 set smart_artist_sort=true
-set softvol=false
-set softvol_state=0 0
+set softvol=true
+set softvol_state=80 80
 set status_display_program=
 bind -f browser backspace browser-up
 bind -f browser i toggle show_hidden
