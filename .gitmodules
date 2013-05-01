@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/vim-processing"]
 	path = .vim/bundle/vim-processing
 	url = git://github.com/sophacles/vim-processing.git
+[submodule ".tmux/tmux-powerline"]
+	path = .tmux/tmux-powerline
+	url = git://github.com/erikw/tmux-powerline.git
