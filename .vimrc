@@ -289,8 +289,8 @@ endfunction"}}}
 
 "インサートモード時のキーバインドをemacs風にする
 " カーソル移動
-inoremap <C-p> <Up>
-inoremap <C-n> <Down>
+"inoremap <C-p> <Up>
+"inoremap <C-n> <Down>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-e> <End>
@@ -332,3 +332,20 @@ call tinymode#ModeMsg("winsize", "window resizing with C-hjkl")
 
 " ハイライトの文字色を変更
 hi Search term=reverse cterm=reverse ctermfg=Yellow ctermbg=16
+
+
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
+" Tabキーで補完候補の選択をで行う
+inoremap <expr><TAB> pumvisible() ? "\<Down>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<Up>" : "\<S-TAB>"
+" Enterでポップアップを削除して改行
+inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
+" 大文字が入力されるまで大文字小文字の区別を無視する
+let g:neocomplcache_enable_smart_case = 1
+" _(アンダースコア)区切りの補完を有効化
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_enable_camel_case_completion  =  1
+" シンタックスをキャッシュするときの最小文字長
+let g:neocomplcache_min_syntax_length = 3
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
