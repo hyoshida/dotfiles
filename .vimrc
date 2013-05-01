@@ -327,3 +327,8 @@ call tinymode#Map("winsize", "<C-k>", "5wincmd -")
 call tinymode#Map("winsize", "<C-l>", "5wincmd >")
 call tinymode#Map("winsize", "<C-h>", "5wincmd <")
 call tinymode#ModeMsg("winsize", "window resizing with C-hjkl")
+
+
+
+" ハイライトの文字色を変更
+hi Search term=reverse cterm=reverse ctermfg=Yellow ctermbg=16
