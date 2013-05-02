@@ -349,3 +349,11 @@ let g:neocomplcache_enable_camel_case_completion  =  1
 " シンタックスをキャッシュするときの最小文字長
 let g:neocomplcache_min_syntax_length = 3
 "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" \eキーでファイルタイプにあったインタプリタを実行
+au Filetype ruby       nnoremap <buffer><leader>e :!ruby %<Return>
+au Filetype perl       nnoremap <buffer><leader>e :!perl %<Return>
+au Filetype haskell    nnoremap <buffer><leader>e :!runghc %<Return>
+au Filetype scheme     nnoremap <buffer><leader>e :!gosh %<Return>
+au Filetype javascript nnoremap <buffer><leader>e :!js %<Return>
+au Filetype vim        nnoremap <silent><leader>e :source %<Return>
