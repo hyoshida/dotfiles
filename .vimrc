@@ -328,11 +328,10 @@ call tinymode#Map("winsize", "<C-l>", "5wincmd >")
 call tinymode#Map("winsize", "<C-h>", "5wincmd <")
 call tinymode#ModeMsg("winsize", "window resizing with C-hjkl")
 
-
-
 " ハイライトの文字色を変更
 hi Search term=reverse cterm=reverse ctermfg=Yellow ctermbg=16
-
+hi Pmenu ctermfg=252 ctermbg=235
+hi PmenuSel ctermfg=255 ctermbg=240
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
