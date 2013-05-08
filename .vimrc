@@ -357,3 +357,6 @@ au Filetype haskell    nnoremap <buffer><leader>e :!runghc %<Return>
 au Filetype scheme     nnoremap <buffer><leader>e :!gosh %<Return>
 au Filetype javascript nnoremap <buffer><leader>e :!js %<Return>
 au Filetype vim        nnoremap <silent><leader>e :source %<Return>
+
+" tagsで読み込むファイルを限定
+set tags=~/.tags,gems.tags
