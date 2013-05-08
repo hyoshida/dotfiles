@@ -340,8 +340,6 @@ inoremap <expr><TAB> pumvisible() ? "\<Down>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<Up>" : "\<S-TAB>"
 " Enterでポップアップを削除して改行
 inoremap <expr><CR> neocomplcache#smart_close_popup() . "\<CR>"
-" 大文字が入力されるまで大文字小文字の区別を無視する
-let g:neocomplcache_enable_smart_case = 1
 " _(アンダースコア)区切りの補完を有効化
 let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_enable_camel_case_completion  =  1
