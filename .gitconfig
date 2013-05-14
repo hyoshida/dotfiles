@@ -1,3 +1,5 @@
+[core]
+	excludesfile = ~/.gitignore_global
 [user]
 	name = YOSHIDA Hiroki
 	email = hyoshida@appirits.com
@@ -9,3 +11,6 @@
 	ba = branch -a
 	ls = log --name-status
 	ll = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+	ci = commit
+	rb = rebase
+	sh = show
