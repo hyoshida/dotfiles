@@ -1,3 +1,11 @@
 [user]
 	name = YOSHIDA Hiroki
 	email = hyoshida@appirits.com
+[alias]
+	st = status
+	co = checkout
+	cp = cherry-pick
+	br = branch
+	ba = branch -a
+	ls = log --name-status
+	ll = log --pretty=\"format:%ad %h (%an): %s\" --date=short
