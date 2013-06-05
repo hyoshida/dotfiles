@@ -17,3 +17,5 @@
 	ci = commit
 	rb = rebase
 	sh = show
+[color]
+	ui = auto
