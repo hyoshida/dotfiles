@@ -12,7 +12,8 @@
 	br = branch
 	ba = branch -a
 	ls = log --name-status
-	ll = log --pretty=\"format:%ad %h (%an): %s\" --date=short
+	ll = log --pretty=format:'%C(yellow)%h%C(reset) %C(white)%ad%C(reset) | %C(white)%s%C(reset) %C(red)[%an]%C(reset)%C(magenta)%d%C(reset)' --date=short
+	la = log --format=format:'%C(yellow)%h%C(reset) - %C(blue)%ai%C(reset) %C(bold black)(%ar)%C(reset)%C(magenta)%d%C(reset)%n''          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit --graph --all
 	ci = commit
 	rb = rebase
 	sh = show
