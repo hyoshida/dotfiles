@@ -1,5 +1,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
+	# HACK: git 1.7.1 からは less -R で正常に動作する
+	pager = LESS=-R less
 [user]
 	name = YOSHIDA Hiroki
 	email = hyoshida@appirits.com
