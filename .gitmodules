@@ -4,63 +4,9 @@
 [submodule ".rbenv_plugins/ruby-build"]
 	path = .rbenv_plugins/ruby-build
 	url = git://github.com/sstephenson/ruby-build.git
-[submodule ".vim/bundle/vim-pathogen"]
-	path = .vim/bundle/vim-pathogen
-	url = git://github.com/tpope/vim-pathogen.git
-[submodule ".vim/bundle/neocomplcache"]
-	path = .vim/bundle/neocomplcache
-	url = git://github.com/Shougo/neocomplcache.git
-[submodule ".vim/bundle/vim-rails"]
-	path = .vim/bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
-[submodule ".vim/bundle/vim-coffee-script"]
-	path = .vim/bundle/vim-coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule ".vim/bundle/vim-matchit"]
-	path = .vim/bundle/vim-matchit
-	url = git://github.com/tsaleh/vim-matchit.git
-[submodule ".vim/bundle/unite.vim"]
-	path = .vim/bundle/unite.vim
-	url = git://github.com/Shougo/unite.vim.git
-[submodule ".vim/bundle/unite-colorscheme"]
-	path = .vim/bundle/unite-colorscheme
-	url = git://github.com/ujihisa/unite-colorscheme.git
-[submodule ".vim/bundle/jellybeans.vim"]
-	path = .vim/bundle/jellybeans.vim
-	url = git://github.com/nanotech/jellybeans.vim
-[submodule ".vim/bundle/vim-hybrid"]
-	path = .vim/bundle/vim-hybrid
-	url = git://github.com/w0ng/vim-hybrid
-[submodule ".vim/bundle/vim-railscasts-theme"]
-	path = .vim/bundle/vim-railscasts-theme
-	url = git://github.com/jpo/vim-railscasts-theme
-[submodule ".vim/bundle/vim-powerline"]
-	path = .vim/bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline
-[submodule ".vim/bundle/vim-snipmate"]
-	path = .vim/bundle/vim-snipmate
-	url = git://github.com/garbas/vim-snipmate
-[submodule ".vim/bundle/tlib_vim"]
-	path = .vim/bundle/tlib_vim
-	url = git://github.com/tomtom/tlib_vim.git
-[submodule ".vim/bundle/vim-addon-mw-utils"]
-	path = .vim/bundle/vim-addon-mw-utils
-	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule ".vim/bundle/snipmate-snippets"]
-	path = .vim/bundle/snipmate-snippets
-	url = git://github.com/vim-scripts/snipmate-snippets.git
-[submodule ".vim/bundle/vim-quickrun"]
-	path = .vim/bundle/vim-quickrun
-	url = git://github.com/thinca/vim-quickrun
-[submodule ".vim/bundle/tinymode.vim"]
-	path = .vim/bundle/tinymode.vim
-	url = git://github.com/vim-scripts/tinymode.vim.git
-[submodule ".vim/bundle/vim-scala"]
-	path = .vim/bundle/vim-scala
-	url = git://github.com/derekwyatt/vim-scala
-[submodule ".vim/bundle/vim-processing"]
-	path = .vim/bundle/vim-processing
-	url = git://github.com/sophacles/vim-processing.git
 [submodule ".tmux/tmux-powerline"]
 	path = .tmux/tmux-powerline
 	url = git://github.com/erikw/tmux-powerline.git
+[submodule ".vim/bundle/neobundle.vim"]
+	path = .vim/bundle/neobundle.vim
+	url = git://github.com/Shougo/neobundle.vim.git

@@ -1,13 +1,30 @@
-" pathogen
-" 特定プラグインを無効化
-let g:pathogen_disabled = []
-if v:version <= 700
-	call add(g:pathogen_disabled, 'neocomplcache')
-	call add(g:pathogen_disabled, 'unite.vim')
-	call add(g:pathogen_disabled, 'vim-snipmate')
+" NeoBundle
+set nocompatible " be iMproved
+filetype off
+
+if has('vim_starting')
+	set runtimepath+=~/.vim/bundle/neobundle.vim
+	call neobundle#rc(expand('~/.vim/bundle/'))
 endif
-" pathogen を実行
-execute pathogen#infect()
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'tsaleh/vim-matchit'
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'snipmate-snippets'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tinymode.vim'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'sophacles/vim-processing'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'garbas/vim-snipmate'
 
 syntax on
 filetype plugin indent on

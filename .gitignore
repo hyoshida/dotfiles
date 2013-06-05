@@ -1,6 +1,8 @@
 backups/*
 !backups/.gitkeep
 .vim/.netrwhist
+.vim/bundle
+!.vim/bundle/neobundle.vim
 .moc/*
 !.moc/config
 !.moc/keymap

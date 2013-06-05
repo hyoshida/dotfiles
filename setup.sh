@@ -10,8 +10,15 @@ for dotfile in .?*; do
         ln -Fis "$PWD/$dotfile" $HOME
     fi
 done
+
+# サブモジュールをインストール
 git submodule update --init
+
+# rbenvでruby-buildが動作するよう細工
 if [ -e .rbenv/plugins ]; then
     rm .rbenv/plugins
 fi
 ln -s "$PWD/.rbenv_plugins" .rbenv/plugins
+
+# vimプラグインをインストール
+vim +NeoBundleInstall +q
