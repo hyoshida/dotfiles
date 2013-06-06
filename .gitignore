@@ -9,3 +9,6 @@ backups/*
 !.moc/themes/*
 .cmus/*
 !.cmus/rc
+.bin/git-flow*
+.bin/gitflow*
+tmp/*

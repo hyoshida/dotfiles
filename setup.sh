@@ -1,13 +1,17 @@
 #!/bin/sh
+
 cd `dirname $0`
+CURRENT_DIR=$PWD
+WORKING_DIR=$CURRENT_DIR/tmp
+
 now=`date '+%Y%m%d%H%M%S'`
-mkdir "$PWD/backups/$now"
+mkdir "$CURRENT_DIR/backups/$now"
 for dotfile in .?*; do
-    if [ $dotfile != '..' ] && [ $dotfile != '.git' ] && [ $dotfile != '.gitignore' ] ; then
+    if [ $dotfile != '..' ] && [ $dotfile != '.git' ] && [ $dotfile != '.gitignore' ]; then
         if [ -e "$HOME/$dotfile" ]; then
-            mv "$HOME/$dotfile" "$PWD/backups/$now"
+            mv "$HOME/$dotfile" "$CURRENT_DIR/backups/$now"
         fi
-        ln -Fis "$PWD/$dotfile" $HOME
+        ln -Fis "$CURRENT_DIR/$dotfile" $HOME
     fi
 done
 
@@ -15,10 +19,15 @@ done
 git submodule update --init
 
 # rbenvでruby-buildが動作するよう細工
-if [ -e .rbenv/plugins ]; then
-    rm .rbenv/plugins
+if [ -e $CURRENT_DIR/.rbenv/plugins ]; then
+    rm $CURRENT_DIR/.rbenv/plugins
 fi
-ln -s "$PWD/.rbenv_plugins" .rbenv/plugins
+ln -s "$CURRENT_DIR/.rbenv_plugins" $CURRENT_DIR/.rbenv/plugins
 
 # vimプラグインをインストール
 vim +NeoBundleInstall +q
+
+# git-flowをインストール
+pushd $WORKING_DIR > /dev/null
+wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | INSTALL_PREFIX=$CURRENT_DIR/.bin bash -s install
+popd > /dev/null
