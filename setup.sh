@@ -4,6 +4,10 @@ cd `dirname $0`
 CURRENT_DIR=$PWD
 WORKING_DIR=$CURRENT_DIR/tmp
 
+function print() {
+    echo -e "\033[1;32m$*\033[0;39m"
+}
+
 now=`date '+%Y%m%d%H%M%S'`
 mkdir "$CURRENT_DIR/backups/$now"
 for dotfile in .?*; do
@@ -15,19 +19,25 @@ for dotfile in .?*; do
     fi
 done
 
-# $B%5%V%b%8%e!<%k$r%$%s%9%H!<%k(B
+# サブモジュールをインストール
+print 'Install git submodules...'
 git submodule update --init
 
-# rbenv$B$G(Bruby-build$B$,F0:n$9$k$h$&:Y9)(B
+# rbenvでruby-buildが動作するよう細工
+print 'Setting for rbenv...'
 if [ -e $CURRENT_DIR/.rbenv/plugins ]; then
     rm $CURRENT_DIR/.rbenv/plugins
 fi
 ln -s "$CURRENT_DIR/.rbenv_plugins" $CURRENT_DIR/.rbenv/plugins
 
-# vim$B%W%i%0%$%s$r%$%s%9%H!<%k(B
+# vimプラグインをインストール
+print 'Install NeoBundle for vim...'
 vim +NeoBundleInstall +q
 
-# git-flow$B$r%$%s%9%H!<%k(B
+# git-flowをインストール
+print 'Install git-flow...'
 pushd $WORKING_DIR > /dev/null
 wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | INSTALL_PREFIX=$CURRENT_DIR/.bin bash -s install
 popd > /dev/null
+
+print 'Successed!'
