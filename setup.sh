@@ -4,6 +4,8 @@ cd `dirname $0`
 CURRENT_DIR=$PWD
 WORKING_DIR=$CURRENT_DIR/tmp
 
+mkdir -p $WORKING_DIR
+
 function print() {
     printf "\033[1;32m$*\033[0;39m\n"
 }
