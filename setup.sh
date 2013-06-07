@@ -5,7 +5,7 @@ CURRENT_DIR=$PWD
 WORKING_DIR=$CURRENT_DIR/tmp
 
 function print() {
-    echo -e "\033[1;32m$*\033[0;39m"
+    printf "\033[1;32m$*\033[0;39m\n"
 }
 
 now=`date '+%Y%m%d%H%M%S'`
