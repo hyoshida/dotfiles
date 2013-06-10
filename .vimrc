@@ -1,7 +1,7 @@
 " ===== NeoBundle =====
 set nocompatible " be iMproved
 filetype off
-source ~/dotfiles/config/noebundle.vimrc
+source ~/dotfiles/config/neobundle.vimrc
 syntax on
 filetype plugin indent on
 " ===== /NeoBundle ======
