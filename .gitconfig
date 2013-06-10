@@ -19,3 +19,5 @@
 	sh = show
 [color]
 	ui = auto
+[init]
+	templatedir = ~/.git_template
