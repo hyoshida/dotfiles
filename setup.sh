@@ -6,7 +6,7 @@ WORKING_DIR=$CURRENT_DIR/tmp
 
 mkdir -p $WORKING_DIR
 
-function print() {
+print() {
     printf "\033[1;32m$*\033[0;39m\n"
 }
 
@@ -38,8 +38,8 @@ vim +NeoBundleInstall +q
 
 # git-flowをインストール
 print 'Install git-flow...'
-pushd $WORKING_DIR > /dev/null
+cd $WORKING_DIR > /dev/null
 wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | INSTALL_PREFIX=$CURRENT_DIR/.bin bash -s install
-popd > /dev/null
+cd - > /dev/null
 
 print 'Successed!'
