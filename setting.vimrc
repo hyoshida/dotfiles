@@ -52,11 +52,6 @@ au BufNewFile,BufRead * setlocal tabstop=8 shiftwidth=8
 " 自動折りたたみを無効化
 set foldlevel=100
 
-" デフォルトの文字コード(短縮名 'enc')
-set encoding=utf-8
-" 文字コード自動判別のためのリスト(短縮名 'fencs')
-set fileencodings=iso-2022-jp,euc-jp,utf-8,sjis
-
 " ステータス行の表示
 set laststatus=2
 " ステータス行の内容を変更

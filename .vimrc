@@ -7,6 +7,7 @@ filetype plugin indent on
 " ===== /NeoBundle ======
 
 source ~/dotfiles/setting.vimrc
+source ~/dotfiles/encoding.vimrc
 source ~/dotfiles/color.vimrc
 source ~/dotfiles/keybind.vimrc
 
