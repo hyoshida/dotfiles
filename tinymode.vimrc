@@ -1,0 +1,10 @@
+" ウィンドウ簡単リサイズ
+call tinymode#EnterMap("winsize", "<C-W><C-j>", "+")
+call tinymode#EnterMap("winsize", "<C-W><C-k>", "-")
+call tinymode#EnterMap("winsize", "<C-W><C-l>", ">")
+call tinymode#EnterMap("winsize", "<C-W><C-h>", "<")
+call tinymode#Map("winsize", "<C-j>", "5wincmd +")
+call tinymode#Map("winsize", "<C-k>", "5wincmd -")
+call tinymode#Map("winsize", "<C-l>", "5wincmd >")
+call tinymode#Map("winsize", "<C-h>", "5wincmd <")
+call tinymode#ModeMsg("winsize", "window resizing with C-hjkl")
