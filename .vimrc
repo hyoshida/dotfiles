@@ -1,22 +1,22 @@
 " ===== NeoBundle =====
 set nocompatible " be iMproved
 filetype off
-source ~/dotfiles/noebundle.vimrc
+source ~/dotfiles/config/noebundle.vimrc
 syntax on
 filetype plugin indent on
 " ===== /NeoBundle ======
 
-source ~/dotfiles/setting.vimrc
-source ~/dotfiles/encoding.vimrc
-source ~/dotfiles/color.vimrc
-source ~/dotfiles/keybind.vimrc
-source ~/dotfiles/binary.vimrc
+source ~/dotfiles/config/setting.vimrc
+source ~/dotfiles/config/encoding.vimrc
+source ~/dotfiles/config/color.vimrc
+source ~/dotfiles/config/keybind.vimrc
+source ~/dotfiles/config/binary.vimrc
 
 if v:version >= 700
-	source ~/dotfiles/tabline.vimrc
+	source ~/dotfiles/config/tabline.vimrc
 endif
 
-source ~/dotfiles/unite.vimrc
-source ~/dotfiles/quickrun.vimrc
-source ~/dotfiles/tinymode.vimrc
-source ~/dotfiles/neocomplcache.vimrc
+source ~/dotfiles/config/unite.vimrc
+source ~/dotfiles/config/quickrun.vimrc
+source ~/dotfiles/config/tinymode.vimrc
+source ~/dotfiles/config/neocomplcache.vimrc

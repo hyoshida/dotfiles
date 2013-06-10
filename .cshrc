@@ -17,15 +17,15 @@ if ($?prompt) then
     endif
 
     # Display git-branch on prompt.
-    if (-r ${HOME}/dotfiles/prompt.tcsh) then
-        source ${HOME}/dotfiles/prompt.tcsh
-        alias cd "cd \!* && source ${HOME}/dotfiles/prompt.tcsh"
-        alias git "git \!* && source ${HOME}/dotfiles/prompt.tcsh"
+    if (-r ${HOME}/dotfiles/config/prompt.tcshrc) then
+        source ${HOME}/dotfiles/config/prompt.tcshrc
+        alias cd "cd \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
+        alias git "git \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
     endif
 
     # Completions
-    if (-r ${HOME}/dotfiles/complete.tcsh) then
-        source ${HOME}/dotfiles/complete.tcsh
+    if (-r ${HOME}/dotfiles/config/complete.tcshrc) then
+        source ${HOME}/dotfiles/config/complete.tcshrc
     endif
 endif
 
