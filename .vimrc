@@ -10,6 +10,7 @@ source ~/dotfiles/setting.vimrc
 source ~/dotfiles/encoding.vimrc
 source ~/dotfiles/color.vimrc
 source ~/dotfiles/keybind.vimrc
+source ~/dotfiles/binary.vimrc
 
 if v:version >= 700
 	source ~/dotfiles/tabline.vimrc
