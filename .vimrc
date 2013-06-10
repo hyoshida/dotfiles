@@ -357,6 +357,7 @@ call tinymode#ModeMsg("winsize", "window resizing with C-hjkl")
 hi Search term=reverse cterm=reverse ctermfg=Yellow ctermbg=16
 hi Pmenu ctermfg=252 ctermbg=235
 hi PmenuSel ctermfg=255 ctermbg=240
+hi Visual term=reverse cterm=reverse ctermbg=Black
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
