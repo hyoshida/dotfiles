@@ -11,13 +11,13 @@ print() {
 }
 
 now=`date '+%Y%m%d%H%M%S'`
-mkdir "$CURRENT_DIR/backups/$now"
+mkdir $CURRENT_DIR/backups/$now
 for dotfile in .?*; do
     if [ $dotfile != '..' ] && [ $dotfile != '.git' ] && [ $dotfile != '.gitignore' ]; then
-        if [ -e "$HOME/$dotfile" ]; then
-            mv "$HOME/$dotfile" "$CURRENT_DIR/backups/$now"
+        if [ -e $HOME/$dotfile ]; then
+            mv $HOME/$dotfile $CURRENT_DIR/backups/$now
         fi
-        ln -Fis "$CURRENT_DIR/$dotfile" $HOME
+        ln -s $CURRENT_DIR/$dotfile $HOME
     fi
 done
 
@@ -30,7 +30,7 @@ print 'Setting for rbenv...'
 if [ -e $CURRENT_DIR/.rbenv/plugins ]; then
     rm $CURRENT_DIR/.rbenv/plugins
 fi
-ln -s "$CURRENT_DIR/.rbenv_plugins" $CURRENT_DIR/.rbenv/plugins
+ln -s $CURRENT_DIR/.rbenv_plugins $CURRENT_DIR/.rbenv/plugins
 
 # vimプラグインをインストール
 print 'Install NeoBundle for vim...'
