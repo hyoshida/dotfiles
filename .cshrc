@@ -61,7 +61,7 @@ endif
 #### Support rbenv commands.
 ######################################################################
 if ( -x $home/.rbenv/bin/rbenv ) then
-    alias rbenv 'env MAKE=gmake rbenv'
+    which gmake >& /dev/null && alias rbenv 'env MAKE=gmake rbenv'
     set path = ( $home/.rbenv/bin $home/.rbenv/shims $path )
     rbenv rehash
 endif
