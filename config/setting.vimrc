@@ -50,7 +50,9 @@ set noexpandtab
 au BufNewFile,BufRead * setlocal tabstop=8 shiftwidth=8
 
 " 自動折りたたみを無効化
-set foldlevel=100
+autocmd FileType * :set foldmethod=manual
+autocmd FileType * :set foldlevel=1
+autocmd FileType * :set foldnestmax=2
 
 " ステータス行の表示
 set laststatus=2
