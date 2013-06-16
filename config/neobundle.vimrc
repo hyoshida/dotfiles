@@ -3,24 +3,10 @@ if has('vim_starting')
 	call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
+" Utils
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'tsaleh/vim-matchit'
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'nanotech/jellybeans.vim'
-NeoBundle 'jpo/vim-railscasts-theme'
-NeoBundle 'Lokaltog/vim-powerline'
-NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'MarcWeber/vim-addon-mw-utils'
-NeoBundle 'snipmate-snippets'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tinymode.vim'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'sophacles/vim-processing'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'Shougo/vimproc', {
 	\ 'build' : {
 	\     'windows' : 'make -f make_mingw32.mak',
@@ -29,3 +15,22 @@ NeoBundle 'Shougo/vimproc', {
 	\     'unix'    : 'make -f make_unix.mak',
 	\ },
 \ }
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'tsaleh/vim-matchit'
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'MarcWeber/vim-addon-mw-utils'
+NeoBundle 'tinymode.vim'
+NeoBundle 'snipmate-snippets'
+
+" Language
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'sophacles/vim-processing'
+NeoBundle 'kchmck/vim-coffee-script'
+
+" Colros
+NeoBundle 'ujihisa/unite-colorscheme'
+NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'jpo/vim-railscasts-theme'
