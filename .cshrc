@@ -139,6 +139,14 @@ alias processing	'env LANG=C processing'
 alias vlc	${HOME}/bin/vlc
 alias m		mplayer
 
+# alias for BSD
+switch ("$OSTYPE")
+case *'bsd'*:
+case *'darwin'*:
+	alias top 'top -u'
+	breaksw
+endsw
+
 # yabuki's alias
 alias j		jobs
 alias pd	pushd
