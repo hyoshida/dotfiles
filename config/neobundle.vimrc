@@ -27,6 +27,9 @@ NeoBundle 'tinymode.vim'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'snipmate-snippets'
 
+" For text-object
+NeoBundle 'tpope/vim-surround'
+
 " Languages
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'derekwyatt/vim-scala'
