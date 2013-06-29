@@ -17,15 +17,17 @@ NeoBundle 'Shougo/vimproc', {
 	\ },
 \ }
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'tsaleh/vim-matchit'
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tinymode.vim'
+
+" Snippets
+NeoBundle 'Shougo/neosnippet'
 NeoBundle 'snipmate-snippets'
 
-" Language
+" Languages
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'sophacles/vim-processing'
