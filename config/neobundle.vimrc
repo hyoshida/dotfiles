@@ -31,6 +31,7 @@ NeoBundle 'snipmate-snippets'
 NeoBundle 'tpope/vim-surround'
 
 " Languages
+NeoBundle 'ecomba/vim-ruby-refactoring'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'sophacles/vim-processing'
