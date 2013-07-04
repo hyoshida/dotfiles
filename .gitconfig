@@ -20,6 +20,7 @@
 	sh = show
 	wd = diff --word-diff
 	wl = log -p --word-diff
+	cut = fetch --prune
 [color]
 	ui = auto
 [init]
