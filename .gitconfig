@@ -21,6 +21,7 @@
 	wd = diff --word-diff
 	wl = log -p --word-diff
 	cut = fetch --prune
+	count = shortlog --numbered --summary
 [color]
 	ui = auto
 [init]
