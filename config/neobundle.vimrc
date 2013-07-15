@@ -36,6 +36,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'sophacles/vim-processing'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'slim-template/vim-slim'
 
 " Colros
 NeoBundle 'ujihisa/unite-colorscheme'
