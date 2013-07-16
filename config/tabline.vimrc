@@ -30,11 +30,6 @@ function! OpenCopyTab()
 	execute ":edit " . f
 endfunction
 
-" 1番目～ 9番目のタブへ移動
-for i in range(1, 9)
-	execute 'nnoremap <silent> t' . i . ' ' . i . 'gt'
-endfor
-
 " 現在のタブを右へ移動
 nnoremap <silent> tk :CustomTabMoveRight<CR>
 nnoremap <silent> tl :CustomTabMoveRight<CR>
