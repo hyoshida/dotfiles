@@ -37,22 +37,35 @@ if [ -z $TMUX_POWERLINE_LEFT_STATUS_SEGMENTS ]; then
 	)
 fi
 
+support_grep_by_perl_regexp() {
+	if [ -z "$TMUX_POWERLINE_SEG_WEATHER_GREP" ]; then
+		TMUX_POWERLINE_SEG_WEATHER_GREP="${TMUX_POWERLINE_SEG_WEATHER_GREP_DEFAULT}"
+	fi
+	echo test | ${TMUX_POWERLINE_SEG_WEATHER_GREP} -P test > /dev/null
+}
+
 if [ -z $TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS ]; then
-	TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
-		#"earthquake 3 0" \
-		#"pwd 89 211" \
-		#"mailcount 9 255" \
-		#"now_playing 234 37" \
-		#"cpu 240 136" \
-		"load 237 167" \
-		#"tmux_mem_cpu_load 234 136" \
-		"battery 137 127" \
-		"weather 31 255" \
-		#"rainbarf 0 0" \
-		#"xkb_layout 125 117" \
-		"date_day 235 136" \
-		"date 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-		"time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-		#"utc_time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
-	)
+	# XXX: weather で yahoo.com へのアクセス過多が発生する不具合を防止
+	#      [原因] FreeBSD では textproc/gnugrep がインストールされていないと
+	#             /usr/local/bin/grep が存在しないか、-P オプションが利用できないため
+	#             "RSS取得 => エラー => 再試行" のループが発生する
+	if support_grep_by_perl_regexp; then
+		TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
+			"load 237 167" \
+			"battery 137 127" \
+			"weather 31 255" \
+			"date_day 235 136" \
+			"date 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+			"time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+		)
+	else
+		TMUX_POWERLINE_RIGHT_STATUS_SEGMENTS=(
+			"load 237 167" \
+			"battery 137 127" \
+			"date_day 235 136" \
+			"date 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+			"time 235 136 ${TMUX_POWERLINE_SEPARATOR_LEFT_THIN}" \
+		)
+	fi
 fi
+
