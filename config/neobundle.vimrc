@@ -22,6 +22,7 @@ NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tinymode.vim'
+NeoBundle 'vim-scripts/VisIncr'
 
 " Snippets
 NeoBundle 'Shougo/neosnippet'
