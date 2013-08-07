@@ -37,6 +37,7 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'sophacles/vim-processing'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'othree/html5.vim'
 
 " Colros
 NeoBundle 'ujihisa/unite-colorscheme'
