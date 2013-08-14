@@ -1,13 +1,15 @@
 " 256色で表示
 set t_Co=256
 
-highlight Comment ctermfg=DarkCyan
-highlight Search term=reverse cterm=reverse ctermfg=Yellow ctermbg=16
-highlight Pmenu ctermfg=252 ctermbg=235
-highlight PmenuSel ctermfg=255 ctermbg=240
-highlight Visual term=reverse cterm=reverse ctermbg=Black
+colorscheme Monokai
+
 highlight TabLine ctermfg=Black ctermbg=240
 highlight TabLineFill term=reverse cterm=reverse ctermfg=236
+highlight Visual ctermbg=235
+highlight Normal ctermbg=232
+highlight NonText ctermbg=233
+highlight SpecialKey ctermbg=none
+highlight LineNr ctermbg=234
 
 " 全角スペースの視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=DarkBlue guibg=DarkGray
