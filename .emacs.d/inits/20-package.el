@@ -12,6 +12,7 @@
     markdown-mode
     scss-mode
     yaml-mode
+    slim-mode
     tabbar
     powerline
     anything
