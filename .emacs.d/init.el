@@ -8,15 +8,3 @@
 (require 'init-loader)
 (setq init-loader-show-log-after-init nil)
 (init-loader-load "~/.emacs.d/inits")
-
-;; auto-install
-;(require 'auto-install)
-;(setq auto-install-directory "~/.emacs.d/auto-install")
-;;(auto-install-update-emacswiki-package-name t)
-;(auto-install-compatibility-setup)             ; 互換性確保
-;(add-to-list 'load-path "~/.emacs.d/auto-install")
-;
-;;; anything
-;(require 'anything)
-;(defvar org-directory "")
-;(require 'anything-startup)
