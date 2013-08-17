@@ -39,7 +39,7 @@
 
 ;; 表示するタブを限定
 (defvar my-tabbar-displayed-buffers
-  '("*scratch*")
+  '("*scratch*" "*untitled*")
   "*Regexps matches buffer names always included tabs.")
 (defun my-tabbar-buffer-list ()
   "Return the list of buffers to show in tabs.
