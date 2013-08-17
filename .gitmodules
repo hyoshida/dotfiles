@@ -10,3 +10,9 @@
 [submodule ".vim/bundle/neobundle.vim"]
 	path = .vim/bundle/neobundle.vim
 	url = git://github.com/Shougo/neobundle.vim.git
+[submodule ".emacs.d/site-lisp/package"]
+	path = .emacs.d/site-lisp/package
+	url = https://github.com/technomancy/package.el.git
+[submodule ".emacs.d/site-lisp/init-loader"]
+	path = .emacs.d/site-lisp/init-loader
+	url = https://github.com/emacs-jp/init-loader.git
