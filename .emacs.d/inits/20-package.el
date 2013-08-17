@@ -7,12 +7,12 @@
 
 (defvar installing-package-list
   '(
-    ;; ここに使っているパッケージを書く。
     php-mode
     scala-mode
     markdown-mode
     scss-mode
     yaml-mode
+    powerline
     ))
 
 (let ((not-installed (loop for x in installing-package-list

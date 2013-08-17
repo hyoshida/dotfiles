@@ -126,6 +126,10 @@
 (setq tabbar-buffer-list-function 'my-tabbar-buffer-list)
 
 
+;; power-line
+(require 'powerline)
+(powerline-default-theme)
+
 
 ;;;;  flymake for ruby
 (require 'flymake)
