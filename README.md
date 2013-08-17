@@ -1,7 +1,7 @@
 # dotfiles by hyoshida
 
-dotfiles�Ƃ�.vimrc��.cshrc�Ȃǂ̐ݒ�t�@�C���̑��̂ł��B
-���L�̂Q�̎菇�𓥂ނ��ƂŁA���ׂẴ}�V���œ��l�̐ݒ���Č����邱�Ƃ��ł��܂��B
+dotfilesとは.vimrcや.cshrcなどの設定ファイルの総称です。
+下記の２つの手順を踏むことで、すべてのマシンで同様の設定を再現することができます。
 
 1. Clone from github
 
