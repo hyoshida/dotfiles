@@ -35,15 +35,6 @@
 ;; タイトルバーにファイルのフルパスを表示
 (setq frame-title-format "%f")
 
-;; anthy との共存
-;(cond (window-system
-;        (require 'scim-bridge-ja)
-;        (add-hook 'after-init-hook 'scim-mode-on)
-;        ; C-SPC は Set Mark に使う
-;        ;(scim-define-common-key ?\C-\s nil)
-;        ; C-/ は Undo に使う
-;        (scim-define-common-key ?\C-/ nil)))
-
 ;; ~/.emacs.d/site-lisp を load-path に追加
 (let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
   (add-to-list 'load-path default-directory)
