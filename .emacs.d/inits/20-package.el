@@ -14,6 +14,7 @@
     yaml-mode
     powerline
     anything
+    monokai-theme
     ))
 
 (let ((not-installed (loop for x in installing-package-list
