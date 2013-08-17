@@ -20,14 +20,10 @@
 (setq make-backup-files nil)
 ;;; .#* とかのバックアップファイルを作らない
 (setq auto-save-default nil)
-;; C-h で Backspace
-(global-set-key "\C-h" 'delete-backward-char)
 ;; ツールバーを隠す
 ;;(tool-bar-mode -1)
 ;; メニューバーを隠す
 (menu-bar-mode -1)
-;; バイトコンパイル用のキーバインド登録
-(global-set-key (kbd "C-C C-C") 'byte-compile-file)
 ;; ハイライトを有効化
 (transient-mark-mode 1)
 ;; スクロール量を 1 行分にする
