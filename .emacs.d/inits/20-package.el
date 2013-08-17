@@ -16,6 +16,7 @@
     powerline
     anything
     monokai-theme
+    redo+
     ))
 
 (let ((not-installed (loop for x in installing-package-list
