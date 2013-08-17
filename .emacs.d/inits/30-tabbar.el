@@ -14,29 +14,30 @@
                  (cons "" nil))))
 ;; タブをスクロールさせずに省略して表示
 (setq tabbar-auto-scroll-flag nil)
-;; タブの長さ
-(setq tabbar-separator '(1.5))
 ;; 色設定
 (set-face-attribute
   'tabbar-default nil
-  :background "gray90")
+  :background "color-240")
 (set-face-attribute
   'tabbar-unselected nil
-  :background "gray90"
-  :foreground "black"
-  :box '(:line-width 1 :color "white" :style released-button))
+  :background "color-245"
+  :foreground "black")
 (set-face-attribute
   'tabbar-selected nil
   :background "black"
   :foreground "white"
-  :box '(:line-width 1 :color "white" :style pressed-button))
-(set-face-attribute
-  'tabbar-button nil
-  :box '(:line-width 1 :color "gray72" :style released-button))
-(set-face-attribute
-  'tabbar-separator nil
-  :height 0.7)
+  :weight 'bold)
 
+;; タブの余白追加 + バッファに変更があったときのマーク付け
+;; from https://github.com/jianingy/emacs-ysl/blob/master/etc-lisp/ysl-tabbar.el
+(defadvice tabbar-buffer-tab-label (after fixup_tab_label_space_and_flag activate)
+  (setq ad-return-value
+        (if (and (buffer-modified-p (tabbar-tab-value tab))
+                 (buffer-file-name (tabbar-tab-value tab)))
+            (concat " " (concat ad-return-value "* "))
+          (concat " " (concat ad-return-value " ")))))
+
+;; 表示するタブを限定
 (defvar my-tabbar-displayed-buffers
   '("*scratch*")
   "*Regexps matches buffer names always included tabs.")
