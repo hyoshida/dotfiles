@@ -96,6 +96,9 @@
 (set-face-attribute
   'tabbar-separator nil
   :height 0.7)
+;; タブ移動のキーバインドを登録
+(global-set-key "\M-p" 'tabbar-backward-tab)
+(global-set-key "\M-n" 'tabbar-forward-tab)
 
 (defvar my-tabbar-displayed-buffers
   '("*scratch*")
