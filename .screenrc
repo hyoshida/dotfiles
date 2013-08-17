@@ -25,8 +25,8 @@ termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 #termcapinfo kterm-color 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
 
 
-# コマンドキーをデフォルトの Ctrl+A から ` に変更する
-escape ``
+# コマンドキーをデフォルトの Ctrl+A から Ctrl+T に変更する
+escape ^Tt
 # ステータス行を常に表示する
 hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
 
