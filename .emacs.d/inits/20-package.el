@@ -13,6 +13,7 @@
     scss-mode
     yaml-mode
     powerline
+    anything
     ))
 
 (let ((not-installed (loop for x in installing-package-list
