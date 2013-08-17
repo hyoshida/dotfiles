@@ -1,5 +1,6 @@
 ;; C-h で Backspace
-(global-set-key "\C-h" 'delete-backward-char)
+(keyboard-translate ?\C-h ?\C-?)
+(global-set-key (kbd "C-h") nil)
 
 ;; バイトコンパイル用のキーバインド登録
 (global-set-key (kbd "C-C C-C") 'byte-compile-file)
