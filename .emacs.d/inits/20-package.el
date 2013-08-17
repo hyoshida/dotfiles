@@ -13,6 +13,7 @@
     scss-mode
     yaml-mode
     slim-mode
+    coffee-mode
     tabbar
     powerline
     anything
