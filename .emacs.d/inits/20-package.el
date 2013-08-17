@@ -12,6 +12,7 @@
     markdown-mode
     scss-mode
     yaml-mode
+    tabbar
     powerline
     anything
     monokai-theme
