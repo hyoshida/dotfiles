@@ -1,6 +1,5 @@
-;; 日本語環境にする
-(set-language-environment "japanese")
-(set-default-coding-systems 'utf-8) ;標準でutf-8を使う
+;; デフォルトの文字コードを UTF-8 にする
+(set-default-coding-systems 'utf-8)
 ;; スクロールバーを右側にする
 ;;(set-scroll-bar-mode 'right)
 ;; 括弧の対応を表示する
