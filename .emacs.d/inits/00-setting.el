@@ -22,10 +22,17 @@
 ;; メニューバーを隠す
 (menu-bar-mode -1)
 
-;;; *.~ とかのバックアップファイルを作らない
-(setq make-backup-files nil)
-;;; .#* とかのバックアップファイルを作らない
-(setq auto-save-default nil)
-
 ;; タイトルバーにファイルのフルパスを表示
 (setq frame-title-format "%f")
+
+;; バックアップファイルを作らない
+(setq make-backup-files nil)
+
+;; 終了時に自動保存ファイルを消す
+(setq delete-auto-save-files t)
+
+;; ミニバッファに補完予測を逐次表示
+(icomplete-mode 1)
+
+;; ファイル末尾に改行を自動挿入
+(setq require-final-newline t)
