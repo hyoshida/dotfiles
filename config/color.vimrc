@@ -12,6 +12,8 @@ highlight Normal ctermbg=232
 highlight NonText ctermbg=233
 highlight SpecialKey ctermbg=none
 highlight LineNr ctermbg=234
+highlight FoldColumn ctermbg=234
+highlight VertSplit ctermbg=233
 
 " 全角スペースの視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=DarkBlue guibg=DarkGray
