@@ -27,4 +27,5 @@ if s:can_neobundle
 	source ~/dotfiles/config/tinymode.vimrc
 	source ~/dotfiles/config/neocomplcache.vimrc
 	source ~/dotfiles/config/neosnippet.vimrc
+	source ~/dotfiles/config/taglist.vimrc
 endif

@@ -18,11 +18,14 @@ NeoBundle 'Shougo/vimproc', {
 \ }
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tsaleh/vim-matchit'
-NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tinymode.vim'
 NeoBundle 'vim-scripts/VisIncr'
+
+" UI
+NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'taglist.vim'
 
 " Snippets
 NeoBundle 'Shougo/neosnippet'
