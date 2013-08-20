@@ -36,7 +36,6 @@ endfunction
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
@@ -49,6 +48,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby,eruby setlocal omnifunc=rubycomplete#Complete
 
 " Enable heavy omni completion.
 if !exists('g:neocomplcache_omni_patterns')
@@ -57,7 +57,8 @@ endif
 let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-let g:neocomplcache_omni_patterns.ruby =  '[^. *\t]\.\w*\|\h\w*::'
+" TODO: RubyのOmni自動補完で２文字以上入力があるときにうまく表示されない
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
@@ -73,3 +74,22 @@ let g:neocomplcache_same_filetype_lists.c = 'cpp,d'
 let g:neocomplcache_same_filetype_lists.cpp = 'c'
 " In gitconfig buffers, completes from all buffers.
 let g:neocomplcache_same_filetype_lists.gitconfig = '_'
+
+" 補完開始文字数を設定
+let g:neocomplcache_auto_completion_start_length = 2
+if !exists('g:neocomplcache_source_completion_length')
+  let g:neocomplcache_source_completion_length = {}
+endif
+let g:neocomplcache_source_completion_length = {
+  \ 'snippets_complete' : 2,
+  \ 'buffer_complete' : 3,
+  \ 'syntax_complete' : 2,
+  \ 'tags_complete' : 2,
+  \ 'omni_complete' : 1,
+  \ 'include_complete' : 1,
+\}
+
+" 無効にする補完
+let g:neocomplcache_source_disable = {
+  \ 'buffer_complete' : 1,
+\}
