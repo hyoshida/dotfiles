@@ -29,7 +29,7 @@ NeoBundle 'taglist.vim'
 
 " Snippets
 NeoBundle 'Shougo/neosnippet'
-NeoBundle 'snipmate-snippets'
+NeoBundle 'honza/vim-snippets'
 
 " For text-object
 NeoBundle 'tpope/vim-surround'
