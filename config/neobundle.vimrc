@@ -6,7 +6,6 @@ endif
 " Utils
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neocomplcache-rsense'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', {
 	\ 'build' : {
