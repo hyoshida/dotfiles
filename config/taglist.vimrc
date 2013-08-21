@@ -10,5 +10,8 @@ let Tlist_Exit_OnlyWindow = 1
 " Tlistを開いたらフォーカスも合わせる
 let Tlist_GainFocus_On_ToggleOpen = 1
 
+" 選択したら閉じる
+let Tlist_Close_On_Select = 1
+
 " \tでTlistを開く
 map <silent> <leader>t :TlistOpen<CR>
