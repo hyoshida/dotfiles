@@ -31,6 +31,8 @@ nnoremap <silent> [unite]c :<C-u>Unite -buffer-name=colorscheme colorscheme -aut
 nnoremap <silent> [unite]l :<C-u>Unite -buffer-name=line line -vertical<CR>
 " unite-grep: grep検索
 nnoremap <silent> [unite]g :<C-u>Unite -buffer-name=grep grep<CR>
+" unite-outline: 見出し検索
+nnoremap <silent> [unite]o :<C-u>Unite -buffer-name=outline outline -vertical<CR>
 
 "uniteを開いている間のキーマッピング
 autocmd FileType unite call s:unite_my_settings()

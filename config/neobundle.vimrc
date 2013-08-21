@@ -6,7 +6,6 @@ endif
 " Utils
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimproc', {
 	\ 'build' : {
 	\     'windows' : 'make -f make_mingw32.mak',
@@ -21,6 +20,10 @@ NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tinymode.vim'
 NeoBundle 'vim-scripts/VisIncr'
+
+" unite.vim
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'h1mesuke/unite-outline'
 
 " UI
 NeoBundle 'Lokaltog/vim-powerline'
