@@ -1,5 +1,6 @@
 " Plugin key-mappings.
-imap <C-m> <Plug>(neosnippet_expand_or_jump)
+" ジャンプ/展開可能なら実行、そうでないなら改行
+imap <expr><C-m> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<C-j>"
 smap <C-m> <Plug>(neosnippet_expand_or_jump)
 xmap <C-m> <Plug>(neosnippet_expand_target)
 
