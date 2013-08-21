@@ -15,6 +15,8 @@ let g:unite_split_rule = 'rightbelow'
 
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite -buffer-name=buffer buffer<CR>
+" タブ一覧
+nnoremap <silent> [unite]t :<C-u>Unite -buffer-name=tab tab<CR>
 " ファイル一覧
 nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=file file<CR>
 " レジスタ一覧
