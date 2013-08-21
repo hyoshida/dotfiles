@@ -37,8 +37,8 @@ nnoremap <silent> [unite]o :<C-u>Unite -buffer-name=outline outline -vertical<CR
 "uniteを開いている間のキーマッピング
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
-	"ESCでuniteを終了
-	nmap <buffer> <ESC> <Plug>(unite_exit)
+	"ESC連打でuniteを終了
+	nmap <silent> <buffer> <ESC><ESC> <Plug>(unite_exit)
 	"入力モードのときctrl+wでバックスラッシュも削除
 	imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
 	"入力モードのときTabでファイル選択
