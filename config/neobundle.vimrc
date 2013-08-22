@@ -23,7 +23,7 @@ NeoBundle 'vim-scripts/VisIncr'
 
 " unite.vim
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'Shougo/unite-outline'
 
 " UI
 NeoBundle 'Lokaltog/vim-powerline'
