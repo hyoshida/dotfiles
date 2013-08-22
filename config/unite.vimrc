@@ -13,6 +13,9 @@ let g:unite_enable_start_insert = 1
 " 画面分割ルール: 下 or 右に表示する
 let g:unite_split_rule = 'rightbelow'
 
+" ヤンクの記録を有効化
+let g:unite_source_history_yank_enable = 1
+
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite -buffer-name=buffer buffer<CR>
 " タブ一覧
@@ -33,6 +36,8 @@ nnoremap <silent> [unite]l :<C-u>Unite -buffer-name=line line -vertical<CR>
 nnoremap <silent> [unite]g :<C-u>Unite -buffer-name=grep grep<CR>
 " unite-outline: 見出し検索
 nnoremap <silent> [unite]o :<C-u>Unite -buffer-name=outline outline -vertical<CR>
+" ヤンク履歴一覧
+nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yank history/yank<CR>
 
 "uniteを開いている間のキーマッピング
 autocmd FileType unite call s:unite_my_settings()
