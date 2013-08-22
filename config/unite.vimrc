@@ -4,6 +4,10 @@
 nnoremap [unite] <Nop>
 nmap <Space>f [unite]
 
+" unite-rails prefix key.
+nnoremap [unite-rails] <Nop>
+nmap <Space>r [unite-rails]
+
 " file_mruの表示フォーマットを指定。空にすると表示スピードが高速化される
 let g:unite_source_file_mru_filename_format = ''
 
@@ -38,6 +42,14 @@ nnoremap <silent> [unite]g :<C-u>Unite -buffer-name=grep grep<CR>
 nnoremap <silent> [unite]o :<C-u>Unite -buffer-name=outline outline -vertical<CR>
 " ヤンク履歴一覧
 nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yank history/yank<CR>
+" unite-rails: Rails系のファイル一覧
+nnoremap <silent> [unite-rails]m :<C-u>Unite -buffer-name=rails/model rails/model -vertical<CR>
+nnoremap <silent> [unite-rails]c :<C-u>Unite -buffer-name=rails/controller rails/controller -vertical<CR>
+nnoremap <silent> [unite-rails]v :<C-u>Unite -buffer-name=rails/view rails/view -vertical<CR>
+nnoremap <silent> [unite-rails]h :<C-u>Unite -buffer-name=rails/helper rails/helper -vertical<CR>
+nnoremap <silent> [unite-rails]l :<C-u>Unite -buffer-name=rails/lib rails/lib -vertical<CR>
+nnoremap <silent> [unite-rails]d :<C-u>Unite -buffer-name=rails/db rails/db -vertical<CR>
+nnoremap <silent> [unite-rails]s :<C-u>Unite -buffer-name=rails/spec rails/spec -vertical<CR>
 
 "uniteを開いている間のキーマッピング
 autocmd FileType unite call s:unite_my_settings()

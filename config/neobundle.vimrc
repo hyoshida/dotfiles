@@ -24,6 +24,7 @@ NeoBundle 'vim-scripts/VisIncr'
 " unite.vim
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
+NeoBundle 'basyura/unite-rails'
 
 " UI
 NeoBundle 'Lokaltog/vim-powerline'
