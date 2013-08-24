@@ -47,7 +47,7 @@ set noexpandtab
 "endif
 
 " タブ幅は拡張子を問わずに統一
-au BufNewFile,BufRead * setlocal tabstop=8 shiftwidth=8
+au BufNewFile,BufRead * setlocal tabstop=4 shiftwidth=4
 
 " 自動折りたたみを無効化
 autocmd FileType * :set foldmethod=manual
@@ -70,3 +70,7 @@ set backspace=start,eol,indent
 
 " tagsで読み込むファイルを限定
 set tags=~/.tags,gems.tags
+
+" 新しいウィンドウを現在のウィンドウの下か右に開く
+set splitbelow
+set splitright
