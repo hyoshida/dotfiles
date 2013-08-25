@@ -1,5 +1,5 @@
 " カラー対応してそうなら256色で表示
-if $TERM =~ '^xterm'
+if $TERM =~ '^\(xterm\|screen\)'
 	set t_Co=256
 endif
 
