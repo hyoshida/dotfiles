@@ -29,4 +29,5 @@ if s:can_neobundle
 	source ~/dotfiles/config/neocomplcache.vimrc
 	source ~/dotfiles/config/neosnippet.vimrc
 	source ~/dotfiles/config/taglist.vimrc
+	source ~/dotfiles/config/fugitive.vimrc
 endif
