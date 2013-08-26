@@ -2,6 +2,9 @@
 command -nargs=* Grm Gremove <args>
 command -nargs=* Gci Gcommit <args>
 
+" :gitで:Gitを使えるようにする
+cabbrev git Git
+
 " :Gstatus時のキーバインド
 autocmd FileType gitcommit call s:gitcommit_custom_keybinds()
 function! s:gitcommit_custom_keybinds()"{{{
