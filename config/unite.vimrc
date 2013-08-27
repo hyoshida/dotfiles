@@ -55,7 +55,7 @@ nnoremap <silent> [unite-rails]s :<C-u>Unite -buffer-name=rails/spec rails/spec 
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
 	" ESC連打でuniteを終了
-	nmap <silent> <buffer> <ESC><ESC> <Plug>(unite_exit)
+	nmap <silent> <buffer> <ESC><ESC> <Plug>(unite_all_exit)
 	" 入力モードのときctrl+wでバックスラッシュも削除
 	imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
 	" 入力モードのときTabでファイル選択
