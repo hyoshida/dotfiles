@@ -34,6 +34,8 @@ nnoremap <silent> [unite]m :<C-u>Unite -buffer-name=mru file_mru<CR>
 nnoremap <silent> [unite]a :<C-u>UniteWithBufferDir -buffer-name=all buffer file_mru bookmark file<CR>
 " カラースキーム選択
 nnoremap <silent> [unite]c :<C-u>Unite -buffer-name=colorscheme colorscheme -auto-preview<CR>
+" 過去のUniteバッファ一覧
+nnoremap <silent> [unite]u :<C-u>Unite -buffer-name=resume resume<CR>
 " unite-line: ファイル内検索
 nnoremap <silent> [unite]l :<C-u>Unite -buffer-name=line line -vertical<CR>
 " unite-grep: grep検索
