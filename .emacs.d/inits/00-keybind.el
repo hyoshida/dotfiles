@@ -20,3 +20,6 @@
       (kill-region (region-beginning) (region-end))
     (backward-kill-word 1)))
 (global-set-key (kbd "C-w") 'backward-kill-word-or-kill-region)
+
+;; C-u の挙動を tcsh と同じにする
+(global-set-key (kbd "C-u") 'kill-whole-line)
