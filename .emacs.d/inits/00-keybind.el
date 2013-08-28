@@ -23,3 +23,6 @@
 
 ;; C-u の挙動を tcsh と同じにする
 (global-set-key (kbd "C-u") 'kill-whole-line)
+
+;; MacOSX でなぜか C-@ が動作しないので別のキーバインドで set-mark-command
+(global-set-key (kbd "M-SPC") 'set-mark-command)
