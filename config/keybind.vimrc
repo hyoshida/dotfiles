@@ -56,4 +56,8 @@ au Filetype scheme     nnoremap <buffer><leader>e :!gosh %<Return>
 au Filetype javascript nnoremap <buffer><leader>e :!js %<Return>
 au Filetype vim        nnoremap <silent><leader>e :source %<Return>
 
-
+" ウィンドウ分割操作をtmux風にする
+" Ctrl-"でウィンドウを横分割 (like tmux)
+nnoremap <silent> <C-w>" :split<CR>
+" Ctrl-!でアクティブなウィンドウ以外を閉じる
+nnoremap <silent> <C-w>! :only<CR>
