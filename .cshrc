@@ -131,6 +131,7 @@ alias csv	"awk -F, -f ${HOME}/.bin/transposed_matrix.awk"
 alias rserver	'ruby -r webrick -e "WEBrick::HTTPServer.new(:Port => 8000, :DocumentRoot => File.join(Dir::pwd, ARGV.shift || %q{public_html})).tap {|s| trap(%q{INT}) { s.shutdown } }.start"'
 
 alias emacs	'env XMODIFIERS=@im=none TERM=xterm-256color emacs -nw'
+alias cmus	'env TERM=xterm-256color cmus'
 alias euc	'env LANG=ja_JP.eucJP'
 alias filezilla	'env LANG=ja_JP.UTF-8 filezilla'
 alias opera	'env LANG=ja_JP.UTF-8 opera'

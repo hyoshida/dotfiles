@@ -1,6 +1,8 @@
 #!/bin/sh
-SCREEN=`which screen`
-CMUS=`which cmus`
-if ! ${SCREEN} -r -D cmus > /dev/null; then
-  ${SCREEN} -S cmus -c /dev/null ${CMUS} "$@"
+SESSION_NAME='cmus'
+SCREENRC="${HOME}/dotfiles/config/256color.screenrc"
+SCREEN='env TERM=screen-256color screen'
+CMUS='env TERM=screen-256color cmus'
+if ! ${SCREEN} -r -D ${SESSION_NAME} > /dev/null; then
+  ${SCREEN} -S ${SESSION_NAME} -c ${SCREENRC} ${CMUS}
 fi
