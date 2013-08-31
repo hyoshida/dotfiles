@@ -19,3 +19,4 @@ dotfilesとは.vimrcや.cshrcなどの設定ファイルの総称です。
 * vim: 7.2 以上
 * emacs: 22 以上
 * cmus: 2.4.x
+* screen: 4.00 (compiled with the *--enable-colors256* option)
