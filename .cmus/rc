@@ -5,29 +5,6 @@ set altformat_title=%f
 set altformat_trackwin= %f%= %d 
 set auto_reshuffle=true
 set buffer_seconds=10
-set color_cmdline_bg=default
-set color_cmdline_fg=default
-set color_error=lightred
-set color_info=lightyellow
-set color_separator=blue
-set color_statusline_bg=gray
-set color_statusline_fg=black
-set color_titleline_bg=blue
-set color_titleline_fg=white
-set color_win_bg=default
-set color_win_cur=lightyellow
-set color_win_cur_sel_bg=blue
-set color_win_cur_sel_fg=lightyellow
-set color_win_dir=lightblue
-set color_win_fg=default
-set color_win_inactive_cur_sel_bg=gray
-set color_win_inactive_cur_sel_fg=lightyellow
-set color_win_inactive_sel_bg=gray
-set color_win_inactive_sel_fg=black
-set color_win_sel_bg=blue
-set color_win_sel_fg=white
-set color_win_title_bg=blue
-set color_win_title_fg=white
 set confirm_run=true
 set continue=true
 set display_artist_sort_name=false
@@ -138,3 +115,4 @@ fset mp3=filename="*.mp3"
 fset ogg=filename="*.ogg"
 fset ogg-or-mp3=ogg|mp3
 factivate
+colorscheme monokai

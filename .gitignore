@@ -11,6 +11,7 @@ backups/*
 !.moc/themes/*
 .cmus/*
 !.cmus/rc
+!.cmus/monokai.theme
 .bin/git-flow*
 .bin/gitflow*
 tmp/*
