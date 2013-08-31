@@ -100,12 +100,12 @@ bind -f common e win-add-q
 bind -f common end win-bottom
 bind -f common enter win-activate
 bind -f common g win-top
-bind -f common h win-next
+bind -f common h seek -5
 bind -f common home win-top
 bind -f common i win-sel-cur
 bind -f common j win-down
 bind -f common k win-up
-bind -f common l win-next
+bind -f common l seek +5
 bind -f common left seek -5
 bind -f common m toggle aaa_mode
 bind -f common n search-next
@@ -123,11 +123,14 @@ bind -f common tab win-next
 bind -f common u update-cache
 bind -f common up win-up
 bind -f common v player-stop
+bind -f common w win-next
 bind -f common x player-play
 bind -f common y win-add-p
 bind -f common z player-prev
 bind -f common { vol -1% -0
 bind -f common } vol -0 -1%
+bind -f browser h browser-up
+bind -f browser l win-activate
 fset 90s=date>=1990&date<2000
 fset classical=genre="Classical"
 fset missing-tag=!stream&(artist=""|album=""|title=""|tracknumber=-1|date=-1)
