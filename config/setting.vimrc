@@ -30,25 +30,6 @@ set textwidth=0
 " ウィンドウの幅より長い行は折り返して、次の行に続けて表示する
 set wrap
 
-" オートインデントを有効にする
-"set autoindent
-" タブが対応する空白の数
-"set tabstop=4
-" タブやバックスペースの使用等の編集操作をするときに、タブが対応する空白の数
-"set softtabstop=4
-" インデントの各段階に使われる空白の数
-"set shiftwidth=4
-" タブを挿入するとき、代わりに空白を使わない
-set noexpandtab
-
-"if has("autocmd")
-"	" ファイルタイプ別インデント、プラグインを有効にする
-"	filetype plugin indent on
-"endif
-
-" タブ幅は拡張子を問わずに統一
-au BufNewFile,BufRead * setlocal tabstop=4 shiftwidth=4
-
 " 自動折りたたみを無効化
 autocmd FileType * :set foldmethod=manual
 autocmd FileType * :set foldlevel=1

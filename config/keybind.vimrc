@@ -61,3 +61,23 @@ au Filetype vim        nnoremap <silent><leader>e :source %<Return>
 nnoremap <silent> <C-w>" :split<CR>
 " Ctrl-!でアクティブなウィンドウ以外を閉じる
 nnoremap <silent> <C-w>! :only<CR>
+
+" タブと空白をトグルする
+" (from http://vim.wikia.com/wiki/Toggle_between_tabs_and_spaces)
+function TabToggle()
+	if &expandtab
+		set shiftwidth=8
+		set softtabstop=0
+		set tabstop=8
+		set noexpandtab
+	else
+		set shiftwidth=2
+		set softtabstop=2
+		set tabstop=2
+		set expandtab
+	endif
+endfunction
+nmap <F9> mz:execute TabToggle()<CR>'z
+command TabToggle call TabToggle()
+" インデント設定を初期化
+call TabToggle()
