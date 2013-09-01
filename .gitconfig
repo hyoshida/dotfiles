@@ -23,6 +23,8 @@
 	cut = fetch --prune
 	count = shortlog --numbered --summary
 	cleanbr = !git branch --merged | grep -v \"*\" | grep -v master | xargs -n 1 git branch -d
+	# 改行コードとインデントを無視して比較
+	cmp = diff --ignore-all-space --ignore-space-change
 [color]
 	ui = auto
 [init]
