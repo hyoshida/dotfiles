@@ -31,7 +31,6 @@ NeoBundle 'basyura/unite-rails'
 
 " UI
 NeoBundle 'Lokaltog/vim-powerline'
-NeoBundle 'taglist.vim'
 
 " Snippets
 NeoBundle 'Shougo/neosnippet'
