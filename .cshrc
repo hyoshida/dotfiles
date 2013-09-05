@@ -142,11 +142,7 @@ alias rserver	'ruby -r webrick -e "WEBrick::HTTPServer.new(:Port => 8000, :Docum
 alias emacs	'env XMODIFIERS=@im=none TERM=xterm-256color emacs -nw'
 alias cmus	'env TERM=xterm-256color cmus'
 alias euc	'env LANG=ja_JP.eucJP'
-alias filezilla	'env LANG=ja_JP.UTF-8 filezilla'
-alias opera	'env LANG=ja_JP.UTF-8 opera'
 alias processing	'env LANG=C processing'
-#alias tgif	${HOME}/bin/tgif
-alias vlc	${HOME}/bin/vlc
 alias m		mplayer
 
 # alias for BSD
