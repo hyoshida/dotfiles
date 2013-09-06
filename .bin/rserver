@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require 'webrick'
+require 'optparse'
+
+port = ARGV.getopts('p:').values.first || 8000
+document_root = File.join(Dir::pwd, ARGV.shift || 'public_html')
+
+WEBrick::HTTPServer.new(:Port => port, :DocumentRoot => document_root).tap {|s| trap('INT') { s.shutdown } }.start
