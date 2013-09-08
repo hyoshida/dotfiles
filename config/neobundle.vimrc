@@ -53,3 +53,6 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'sickill/vim-monokai'
+
+" hyoshida plugins
+NeoBundle 'hyoshida/unite-cmus'
