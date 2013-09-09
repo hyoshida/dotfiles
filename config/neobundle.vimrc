@@ -32,6 +32,7 @@ NeoBundle 'basyura/unite-rails'
 
 " UI
 NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'lilydjwg/colorizer'
 
 " Snippets
 NeoBundle 'Shougo/neosnippet'
