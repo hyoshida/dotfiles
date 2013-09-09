@@ -23,6 +23,7 @@ NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tinymode.vim'
 NeoBundle 'vim-scripts/VisIncr'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'AndrewRadev/switch.vim'
 
 " unite.vim
 NeoBundle 'Shougo/unite.vim'
