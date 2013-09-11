@@ -118,6 +118,8 @@ bindkey ^r i-search-back
 bindkey ^s i-search-fwd
 bindkey ^p history-search-backward
 bindkey ^n history-search-forward
+bindkey ^i complete-word-fwd
+bindkey "^[i" complete-word-back
 
 
 ######################################################################
