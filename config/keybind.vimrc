@@ -4,11 +4,6 @@ cmap <C-x> <c-r>=expand('%:h')<CR>/
 cmap <C-z> <c-r>=expand('%')<CR>
 " paste in command mode
 cmap <C-y> <C-r>"
-" コマンドモード時にカーソル移動を emacs 形式にする
-cmap <C-a> <Home>
-cmap <C-e> <End>
-cmap <C-f> <Right>
-cmap <C-b> <Left>
 
 " Tabでバッファ移動
 nmap <Tab> :bnext \| redraw<CR>
@@ -27,26 +22,6 @@ endfunction
 " NB: this supports "rp that replaces the selection by the
 " contents of @r
 vnoremap <silent> <expr> =p <sid>Repl()
-
-"インサートモード時のキーバインドをemacs風にする
-" カーソル移動
-"inoremap <C-p> <Up>
-"inoremap <C-n> <Down>
-inoremap <C-b> <Left>
-inoremap <C-f> <Right>
-inoremap <C-e> <End>
-inoremap <C-a> <Home>
-inoremap <C-d> <Del>
-" カーソルのある行を画面中央に
-inoremap <C-l> <C-o>zz
-" カーソルより前の文字を削除
-inoremap <C-u> <C-o>d0
-" カーソルより後の文字を削除
-inoremap <C-k> <c-o>D
-" アンドゥ（「C-_」は「Ctrl+/」を意味する）
-inoremap <C-_> <C-o>u
-" 貼りつけ
-inoremap <C-y> <C-o>P
 
 " \eキーでファイルタイプにあったインタプリタを実行
 au Filetype ruby       nnoremap <buffer><leader>e :!ruby %<Return>
