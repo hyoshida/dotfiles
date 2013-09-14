@@ -31,5 +31,4 @@ if s:can_neobundle
 	source ~/dotfiles/config/neosnippet.vimrc
 	source ~/dotfiles/config/fugitive.vimrc
 	source ~/dotfiles/config/switch.vimrc
-	source ~/dotfiles/config/vimacs.vimrc
 endif
