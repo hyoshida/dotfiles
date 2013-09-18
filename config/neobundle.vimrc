@@ -24,6 +24,7 @@ NeoBundle 'tinymode.vim'
 NeoBundle 'vim-scripts/VisIncr'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'AndrewRadev/switch.vim'
+NeoBundle 'chrisbra/csv.vim'
 
 " unite.vim
 NeoBundle 'Shougo/unite.vim'
