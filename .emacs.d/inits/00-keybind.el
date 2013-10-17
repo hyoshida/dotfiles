@@ -26,3 +26,8 @@
 
 ;; MacOSX でなぜか C-@ が動作しないので別のキーバインドで set-mark-command
 (global-set-key (kbd "M-SPC") 'set-mark-command)
+
+;; 矩形選択をよりわかりやすくする (M-RETで開始)
+(setq cua-enable-cua-keys nil)
+(setq cua-rectangle-mark-key (kbd "M-RET"))
+(cua-mode t)
