@@ -18,6 +18,10 @@ if &t_Co >= 256
 	highlight LineNr ctermbg=234
 	highlight FoldColumn ctermbg=234
 	highlight VertSplit ctermbg=233
+
+	" C言語向け
+	highlight Type ctermfg=81 guifg=#66d9ef
+	highlight Constant ctermfg=81 guifg=#66d9ef
 endif
 
 " 全角スペースの視覚化
