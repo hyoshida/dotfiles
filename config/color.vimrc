@@ -5,7 +5,7 @@ endif
 
 " 256色に対応しているならテーマ適用
 if &t_Co >= 256
-	colorscheme Monokai
+	colorscheme monokai
 
 	highlight Pmenu ctermfg=252 ctermbg=235
 	highlight PmenuSel ctermfg=255 ctermbg=240
