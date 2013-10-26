@@ -16,3 +16,6 @@
 [submodule ".emacs.d/site-lisp/init-loader"]
 	path = .emacs.d/site-lisp/init-loader
 	url = https://github.com/emacs-jp/init-loader.git
+[submodule ".pyenv"]
+	path = .pyenv
+	url = git://github.com/yyuu/pyenv.git

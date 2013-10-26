@@ -68,6 +68,15 @@ endif
 
 
 ######################################################################
+#### Support pyenv commands.
+######################################################################
+if ( -x $home/.pyenv/bin/pyenv ) then
+    set path = ( $home/.pyenv/bin $home/.pyenv/shims $path )
+    pyenv rehash
+endif
+
+
+######################################################################
 #### Add the current path to $PATH.
 ######################################################################
 set path = ( $home/bin $home/.bin $path /sbin . )
@@ -136,6 +145,7 @@ alias tm	'tmux attach'
 alias ts	'tmux list-session'
 alias be	'bundle exec'
 alias re	'rbenv exec'
+alias pe	'pyenv exec'
 alias csv	"awk -F, -f ${HOME}/.bin/transposed_matrix.awk"
 
 alias emacs	'env XMODIFIERS=@im=none TERM=xterm-256color emacs -nw'
