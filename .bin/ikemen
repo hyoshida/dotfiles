@@ -1,0 +1,9 @@
+#!/bin/sh
+stamp_file=${HOME}/dotfiles/tmp/enable_powerline.txt
+if [ -e $stamp_file ]; then
+  rm $stamp_file
+  echo 'Disable ikemen-mode.'
+else
+  touch $stamp_file
+  echo 'Enable ikemen-mode.'
+fi

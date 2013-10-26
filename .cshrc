@@ -21,6 +21,7 @@ if ($?prompt) then
         source ${HOME}/dotfiles/config/prompt.tcshrc
         alias cd "cd \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
         alias git "git \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
+        alias ikemen "ikemen \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
     endif
 
     # Completions
