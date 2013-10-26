@@ -3,10 +3,18 @@ if (! $?prompt) goto end
 
 set git_branch_name = `sh -c 'git branch --no-color 2> /dev/null' | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1:/'`
 set git_branch_name_color = "%{\e[01m%}$git_branch_name%{\e[00m%}"
+
+if ( -x ${HOME}/dotfiles/powerline/scripts/powerline ) then
+  # zsh用のpowerlineを流用
+  set user_prompt = "`${HOME}/dotfiles/powerline/scripts/powerline shell left -r zsh_prompt` "
+else
+  set user_prompt = "%n@%m[$git_branch_name_color%~]% "
+endif
+
 if ("_$user" == "_root") then
     set prompt = "%n@%m[$git_branch_name_color%~]# "
 else
-    set prompt = "%n@%m[$git_branch_name_color%~]% "
+    set prompt = "$user_prompt"
 endif
 
 end:
