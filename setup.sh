@@ -45,4 +45,16 @@ cd - > /dev/null
 # powerline用のフォントをインストール
 sh $CURRENT_DIR/setup_fonts.sh
 
+# 設定ファイルを.configディレクトリにリンク
+print 'Install configs for XDG...'
+mkdir $CURRENT_DIR/backups/$now/xdg_config
+cd $CURRENT_DIR/xdg_config > /dev/null
+for config_file in *; do
+    if [ -e $HOME/.config/$config_file ]; then
+        mv $HOME/.config/$config_file $CURRENT_DIR/backups/$now/xdg_config
+    fi
+    ln -s $CURRENT_DIR/xdg_config/$config_file $HOME/.config
+done
+cd - > /dev/null
+
 print 'Successed!'
