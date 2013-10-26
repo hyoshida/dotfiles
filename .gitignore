@@ -15,3 +15,5 @@ backups/*
 .bin/git-flow*
 .bin/gitflow*
 tmp/*
+.fonts
+.fonts.conf.d

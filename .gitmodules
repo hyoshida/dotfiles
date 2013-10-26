@@ -19,3 +19,9 @@
 [submodule ".pyenv"]
 	path = .pyenv
 	url = git://github.com/yyuu/pyenv.git
+[submodule "powerline"]
+	path = powerline
+	url = https://github.com/Lokaltog/powerline.git
+[submodule "powerline-fonts"]
+	path = powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
