@@ -5,11 +5,11 @@ dotfilesとは.vimrcや.cshrcなどの設定ファイルの総称です。
 
 1. Clone from github
 
-        % git clone git://github.com/hyoshida/dotfiles.git
+        git clone git://github.com/hyoshida/dotfiles.git
 
 2. Running setup.sh
 
-        % sh dotfiles/setup.sh
+        sh dotfiles/setup.sh
 
 ## 推奨環境
 
