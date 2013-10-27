@@ -1,37 +1,6 @@
 #!/bin/csh
 
 ######################################################################
-#### Setting the prompt.
-######################################################################
-if ($?prompt) then
-    # Meta charactors:
-    #     %n <= User name.
-    #     %m <= Machine name.
-    #     %c <= Current directory.
-    #     %~ <= A relative path from ${HOME}.
-    #     %# <= Super user is #, Normal user is >.
-    if ("_$user" == "_root") then
-        set prompt = "%n@%m[%~]# "
-    else
-        set prompt = "%n@%m[%~]% "
-    endif
-
-    # Display git-branch on prompt.
-    if (-r ${HOME}/dotfiles/config/prompt.tcshrc) then
-        source ${HOME}/dotfiles/config/prompt.tcshrc
-        alias cd "cd \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
-        alias git "git \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
-        alias ikemen "ikemen \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
-    endif
-
-    # Completions
-    if (-r ${HOME}/dotfiles/config/complete.tcshrc) then
-        source ${HOME}/dotfiles/config/complete.tcshrc
-    endif
-endif
-
-
-######################################################################
 #### Enable to the completion of the file name.
 ######################################################################
 set autocorrect
@@ -116,6 +85,36 @@ if ( -x /bin/stty ) then
     stty -ixon
 endif
 
+
+######################################################################
+#### Setting the prompt.
+######################################################################
+if ($?prompt) then
+    # Meta charactors:
+    #     %n <= User name.
+    #     %m <= Machine name.
+    #     %c <= Current directory.
+    #     %~ <= A relative path from ${HOME}.
+    #     %# <= Super user is #, Normal user is >.
+    if ("_$user" == "_root") then
+        set prompt = "%n@%m[%~]# "
+    else
+        set prompt = "%n@%m[%~]% "
+    endif
+
+    # Display git-branch on prompt.
+    if (-r ${HOME}/dotfiles/config/prompt.tcshrc) then
+        source ${HOME}/dotfiles/config/prompt.tcshrc
+        alias cd "cd \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
+        alias git "git \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
+        alias ikemen "ikemen \!* && source ${HOME}/dotfiles/config/prompt.tcshrc"
+    endif
+
+    # Completions
+    if (-r ${HOME}/dotfiles/config/complete.tcshrc) then
+        source ${HOME}/dotfiles/config/complete.tcshrc
+    endif
+endif
 
 
 ######################################################################
