@@ -7,3 +7,4 @@ else
   touch $stamp_file
   echo 'Enable ikemen-mode.'
 fi
+vim +PowerlineClearCache +q
