@@ -81,7 +81,7 @@ setenv GIT_EDITOR vim
 ######################################################################
 #### Disable START/STOP(C-s/C-q) output control.
 ######################################################################
-if ( -x /bin/stty ) then
+if ( $?prompt && -x /bin/stty ) then
     stty -ixon
 endif
 
