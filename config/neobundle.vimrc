@@ -42,6 +42,7 @@ NeoBundle 'honza/vim-snippets'
 " For text-object
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'kana/vim-operator-user'
+NeoBundle 'tyru/operator-camelize.vim'
 
 " Languages
 NeoBundle 'ecomba/vim-ruby-refactoring'
