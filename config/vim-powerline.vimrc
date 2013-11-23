@@ -8,3 +8,8 @@ if filereadable(expand('~/dotfiles/tmp/enable_powerline.txt'))
 		\ 'LINE'  : [0xe0a1]
 	\ }
 endif
+
+" 256色に対応していない場合は16色向けのテーマを適用
+if &t_Co < 256
+	let g:Powerline_theme = 'solarized16'
+endif
