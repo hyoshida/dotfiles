@@ -18,6 +18,7 @@
 	ci = commit
 	rb = rebase
 	sh = show
+	di = diff
 	wd = diff --word-diff
 	wl = log -p --word-diff
 	cut = fetch --prune
