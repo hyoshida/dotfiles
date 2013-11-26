@@ -42,6 +42,13 @@ cd $WORKING_DIR > /dev/null
 wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | INSTALL_PREFIX=$CURRENT_DIR/.bin bash -s install
 cd - > /dev/null
 
+# diff-highlightをインストール
+print 'Install diff-highlight...'
+cd $CURRENT_DIR/.bin > /dev/null
+wget --no-check-certificate -q --unlink https://raw.github.com/git/git/master/contrib/diff-highlight/diff-highlight
+chmod +x diff-highlight
+cd - > /dev/null
+
 # powerline用のフォントをインストール
 sh $CURRENT_DIR/setup_fonts.sh
 

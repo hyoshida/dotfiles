@@ -19,7 +19,6 @@
 	rb = rebase
 	sh = show
 	di = diff
-	wd = diff --word-diff
 	wl = log -p --word-diff
 	cut = fetch --prune
 	count = shortlog --numbered --summary
@@ -35,3 +34,7 @@
 	default = simple
 [apply]
 	whitespace = fix
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
