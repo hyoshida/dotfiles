@@ -28,6 +28,19 @@
 	lc = log -p --ignore-all-space --ignore-space-change
 [color]
 	ui = auto
+[color "branch"]
+	current = 197
+	local = white
+	remote = 141
+[color "diff"]
+	meta = 241
+	frag = 81
+	old = 197
+	new = 148
+[color "status"]
+	added = 148
+	changed = 197
+	untracked = 241
 [init]
 	templatedir = ~/.git_template
 [push]
