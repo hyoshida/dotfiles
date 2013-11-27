@@ -45,7 +45,8 @@ cd - > /dev/null
 # diff-highlightをインストール
 print 'Install diff-highlight...'
 cd $CURRENT_DIR/.bin > /dev/null
-wget --no-check-certificate -q --unlink https://raw.github.com/git/git/master/contrib/diff-highlight/diff-highlight
+rm -f diff-highlight
+wget --no-check-certificate -q https://raw.github.com/git/git/master/contrib/diff-highlight/diff-highlight
 chmod +x diff-highlight
 cd - > /dev/null
 
