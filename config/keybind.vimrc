@@ -10,10 +10,6 @@ cmap <C-e> <End>
 cmap <C-f> <Right>
 cmap <C-b> <Left>
 
-" Tabでバッファ移動
-nmap <Tab> :bnext \| redraw<CR>
-nmap <S-Tab> :bprev \| redraw<CR>
-
 " レジスタの内容を置き換えずにペースト
 " I haven't found how to hide this function (yet)
 function! RestoreRegister()
