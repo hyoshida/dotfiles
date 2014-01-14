@@ -21,10 +21,13 @@ NeoBundle 'tsaleh/vim-matchit'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tinymode.vim'
-NeoBundle 'vim-scripts/VisIncr'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'chrisbra/csv.vim'
+
+" Text-editing
+NeoBundle 'vim-scripts/VisIncr'
+NeoBundle 'AndrewRadev/switch.vim'
+NeoBundle 'Align'
 
 " unite.vim
 NeoBundle 'Shougo/unite.vim'
