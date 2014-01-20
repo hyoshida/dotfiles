@@ -127,6 +127,7 @@ bindkey ^r i-search-back
 bindkey ^s i-search-fwd
 bindkey ^p history-search-backward
 bindkey ^n history-search-forward
+bindkey -c ^l "date '+ %n--- CLEARED: %Y-%m-%d %H:%M:%S ---%n '; clear"
 
 
 ######################################################################
