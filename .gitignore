@@ -17,3 +17,4 @@ backups/*
 tmp/*
 .fonts
 .fonts.conf.d
+.bin/diff-highlight
