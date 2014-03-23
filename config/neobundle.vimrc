@@ -33,6 +33,7 @@ NeoBundle 'Align'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'basyura/unite-rails'
+NeoBundle 'Shougo/neomru.vim'
 
 " UI
 NeoBundle 'Lokaltog/vim-powerline'
