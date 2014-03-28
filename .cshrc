@@ -148,6 +148,7 @@ alias be	'bundle exec'
 alias re	'rbenv exec'
 alias pe	'pyenv exec'
 alias csv	"awk -F, -f ${HOME}/.bin/transposed_matrix.awk"
+alias ne	"env PATH='${PATH}:node_modules/.bin'"
 
 alias emacs	'env XMODIFIERS=@im=none TERM=xterm-256color emacs -nw'
 alias cmus	'env TERM=xterm-256color cmus'
