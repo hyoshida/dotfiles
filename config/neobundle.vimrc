@@ -57,6 +57,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'hyoshida/vim-artemis'
+NeoBundle 'digitaltoad/vim-jade'
 
 " Colros
 NeoBundle 'ujihisa/unite-colorscheme'
