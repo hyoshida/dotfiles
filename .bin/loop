@@ -1,0 +1,5 @@
+#!/bin/sh
+while :; do
+  sh -c "$*"
+  sleep 1
+done
