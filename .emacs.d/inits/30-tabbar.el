@@ -36,6 +36,16 @@
                  (buffer-file-name (tabbar-tab-value tab)))
             (concat " " (concat ad-return-value "* "))
           (concat " " (concat ad-return-value " ")))))
+;; called each time the modification state of the buffer changed
+(defun ztl-modification-state-change ()
+    (tabbar-set-template tabbar-current-tabset nil)
+      (tabbar-display-update))
+;; first-change-hook is called BEFORE the change is made
+(defun ztl-on-buffer-modification ()
+    (set-buffer-modified-p t)
+      (ztl-modification-state-change))
+(add-hook 'after-save-hook 'ztl-modification-state-change)
+(add-hook 'first-change-hook 'ztl-on-buffer-modification)
 
 ;; 表示するタブを限定
 (defvar my-tabbar-displayed-buffers
