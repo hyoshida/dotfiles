@@ -1,0 +1,87 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+#
+# Name        : edict
+# Description : English-Japanese dictionary program powered by GENE95
+# Version     : 0.0.8 (2010-01-07)
+# Author      : h1mesuke
+#
+# Copyright (c) 2009-2010 h1mesuke
+# Licensed under the same terms as Ruby. No warranty is provided.
+#
+Usage = "edict [-v] word"
+
+suppress_last_newline =
+  ARGV.reject! {|v| v =~ /\A-v\Z/ } ? true : false
+
+unless ARGV.length >= 1
+  puts "usage: #{Usage}"
+  exit 1
+end
+
+module EDict
+
+  # GENE95 辞書
+  # http://www.namazu.org/~tsuchiya/sdic/data/gene.html
+  #
+  DICT = "~/dotfiles/lib/gene95/gene_utf8_unix.txt"
+
+  def search(word)
+    catch(:found) do
+      grep(word) if word =~ /[A-Z]/
+
+      word = word.downcase
+      grep(word)
+
+      [ # *s
+        [/ies\Z/, 'y'],
+        [/ves\Z/, 'fe'],
+        [/ves\Z/, 'f'],
+        [/es\Z/, ''],
+        [/s\Z/, ''],
+        # *ing
+        [/cking\Z/, 'c'],
+        [/([^aiueo])\1ing\Z/, '\1'],
+        [/ing\Z/, ''],
+        [/ing\Z/, 'e'],
+        # *ed
+        [/cked\Z/, 'c'],
+        [/ied\Z/, 'y'],
+        [/([^aiueo])\1ed\Z/, '\1'],
+        [/ed\Z/, ''],
+        [/ed\Z/, 'e'],
+        # *er, *est
+        [/ie(r|st)\Z/, 'y'],
+        [/([^aiueo])\1e(r|st)\Z/, '\1'],
+        [/e(r|st)\Z/, ''],
+        [/(r|st)\Z/, ''],
+        # *ly
+        [/ly\Z/, ''],
+
+      ].each do |pat, rep|
+        w = word.dup
+        w.sub!(pat, rep) && grep(w)
+      end
+
+      [word, "not found\n"]
+    end
+  end
+
+  private
+  def grep(word)
+    grep_out = `cat #{DICT} | grep -A1 '^#{word}$'`.lines.to_a
+    unless grep_out.empty?
+      meaning = grep_out.last
+      throw :found, [word, meaning]
+    end
+  end
+end
+
+include EDict
+word = ARGV.shift.strip
+result = search(word).join(": ")
+result.chomp! if suppress_last_newline
+
+print result
+
+# vim: filetype=ruby
