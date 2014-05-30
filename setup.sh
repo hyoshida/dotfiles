@@ -21,6 +21,10 @@ for dotfile in .?*; do
     fi
 done
 
+# lessの設定ファイルを作成
+print 'Setting for less...'
+lesskey
+
 # サブモジュールをインストール
 print 'Install git submodules...'
 git submodule update --init
