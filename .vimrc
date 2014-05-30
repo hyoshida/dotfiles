@@ -16,6 +16,7 @@ source ~/dotfiles/config/encoding.vimrc
 source ~/dotfiles/config/color.vimrc
 source ~/dotfiles/config/keybind.vimrc
 source ~/dotfiles/config/binary.vimrc
+source ~/dotfiles/config/mark.vimrc
 
 if s:is_supported_tabline
 	source ~/dotfiles/config/tabline.vimrc
