@@ -26,6 +26,7 @@
 	# 改行コードとインデントを無視して比較
 	cmp = diff --ignore-all-space --ignore-space-change
 	lc = log -p --ignore-all-space --ignore-space-change
+	gr = grep --line-number
 [color]
 	ui = auto
 [color "branch"]

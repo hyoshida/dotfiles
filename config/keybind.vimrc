@@ -77,3 +77,6 @@ nmap <F9> mz:execute TabToggle()<CR>'z
 command TabToggle call TabToggle()
 " インデント設定を初期化
 call TabToggle()
+
+" Ctrl-]で複数tagが存在する場合は候補をすべて表示
+nnoremap <C-]> g<C-]>
