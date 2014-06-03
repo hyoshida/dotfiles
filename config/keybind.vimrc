@@ -73,7 +73,7 @@ function TabToggle()
 		set expandtab
 	endif
 endfunction
-nmap <F9> mz:execute TabToggle()<CR>'z
+noremap <F9> mz:execute TabToggle()<CR>'z
 command TabToggle call TabToggle()
 " インデント設定を初期化
 call TabToggle()
