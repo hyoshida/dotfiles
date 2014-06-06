@@ -49,6 +49,6 @@
 [apply]
 	whitespace = fix
 [pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
+	log = diff-highlight | nkf -w | less
+	show = diff-highlight | nkf -w | less
+	diff = diff-highlight | nkf -w | less
