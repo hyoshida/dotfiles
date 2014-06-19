@@ -49,6 +49,6 @@
 [apply]
 	whitespace = fix
 [pager]
-	log = diff-highlight | nkf -w | less
-	show = diff-highlight | nkf -w | less
-	diff = diff-highlight | nkf -w | less
+	log = diff-highlight | (nkf -w 2> /dev/null || cat) | less
+	show = diff-highlight | (nkf -w 2> /dev/null || cat) | less
+	diff = diff-highlight | (nkf -w 2> /dev/null || cat) | less
