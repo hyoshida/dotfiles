@@ -150,6 +150,7 @@ alias pe	'pyenv exec'
 alias csv	"awk -F, -f ${HOME}/.bin/transposed_matrix.awk"
 alias csvless	"column -s, -t | less -#2 -N -S"
 alias ne	"env PATH='${PATH}:node_modules/.bin'"
+alias yget	"youtube-dl --extract-audio --audio-format mp3 --output '${HOME}/youtube/%(id)s_%(title)s.%(ext)s'"
 
 alias emacs	'env XMODIFIERS=@im=none TERM=xterm-256color emacs -nw'
 alias cmus	'env TERM=xterm-256color cmus'
