@@ -13,4 +13,4 @@ fi
 video_full_url=$1
 video_url=`echo ${video_full_url} | sed -E 's/v=([^&]*).*/v=\1/'`
 
-youtube-dl --extract-audio --audio-format mp3 --output "${HOME}/youtube/%(id)s_%(title)s.%(ext)s" "${video_url}"
+youtube-dl --extract-audio --audio-format mp3 --output "${HOME}/youtube/%(title)s_%(id)s.%(ext)s" "${video_url}"
