@@ -8,17 +8,15 @@ nmap <Space>f [unite]
 nnoremap [unite-rails] <Nop>
 nmap <Space>r [unite-rails]
 
-" file_mruの表示フォーマットを指定。空にすると表示スピードが高速化される
-let g:unite_source_file_mru_filename_format = ''
-
-" 入力モードで開始する
-let g:unite_enable_start_insert = 1
-
-" 画面分割ルール: 下 or 右に表示する
-let g:unite_split_rule = 'rightbelow'
-
 " ヤンクの記録を有効化
 let g:unite_source_history_yank_enable = 1
+
+" 各種設定
+call unite#custom#profile('default', 'context', {
+\   'start_insert' : 1,
+\   'prompt_direction' : 'top',
+\   'direction' : 'rightbelow',
+\ })
 
 " バッファ一覧
 nnoremap <silent> [unite]b :<C-u>Unite -buffer-name=buffer buffer<CR>
