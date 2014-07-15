@@ -20,6 +20,7 @@
     monokai-theme
     redo+
     sr-speedbar
+    org-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
