@@ -6,11 +6,11 @@
 TERM=xterm-256color
 
 # local time, color coded by last return code
-time_enabled="%(?.%F{236}.%F{197})%*%{$reset_color%}"
-time_disabled="%F{236}%*%{$reset_color%}"
+time_enabled="%(?.%F{236}.%F{197})%*%f"
+time_disabled="%F{236}%*%f"
 
 # elaborate exitcode on the right when >0
-return_code_enabled="%(?..%F{197}%?↵ %{$reset_color%})"
+return_code_enabled="%(?..%F{197}%?↵ %f)"
 return_code_disabled=
 
 local username='%n'
