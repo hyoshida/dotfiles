@@ -110,6 +110,12 @@ alias pd=pushd
 alias mae=%-
 
 ######################################################################
+#### Key binds.
+######################################################################
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward
+
+######################################################################
 #### Support rbenv commands.
 ######################################################################
 if [[ -x $HOME/.rbenv/bin/rbenv ]]; then
@@ -146,3 +152,13 @@ if exists percol; then
     zle -N percol_select_history
     bindkey '^R' percol_select_history
 fi
+
+######################################################################
+#### Override clear-screen widget.
+######################################################################
+clear-screen() {
+  date '+ %n%n--- CLEARED: %Y-%m-%d %H:%M:%S ---%n '
+  clear
+  zle reset-prompt
+}
+zle -N clear-screen
