@@ -165,3 +165,9 @@ clear-screen() {
   zle reset-prompt
 }
 zle -N clear-screen
+
+######################################################################
+#### Completion settings.
+######################################################################
+# 補完時の色にはLS_COLORSを利用する
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
