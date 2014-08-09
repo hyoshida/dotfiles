@@ -171,3 +171,17 @@ zle -N clear-screen
 ######################################################################
 # 補完時の色にはLS_COLORSを利用する
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# 未入力時の^Iの挙動を変更
+# refs: http://unix.stackexchange.com/questions/14230/zsh-tab-completion-on-empty-line
+expand-or-complete-or-list-files() {
+    if [[ $#BUFFER == 0 ]]; then
+        BUFFER="ls "
+        CURSOR=3
+        zle list-choices
+    else
+        zle expand-or-complete
+    fi
+}
+zle -N expand-or-complete-or-list-files
+bindkey '^I' expand-or-complete-or-list-files
