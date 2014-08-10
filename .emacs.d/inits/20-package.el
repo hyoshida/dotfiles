@@ -12,7 +12,7 @@
     monokai-theme
     anything
     redo+
-    org-mode
+    org
     php-mode
     scala-mode
     markdown-mode
