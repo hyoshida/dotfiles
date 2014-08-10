@@ -7,6 +7,12 @@
 
 (defvar installing-package-list
   '(
+    tabbar
+    powerline
+    monokai-theme
+    anything
+    redo+
+    org-mode
     php-mode
     scala-mode
     markdown-mode
@@ -14,13 +20,7 @@
     yaml-mode
     slim-mode
     coffee-mode
-    tabbar
-    powerline
-    anything
-    monokai-theme
-    redo+
     sr-speedbar
-    org-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
