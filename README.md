@@ -13,7 +13,7 @@ dotfilesとは.vimrcや.cshrcなどの設定ファイルの総称です。
 
 ## 推奨環境
 
-* tcsh: 6.17.x
+* zsh 4.3 以上
 * tmux: 1.4 以上
 * git: 1.7.11 以上
 * vim: 7.2 以上
