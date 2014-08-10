@@ -36,3 +36,8 @@ percol.view.CANDIDATES_LINE_BASIC    = ("on_default", "default")
 percol.view.CANDIDATES_LINE_SELECTED = ("underline", "on_magenta", "white")
 percol.view.CANDIDATES_LINE_MARKED   = ("bold", "on_cyan", "black")
 percol.view.CANDIDATES_LINE_QUERY    = ("underline", "on_yellow", "black")
+
+# Prompt at the bottom
+# refs: https://github.com/mooz/percol/issues/9
+percol.view.prompt_on_top = False
+percol.view.results_top_down = False
