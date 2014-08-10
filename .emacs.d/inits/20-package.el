@@ -29,4 +29,5 @@
   (when not-installed
     (package-refresh-contents)
     (dolist (pkg not-installed)
+      (message (concat "Installing package: " (symbol-name pkg)))
       (package-install pkg))))
