@@ -138,15 +138,18 @@ fi
 
 ######################################################################
 #### Settings for percol.
+#### refs: https://github.com/mooz/percol#zsh-history-search
 ######################################################################
-# refs: https://github.com/mooz/percol#zsh-history-search
 function exists { which $1 &> /dev/null }
+
+# refs: http://stackoverflow.com/questions/11532157/unix-removing-duplicate-lines-without-sorting
+function uniq_without_sort { awk ' !x[$0]++' }
 
 if exists percol; then
     function percol_select_history() {
         local tac
         exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
-        BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
+        BUFFER=$(fc -l -n 1 | uniq_without_sort | eval $tac | percol --query "$LBUFFER")
         CURSOR=$#BUFFER         # move cursor
         # FreeBSD(or MacOSX?)だとpromptが表示されなくなるのでreset-promptで代用
         # refs: https://twitter.com/shiba_yu36/status/386383666592497664
