@@ -124,6 +124,13 @@ bindkey '^[i' reverse-menu-complete
 bindkey "^[/" redo
 
 ######################################################################
+#### Support MacPorts commands.
+######################################################################
+if [[ -x /opt/local/bin/port ]]; then
+    export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+fi
+
+######################################################################
 #### Support rbenv commands.
 ######################################################################
 if [[ -x $HOME/.rbenv/bin/rbenv ]]; then
