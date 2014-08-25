@@ -45,6 +45,7 @@ nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yank history/yank<CR>
 " unite-rails: Rails系のファイル一覧
 nnoremap <silent> [unite-rails]m :<C-u>Unite -buffer-name=rails/model rails/model -vertical<CR>
 nnoremap <silent> [unite-rails]c :<C-u>Unite -buffer-name=rails/controller rails/controller -vertical<CR>
+nnoremap <silent> [unite-rails]f :<C-u>Unite -buffer-name=rails/config rails/config -vertical<CR>
 nnoremap <silent> [unite-rails]v :<C-u>Unite -buffer-name=rails/view rails/view -vertical<CR>
 nnoremap <silent> [unite-rails]h :<C-u>Unite -buffer-name=rails/helper rails/helper -vertical<CR>
 nnoremap <silent> [unite-rails]l :<C-u>Unite -buffer-name=rails/lib rails/lib -vertical<CR>
