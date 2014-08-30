@@ -23,7 +23,7 @@ nnoremap <silent> [unite]b :<C-u>Unite -buffer-name=buffer buffer<CR>
 " タブ一覧
 nnoremap <silent> [unite]t :<C-u>Unite -buffer-name=tab tab<CR>
 " ファイル一覧
-nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=file file<CR>
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=file file file/new directory/new<CR>
 " レジスタ一覧
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 " 最近使用したファイル一覧
