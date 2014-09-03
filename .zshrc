@@ -69,6 +69,9 @@ export EDITOR=vim
 # Store commands prefixed with a space
 unsetopt hist_ignore_space
 
+# Don't share history real-time between instances
+unsetopt share_history
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
