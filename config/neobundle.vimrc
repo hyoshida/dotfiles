@@ -38,6 +38,7 @@ NeoBundle 'Shougo/neomru.vim'
 " UI
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'lilydjwg/colorizer'
+NeoBundle 'severin-lemaignan/vim-minimap'
 
 " Snippets
 NeoBundle 'Shougo/neosnippet'

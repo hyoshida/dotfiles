@@ -34,4 +34,5 @@ if s:can_neobundle
 	source ~/dotfiles/config/switch.vimrc
 	source ~/dotfiles/config/vim-powerline.vimrc
 	source ~/dotfiles/config/operator-camelize.vimrc
+	source ~/dotfiles/config/vim-minimap.vimrc
 endif
