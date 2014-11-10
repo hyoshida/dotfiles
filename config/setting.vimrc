@@ -55,3 +55,6 @@ set tags=~/.tags,gems.tags
 " 新しいウィンドウを現在のウィンドウの下か右に開く
 set splitbelow
 set splitright
+
+" :vimgrep, :grep などで常に Quickfix を開くようにする
+autocmd QuickFixCmdPost *grep* cwindow
