@@ -203,3 +203,12 @@ expand-or-complete-or-list-files() {
 }
 zle -N expand-or-complete-or-list-files
 bindkey '^I' expand-or-complete-or-list-files
+
+######################################################################
+#### for homeshick.
+######################################################################
+source $HOME/.homesick/repos/homeshick/homeshick.sh
+
+# enable completions
+fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+compinit
