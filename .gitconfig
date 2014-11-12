@@ -30,6 +30,9 @@
 	# colorized cheery -v
 	# original: https://github.com/yuroyoro/dotfiles/commit/859732dc4814e863394e1f34b6f7eea8e9e47a23
 	cch= "!f() { git cherry -v "$@" | awk '{ if($1 == \"+\"){ color = \"green\" } if($1 == \"-\"){ color = \"red\" } cmd = \"git show --date=short --no-notes --pretty=format:\\047%C\" color $1 \" %h %C(blue)%cd %C(white)%s - %C(bold white)%cn%x09%C(reset)\\047 --summary \" $2; cmd | getline t; close(cmd); print t }' ;}; f"
+	# safed reset --hard HEAD
+	# original: http://d.hatena.ne.jp/thinca/20120924/1348491052
+	cancel = !git commit -a -m 'Temporary commit for cancel' && git reset --hard HEAD~
 [color]
 	ui = auto
 [color "branch"]
