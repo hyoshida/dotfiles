@@ -51,6 +51,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Words, regions and marks
+# refs: http://zsh.sourceforge.net/Guide/zshguide04.html
+WORDCHARS="*?_-.[]~=/&;!#$%^(){}<>"
+export WORDCHARS=${WORDCHARS//[.;\/]}
+
 export PATH=$HOME/bin:$HOME/.bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
