@@ -10,16 +10,14 @@ print() {
     printf "\033[1;32m$*\033[0;39m\n"
 }
 
-now=`date '+%Y%m%d%H%M%S'`
-mkdir $CURRENT_DIR/backups/$now
-for dotfile in .?*; do
-    if [ $dotfile != '..' ] && [ $dotfile != '.git' ] && [ $dotfile != '.gitignore' ]; then
-        if [ -e $HOME/$dotfile ]; then
-            mv $HOME/$dotfile $CURRENT_DIR/backups/$now
-        fi
-        ln -s $CURRENT_DIR/$dotfile $HOME
-    fi
-done
+print 'Install dotfiles...'
+homeshick link dotfiles
+homeshick cd dotfiles
+if [ -e $HOME/dotfiles ]; then
+    rm $HOME/dotfiles
+fi
+ln -sf `pwd` $HOME/dotfiles
+cd -
 
 # lessの設定ファイルを作成
 print 'Setting for less...'
