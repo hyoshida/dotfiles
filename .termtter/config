@@ -26,7 +26,7 @@ config.plugins.stdout.timeline_format = [
   '<%= color(time, :cyan) %> ',
   '<%= color("[#{status_id}]", :cyan) %> ',
   '<%= indent_text %>',
-  '<<%=color%>><%="#{s.user.name}(@#{s.user.screen_name})"%>: <%=text%></<%=color%>> ',
+  '<<%=color%>><%="#{s.user.name}(@#{s.user.screen_name})"%>: <%=retweet_text(s) || text%></<%=color%>> ',
   '<%= color("(reply_to [#{reply_to_status_id}]) ", :cyan) if reply_to_status_id %>',
   '<%= color("(retweet_to [#{retweeted_status_id}]) ", :cyan) if retweeted_status_id %>',
   '<%=',
@@ -38,6 +38,12 @@ config.plugins.stdout.timeline_format = [
   '<%= color(source, :blue) %> ',
   '<%= color("[P]", :blue) if s[:user][:protected] %>',
 ].join('')
+
+def retweet_text(statuses)
+  retweet = statuses[:retweeted_status]
+  return unless retweet
+  colorize_users("RT @#{retweet.user.screen_name}: #{retweet.text}")
+end
 
 def color(str, value)
   return str if value == :none
