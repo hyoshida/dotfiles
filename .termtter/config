@@ -1,0 +1,217 @@
+# -*- coding: utf-8 -*-
+# vim: filetype=ruby
+
+config.token_file = '~/.termtter/token'
+config.dmsg_permission = true
+
+config.update_interval = 120
+#config.timeout = 60
+#config.retry = 3
+#config.enable_ssl = true
+#config.proxy.host = 'proxy host'
+#config.proxy.port = '8080'
+#config.proxy.user_name = 'proxy user'
+#config.proxy.password = 'proxy password'
+
+#config.plugins.keyword.keywords = ["termtter"]
+config.confirm = true
+#config.plugins.stdout.colors = (31..36).to_a + (91..96).to_a
+
+config.plugins.alias.aliases = {
+  :o => 'open_url'
+}
+
+config.plugins.open_url.browser = '/usr/local/bin/chrome'
+config.plugins.stdout.timeline_format = [
+  '<%= color(time, :cyan) %> ',
+  '<%= color("[#{status_id}]", :cyan) %> ',
+  '<%= indent_text %>',
+  '<<%=color%>><%="#{s.user.name}(@#{s.user.screen_name})"%>: <%=text%></<%=color%>> ',
+  '<%= color("(reply_to [#{reply_to_status_id}]) ", :cyan) if reply_to_status_id %>',
+  '<%= color("(retweet_to [#{retweeted_status_id}]) ", :cyan) if retweeted_status_id %>',
+  '<%=',
+  '  retweet_count = "retweet:#{s[:retweet_count]}" if s[:retweet_count].nonzero?;',
+  '  favorite_count = "favorite:#{s[:favorite_count]}" if s[:favorite_count].nonzero?;',
+  '  counts = [retweet_count, favorite_count].compact.join(",");',
+  '  color("#{counts} ", 90) unless counts.empty?',
+  '%>',
+  '<%= color(source, :blue) %> ',
+  '<%= color("[P]", :blue) if s[:user][:protected] %>',
+].join('')
+
+def color(str, value)
+  return str if value == :none
+  case value
+  when String, Symbol
+    HighLine.new.color(str, value)
+  else
+    "\e[#{value}m#{str}\e[0m"
+  end
+end
+
+Termtter::Client.init do |t|
+#  t.plug 'reblog'
+#  t.plug 'wassr'
+#  t.plug 'reply_retweet'
+#  t.plug 'typable_id'
+#  t.plug 'notify-send2'
+#  t.plug 'train'
+#  t.plug 'http_server'
+#  t.plug 'translation'
+#  t.plug 'me'
+#  t.plug 'curry'
+#  t.plug 'uri-open'
+#  t.plug 'nop'
+#  t.plug 'hatebu'
+#  t.plug 'w3mimg'
+#  t.plug 'easy_post'
+#  t.plug 'quote'
+#  t.plug 'eject'
+#  t.plug 'scrape'
+#  t.plug 'saykanji'
+#  t.plug 'ndkn'
+#  t.plug 'countter'
+#  t.plug 'stream'
+#  t.plug 'notify-send3'
+#  t.plug 'favotter'
+#  t.plug 'wassr_post'
+#  t.plug 'hi'
+#  t.plug 'timer'
+#  t.plug 'list_with_opts'
+#  t.plug 'short_logger'
+#  t.plug 'list_switch'
+#  t.plug 'filter'
+#  t.plug 'footer'
+#  t.plug 'basic'
+#  t.plug 'spam'
+#  t.plug 'googl'
+  t.plug 'custom_prompt'
+#  t.plug 'pre_exec_hook_sample'
+#  t.plug 'screen-notify'
+#  t.plug 'modify_arg_hook_sample'
+#  t.plug 'growl'
+#  t.plug 'search_url'
+#  t.plug 'expand_url'
+#  t.plug 'linefeed'
+#  t.plug 'event_invoked_at'
+#  t.plug 'toppo'
+#  t.plug 'confirm'
+#  t.plug 'g'
+#  t.plug 'channel'
+#  t.plug 'update_editor'
+#  t.plug 'system_status'
+#  t.plug 'multi_output'
+  t.plug 'url'
+  t.plug 'open_url'
+#  t.plug 'mashimaro'
+#  t.plug 'mudan_kinshi'
+#  t.plug 'reduce_text'
+#  t.plug 'april_fool'
+#  t.plug 'ignore'
+#  t.plug 'bomb'
+#  t.plug 'sl'
+#  t.plug 'replace'
+#  t.plug 'ar-single'
+#  t.plug 'clear'
+#  t.plug 'db'
+#  t.plug 'crypt'
+#  t.plug 'multi_post'
+#  t.plug 'geo'
+#  t.plug 'group'
+#  t.plug 'keyword'
+#  t.plug 'draft'
+#  t.plug 'outputz'
+#  t.plug 'ruby-v'
+#  t.plug 'another_prompt'
+#  t.plug 'other_user'
+#  t.plug 'gsub'
+#  t.plug 'protected_filter'
+#  t.plug 'reply_sound'
+#  t.plug 'cool'
+#  t.plug 'encoding'
+#  t.plug 'im_kayac'
+#  t.plug 'trends'
+#  t.plug 'paranoid'
+  t.plug 'yonda'
+#  t.plug 'github-issues'
+#  t.plug 'hugeurl'
+#  t.plug 'multi_reply'
+#  t.plug 'dupu'
+#  t.plug 'open'
+#  t.plug 'line'
+#  t.plug 'shell'
+#  t.plug 'quick_exit'
+#  t.plug 'twitpic'
+#  t.plug 'capital_update'
+#  t.plug 'primes'
+#  t.plug 'story'
+#  t.plug 'web'
+#  t.plug 'reply'
+#  t.plug 'quicklook'
+#  t.plug 'gist'
+#  t.plug 'source'
+#  t.plug 'suspend'
+#  t.plug 'nuance'
+#  t.plug 'translate_tweet'
+#  t.plug 'fibyou'
+#  t.plug 'pool'
+#  t.plug 'en2ja'
+#  t.plug 'fib_filter'
+#  t.plug 'english'
+#  t.plug 'whois'
+#  t.plug 'mecab'
+#  t.plug 'post_exec_hook_sample'
+#  t.plug 'user_stream'
+#  t.plug 'friends'
+#  t.plug 'hatebu_and_update'
+#  t.plug 'graduatter'
+#  t.plug 'fluentd'
+#  t.plug 'ar'
+#  t.plug 'switch_user'
+#  t.plug 'itunes'
+#  t.plug 'clock'
+#  t.plug 'erb'
+#  t.plug 'copy'
+#  t.plug 'history'
+#  t.plug 'hatena_keyword_haiku'
+#  t.plug 'random'
+#  t.plug 'screen'
+#  t.plug 'reload'
+#  t.plug 'aa'
+#  t.plug 'error_log'
+#  t.plug 'gem_install'
+#  t.plug 'notify-send'
+#  t.plug 'haml'
+#  t.plug 'reverse'
+#  t.plug 'md5pass'
+#  t.plug 'command_plus'
+#  t.plug 'mark'
+#  t.plug 'appendtitle'
+#  t.plug 'storage'
+#  t.plug 'foo'
+#  t.plug 'log'
+#  t.plug 'mongo'
+#  t.plug 'irc_gw'
+#  t.plug 'yhara_filter'
+#  t.plug 'whale'
+#  t.plug 'grass'
+#  t.plug 'otsune'
+#  t.plug 'jakigan'
+#  t.plug 'gyazo'
+#  t.plug 'growl2'
+#  t.plug 'time_signal'
+#  t.plug 'l2'
+#  t.plug 'async'
+#  t.plug 'searchline'
+#  t.plug 'nyancat'
+#  t.plug 'capture'
+#  t.plug 'msagent'
+#  t.plug 'yhara'
+#  t.plug 'truncate'
+#  t.plug 'url_shortener'
+#  t.plug 'erase'
+#  t.plug 'exec_and_update'
+#  t.plug 'say'
+#  t.plug 'babelfish'
+#  t.plug 'addspace'
+end
