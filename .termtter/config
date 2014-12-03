@@ -219,5 +219,5 @@ Termtter::Client.init do |t|
 #  t.plug 'exec_and_update'
 #  t.plug 'say'
 #  t.plug 'babelfish'
-#  t.plug 'addspace'
+  t.plug 'addspace'
 end
