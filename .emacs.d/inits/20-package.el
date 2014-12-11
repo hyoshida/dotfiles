@@ -21,6 +21,8 @@
     slim-mode
     coffee-mode
     sr-speedbar
+
+    wanderlust
     ))
 
 (let ((not-installed (loop for x in installing-package-list
