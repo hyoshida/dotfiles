@@ -16,6 +16,16 @@
       ;;for non ascii-characters in folder-names
       elmo-imap4-use-modified-utf7 t)
 
+;; POP3
+(setq elmo-pop3-default-server "mail44.kbmj.jp"
+      elmo-pop3-default-user "hyoshida"
+      elmo-imap4-default-authenticate-type 'clear
+      elmo-pop3-default-port '110
+      elmo-pop3-default-stream-type 'starttls
+
+      ;; for insecure connection
+      starttls-extra-arguments '("--insecure"))
+
 ;; SMTP
 (setq wl-smtp-connection-type 'starttls
       wl-smtp-posting-port 587
@@ -86,3 +96,21 @@
 (setq wl-summary-line-format-spec-alist
   (append wl-summary-line-format-spec-alist
     '((?@ (wl-summary-line-attached)))))
+
+;; Notify Mail arrival
+(setq wl-biff-check-folder-list '("%inbox"))
+(setq wl-biff-check-interval 60)
+(setq wl-biff-use-idle-timer t)
+; (setq wl-biff-notify-hook (lambda() (popup-message "Wanderlust" "You have new mail!")))
+(setq wl-biff-notify-hook '(ding))
+
+;; refs http://www.funtoo.org/Package:Emacs
+(defun popup-message (title msg &optional sound)
+  "Show a popup if we're on X, or echo it otherwise; TITLE is the title of the message, MSG is the context. Optionally, you can provide a sound to be played"
+  (interactive)
+  (when sound (shell-command
+               (concat "mplayer -really-quiet " sound " 2> /dev/null")))
+  (if (eq window-system 'x)
+      (shell-command (concat "notify-send '" title "' '" msg "'"))
+    ;; text only version
+    (message (concat title ": " msg))))
