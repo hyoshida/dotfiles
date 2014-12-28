@@ -14,7 +14,7 @@ config.update_interval = 120
 #config.proxy.password = 'proxy password'
 
 #config.plugins.keyword.keywords = ["termtter"]
-config.confirm = true
+config.confirm = false
 #config.plugins.stdout.colors = (31..36).to_a + (91..96).to_a
 
 config.plugins.alias.aliases = {
