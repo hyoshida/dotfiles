@@ -36,3 +36,6 @@
 
 ;; ファイル末尾に改行を自動挿入
 (setq require-final-newline t)
+
+;; オートインデントでスペースを使う
+(setq-default indent-tabs-mode nil)
