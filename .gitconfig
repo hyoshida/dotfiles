@@ -6,7 +6,7 @@
 	name = YOSHIDA Hiroki
 	email = hyoshida@appirits.com
 [alias]
-	st = status
+	st = status -sb
 	co = checkout
 	cp = cherry-pick
 	br = branch
