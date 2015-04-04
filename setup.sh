@@ -38,7 +38,7 @@ ln -s $CURRENT_DIR/.rbenv_plugins $CURRENT_DIR/.rbenv/plugins
 
 # vimプラグインをインストール
 print 'Install NeoBundle for vim...'
-vim +NeoBundleInstall +NeoBundleUpdate +q
+vim :NeoBundleInstall +q
 
 # git-flowをインストール
 print 'Install git-flow...'
