@@ -8,15 +8,6 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimproc', {
-	\ 'build' : {
-	\     'windows' : 'make -f make_mingw32.mak',
-	\     'cygwin'  : 'make -f make_cygwin.mak',
-	\     'mac'     : 'make -f make_mac.mak',
-	\     'unix'    : 'make -f make_unix.mak',
-	\ },
-\ }
-NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tsaleh/vim-matchit'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'

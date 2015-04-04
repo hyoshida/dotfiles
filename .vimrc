@@ -26,7 +26,6 @@ if s:can_neobundle
 	source ~/dotfiles/config/vimshell.vimrc
 	source ~/dotfiles/config/vimfiler.vimrc
 	source ~/dotfiles/config/unite.vimrc
-	source ~/dotfiles/config/quickrun.vimrc
 	source ~/dotfiles/config/tinymode.vimrc
 	source ~/dotfiles/config/neocomplcache.vimrc
 	source ~/dotfiles/config/neosnippet.vimrc
