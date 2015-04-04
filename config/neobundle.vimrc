@@ -1,7 +1,18 @@
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
 if has('vim_starting')
+	if &compatible
+		set nocompatible " be iMproved
+	endif
 	set runtimepath+=~/.vim/bundle/neobundle.vim
-	call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Utils
 NeoBundle 'Shougo/neobundle.vim'
@@ -59,3 +70,12 @@ NeoBundle 'sickill/vim-monokai'
 
 " hyoshida plugins
 NeoBundle 'hyoshida/unite-cmus'
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck

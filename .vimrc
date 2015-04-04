@@ -2,13 +2,11 @@ let s:is_supported_tabline = (v:version >= 700)
 let s:can_neobundle = (v:version >= 702)
 
 " ===== NeoBundle =====
-set nocompatible " be iMproved
 filetype off
 if s:can_neobundle
 	source ~/dotfiles/config/neobundle.vimrc
 endif
 syntax on
-filetype plugin indent on
 " ===== /NeoBundle ======
 
 source ~/dotfiles/config/setting.vimrc
