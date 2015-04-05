@@ -98,7 +98,6 @@ alias ts='tmux list-session'
 alias be='bundle exec'
 alias re='rbenv exec'
 alias pe='pyenv exec'
-alias ne="env PATH='${PATH}:node_modules/.bin'"
 alias csv="awk -F, -f ${HOME}/.bin/transposed_matrix.awk"
 alias csvless="column -s, -t | less -#2 -N -S"
 alias emacs='env XMODIFIERS=@im=none TERM=xterm-256color emacs -nw'
@@ -107,6 +106,11 @@ alias euc='env LANG=ja_JP.eucJP'
 alias processing='env LANG=C processing'
 alias m=mplayer
 alias percol="${HOME}/dotfiles/percol/bin/percol"
+
+# for npm
+if which npm &> /dev/null; then
+  alias ne="env PATH='${PATH}:$(npm root)/.bin:$(npm -g root)/.bin'"
+fi
 
 # alias for BSD
 case "$OSTYPE" in
