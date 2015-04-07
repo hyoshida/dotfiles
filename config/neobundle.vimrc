@@ -19,6 +19,16 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
+NeoBundle 'Shougo/vimproc', {
+	\ 'build' : {
+	\     'windows' : 'tools\\update-dll-mingw',
+	\     'cygwin'  : 'make -f make_cygwin.mak',
+	\     'mac'     : 'make -f make_mac.mak',
+	\     'linux'   : 'make',
+	\     'unix'    : 'gmake',
+	\ },
+\ }
+NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tinymode.vim'
