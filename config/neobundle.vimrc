@@ -34,6 +34,7 @@ NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tinymode.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'chrisbra/csv.vim'
+NeoBundle 'thinca/vim-qfreplace'
 
 " Text-editing
 NeoBundle 'vim-scripts/VisIncr'
