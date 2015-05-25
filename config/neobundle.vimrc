@@ -78,6 +78,9 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'sickill/vim-monokai'
 
+" Lint
+NeoBundle 'scrooloose/syntastic.git'
+
 " hyoshida plugins
 NeoBundle 'hyoshida/unite-cmus'
 
