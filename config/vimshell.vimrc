@@ -1,8 +1,8 @@
 " vimshell prefix key.
 nnoremap [vimshell] <Nop>
 vnoremap [vimshell] <Nop>
-nmap <Space>v [vimshell]
-vmap <Space>v [vimshell]
+nmap <Leader>v [vimshell]
+vmap <Leader>v [vimshell]
 
 " VimShellPopの際に縦分割で開く
 let g:vimshell_popup_command = 'vsplit'

@@ -1,6 +1,6 @@
 " vim-minimap
 nnoremap [minimap] <Nop>
-nmap <Space>m [minimap]
+nmap <Leader>m [minimap]
 
 nnoremap <silent> [minimap]m :call ShowOrReloadMinimap()<CR>
 nnoremap <silent> [minimap]k :call CloseMinimap()<CR>

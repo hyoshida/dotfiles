@@ -11,7 +11,7 @@ endfunction"}}}
 
 " fugitive prefix key.
 nnoremap [fugitive] <Nop>
-nmap <Space>g [fugitive]
+nmap <Leader>g [fugitive]
 
 nnoremap <silent> [fugitive]st :<C-u>Gstatus<CR>
 nnoremap <silent> [fugitive]ci :<C-u>Gcommit<CR>

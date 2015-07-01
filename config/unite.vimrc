@@ -2,11 +2,11 @@
 
 " unite prefix key.
 nnoremap [unite] <Nop>
-nmap <Space>f [unite]
+nmap <Leader>f [unite]
 
 " unite-rails prefix key.
 nnoremap [unite-rails] <Nop>
-nmap <Space>r [unite-rails]
+nmap <Leader>r [unite-rails]
 
 " ヤンクの記録を有効化
 let g:unite_source_history_yank_enable = 1
