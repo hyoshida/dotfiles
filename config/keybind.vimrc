@@ -22,7 +22,7 @@ function! s:Repl()
 endfunction
 " NB: this supports "rp that replaces the selection by the
 " contents of @r
-vnoremap <silent> <expr> =p <sid>Repl()
+vnoremap <silent> <expr> p <sid>Repl()
 
 "インサートモード時のキーバインドをemacs風にする
 " カーソル移動
