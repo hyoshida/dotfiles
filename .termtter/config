@@ -26,7 +26,7 @@ config.plugins.stdout.timeline_format = [
   '<%= color(time, :cyan) %> ',
   '<%= color("[#{status_id}]", :cyan) %> ',
   '<%= indent_text %>',
-  '<<%=color%>><%="#{s.user.name}(@#{s.user.screen_name})"%>: <%=retweet_text(s) || text%></<%=color%>> ',
+  '<<%=color%>><%="#{s.user.name}(@#{s.user.screen_name})"%>:</<%=color%>> <%=retweet_text(s) || text%> ',
   '<%= color("(reply_to [#{reply_to_status_id}]) ", :cyan) if reply_to_status_id %>',
   '<%= color("(retweet_to [#{retweeted_status_id}]) ", :cyan) if retweeted_status_id %>',
   '<%=',
