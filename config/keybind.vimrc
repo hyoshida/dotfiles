@@ -1,3 +1,5 @@
+let mapleader = "\<Space>"
+
 " expand dir path
 cmap <C-x> <c-r>=expand('%:h')<CR>/
 " expand file path
@@ -44,13 +46,13 @@ inoremap <C-_> <C-o>u
 " 貼りつけ
 inoremap <C-y> <C-o>P
 
-" \eキーでファイルタイプにあったインタプリタを実行
-au Filetype ruby       nnoremap <buffer><leader>e :!ruby %<Return>
-au Filetype perl       nnoremap <buffer><leader>e :!perl %<Return>
-au Filetype haskell    nnoremap <buffer><leader>e :!runghc %<Return>
-au Filetype scheme     nnoremap <buffer><leader>e :!gosh %<Return>
-au Filetype javascript nnoremap <buffer><leader>e :!js %<Return>
-au Filetype vim        nnoremap <silent><leader>e :source %<Return>
+" ファイルタイプにあったインタプリタを実行
+au Filetype ruby       nnoremap <buffer><Leader>e :!ruby %<Return>
+au Filetype perl       nnoremap <buffer><Leader>e :!perl %<Return>
+au Filetype haskell    nnoremap <buffer><Leader>e :!runghc %<Return>
+au Filetype scheme     nnoremap <buffer><Leader>e :!gosh %<Return>
+au Filetype javascript nnoremap <buffer><Leader>e :!js %<Return>
+au Filetype vim        nnoremap <silent><Leader>e :source %<Return>
 
 " ウィンドウ分割操作をtmux風にする
 " Ctrl-"でウィンドウを横分割 (like tmux)
