@@ -80,3 +80,7 @@ call TabToggle()
 
 " Ctrl-]で複数tagが存在する場合は候補をすべて表示
 nnoremap <C-]> g<C-]>
+
+" Quickly select text you just pasted
+" from: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
+noremap v` `[v`]
