@@ -13,6 +13,7 @@
     helm
     redo+
     org
+    evil
     php-mode
     scala-mode
     markdown-mode
