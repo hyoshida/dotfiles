@@ -10,7 +10,7 @@
     tabbar
     powerline
     monokai-theme
-    anything
+    helm
     redo+
     org
     php-mode
