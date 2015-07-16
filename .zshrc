@@ -106,6 +106,7 @@ alias euc='env LANG=ja_JP.eucJP'
 alias processing='env LANG=C processing'
 alias m=mplayer
 alias percol="${HOME}/dotfiles/percol/bin/percol"
+alias evil='emacs -f evil-mode'
 
 # for npm
 if which npm &> /dev/null; then
