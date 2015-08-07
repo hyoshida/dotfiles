@@ -2,7 +2,6 @@
 set showtabline=2
 
 " タブ操作を簡略化
-"nnoremap <silent> tc :<C-u>tabnew<CR>
 nnoremap <silent> tx :<C-u>tabclose<CR>
 nnoremap <silent> te :<C-u>tabedit<CR>
 nnoremap <silent> tf :<C-u>tabfirst<CR>
@@ -10,8 +9,10 @@ nnoremap <silent> tl :<C-u>tablast<CR>
 nnoremap <silent> tn :<C-u>tabnext<CR>
 nnoremap <silent> tN :<C-u>tabNext<CR>
 nnoremap <silent> tp :<C-u>tabprevious<CR>
-"nnoremap <silent> to :<C-u>tabonly<CR>
 nnoremap <silent> ts :<C-u>tabs<CR>
+nnoremap <silent> <ESC>n :<C-u>tabnext<CR>
+nnoremap <silent> <ESC>p :<C-u>tabprevious<CR>
+
 cabbrev te tabe
 
 "カレントウィンドウを新規タブで開き直す
