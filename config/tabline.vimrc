@@ -10,8 +10,6 @@ nnoremap <silent> tn :<C-u>tabnext<CR>
 nnoremap <silent> tN :<C-u>tabNext<CR>
 nnoremap <silent> tp :<C-u>tabprevious<CR>
 nnoremap <silent> ts :<C-u>tabs<CR>
-nnoremap <silent> <ESC>n :<C-u>tabnext<CR>
-nnoremap <silent> <ESC>p :<C-u>tabprevious<CR>
 
 cabbrev te tabe
 
