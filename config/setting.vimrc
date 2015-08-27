@@ -1,8 +1,6 @@
 " ビープ音を鳴らさない
 set vb t_vb=
 
-" 行番号を表示する
-set number
 " ルーラーを表示
 set ruler
 " タブ文字を CTRL-I で表示し、行末に $ で表示する
