@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>EMACS</appname>
+    <equal>org.gnu.Emacs</equal>
+    <equal>org.gnu.AquamacsEmacs</equal>
+    <equal>org.gnu.Aquamacs</equal>
+    <equal>org.pqrs.unknownapp.conkeror</equal>
+    <equal>com.github.atom</equal>
+    <equal>com.jetbrains.rubymine</equal>
+  </appdef>
+
+  <item>
+    <name>Swap Control and Command (only in Eamcs)</name>
+    <only>EMACS</only>
+    <identifier>private.swap_control_and_command</identifier>
+    <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_L</autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::TAB, ModifierFlag::CONTROL_L,
+      KeyCode::TAB, ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::KEY_1, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_1, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::KEY_2, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_2, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::KEY_3, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_3, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::KEY_4, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_4, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::KEY_5, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_5, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::KEY_6, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_6, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::KEY_7, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_7, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::KEY_8, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_8, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::KEY_9, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_9, ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+
+  <item>
+    <name>Use Terminal Style Bindings (except Eamcs)</name>
+    <not>EMACS</not>
+    <identifier>private.use_terminal_style_bindings</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::M, ModifierFlag::COMMAND_L,
+      KeyCode::RETURN
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::H, ModifierFlag::COMMAND_L,
+      KeyCode::DELETE
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::I, ModifierFlag::COMMAND_L,
+      KeyCode::TAB
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::I, ModifierFlag::OPTION_L,
+      KeyCode::TAB, ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L,
+      KeyCode::ESCAPE
+    </autogen>
+  </item>
+</root>
