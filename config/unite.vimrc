@@ -24,6 +24,7 @@ nnoremap <silent> [unite]b :<C-u>Unite -buffer-name=buffer buffer<CR>
 nnoremap <silent> [unite]t :<C-u>Unite -buffer-name=tab tab<CR>
 " ファイル一覧
 nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=file file file/new directory/new<CR>
+nnoremap <silent> [unite]F :<C-u>call DispatchUniteFileRecAsyncOrGit()<CR>
 " レジスタ一覧
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 " 最近使用したファイル一覧
@@ -77,3 +78,12 @@ endfunction"}}}
 
 " デフォルトアクション変更: ファイルは新しいタブで開く
 call unite#custom_default_action('file', 'tabopen')
+
+" from http://qiita.com/yuku_t/items/9263e6d9105ba972aea8
+function! DispatchUniteFileRecAsyncOrGit()
+  if isdirectory(getcwd()."/.git")
+    Unite file_rec/git
+  else
+    Unite file_rec/async
+  endif
+endfunction
