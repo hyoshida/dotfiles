@@ -18,6 +18,11 @@
     <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_L</autogen>
     <autogen>
       __KeyToKey__
+      KeyCode::SPACE, ModifierFlag::CONTROL_L,
+      KeyCode::SPACE, ModifierFlag::COMMAND_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
       KeyCode::TAB, ModifierFlag::CONTROL_L,
       KeyCode::TAB, ModifierFlag::COMMAND_L
     </autogen>
