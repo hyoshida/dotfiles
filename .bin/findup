@@ -1,0 +1,2 @@
+#!/bin/sh
+find $* -type f | ([ -x "`which sha1sum 2> /dev/null`" ] && xargs sha1sum || xargs shasum) | awk '{ p[$1] = p[$1] ? p[$1] " = " $2 : $2 } END { for (key in p) { if (p[key] ~ / = /) print p[key] } }'
