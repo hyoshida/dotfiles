@@ -1,13 +1,5 @@
 #!/bin/sh
-# from http://www.techques.com/question/1-591923/Make-git-automatically-remove-trailing-whitespace-before-committing
-esed() {
-  if [ "$OSTYPE" = 'darwin' ]; then
-    sed -E "$@"
-  else
-    sed -r "$@"
-  fi
-}
-
+# from http://stackoverflow.com/questions/591923/make-git-automatically-remove-trailing-whitespace-before-committing
 if git-rev-parse --verify HEAD > /dev/null 2>&1; then
   against=HEAD
 else
@@ -16,7 +8,7 @@ else
 fi
 
 # Find files with trailing whitespace
-for FILE in `exec git diff-index --check --cached $against -- | sed '/^[+-]/d' | esed 's/:[0-9]+:.*//' | uniq`; do
+for FILE in `exec git diff-index --check --cached $against -- | sed '/^[+-]/d' | cut -f1 -d: | uniq`; do
   # Fix them!
   sed -i.$now 's/[[:space:]]*$//' "$FILE"
   rm "$FILE.$now"
