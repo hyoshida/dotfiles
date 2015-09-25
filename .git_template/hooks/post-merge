@@ -1,2 +1,2 @@
 #!/bin/sh
-exec ${HOME}/dotfiles/.git_template/hooks/.pre-merge.sh
+exec ${HOME}/dotfiles/.git_template/hooks/.post-merge.sh
