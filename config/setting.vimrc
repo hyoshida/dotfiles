@@ -56,3 +56,10 @@ set splitright
 
 " :vimgrep, :grep などで常に Quickfix を開くようにする
 autocmd QuickFixCmdPost *grep* cwindow
+
+" Add syntax rule
+let g:ruby_heredoc_syntax_filetypes = {
+  \ 'slim' : {
+  \   'start' : "'SLIM'"
+  \},
+  \}

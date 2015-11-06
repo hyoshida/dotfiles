@@ -71,6 +71,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'hyoshida/vim-artemis'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'joker1007/vim-ruby-heredoc-syntax'
 
 " Colros
 NeoBundle 'ujihisa/unite-colorscheme'
