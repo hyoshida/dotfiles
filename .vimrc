@@ -39,6 +39,7 @@ if s:can_neobundle
 	end
 
 	if has('python') || has('python3')
+		source ~/dotfiles/config/omnisharp.vimrc
 		source ~/dotfiles/config/vim-minimap.vimrc
 	end
 endif

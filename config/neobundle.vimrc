@@ -35,6 +35,7 @@ NeoBundle 'tinymode.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'chrisbra/csv.vim'
 NeoBundle 'thinca/vim-qfreplace'
+NeoBundle 'tpope/vim-dispatch' " for OmniSharp
 
 " Text-editing
 NeoBundle 'vim-scripts/VisIncr'
@@ -72,6 +73,14 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'hyoshida/vim-artemis'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'joker1007/vim-ruby-heredoc-syntax'
+NeoBundleLazy 'OmniSharp/omnisharp-vim', {
+\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
+\   'build': {
+\     'windows' : 'msbuild server/OmniSharp.sln',
+\     'mac': 'xbuild server/OmniSharp.sln',
+\     'unix': 'xbuild server/OmniSharp.sln',
+\   },
+\ }
 
 " Colros
 NeoBundle 'ujihisa/unite-colorscheme'
