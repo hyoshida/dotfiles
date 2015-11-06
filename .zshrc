@@ -213,3 +213,16 @@ expand-or-complete-or-list-files() {
 }
 zle -N expand-or-complete-or-list-files
 bindkey '^I' expand-or-complete-or-list-files
+
+######################################################################
+#### Rename Tmux window.
+######################################################################
+precmd() {
+  local window_name=$(basename $PWD)
+
+  [[ $window_name == '/' ]] && window_name='root'
+
+  if [[ $TERM == 'xterm-256color' ]]; then
+    printf '\ek%s\e\\' $window_name
+  fi
+}
