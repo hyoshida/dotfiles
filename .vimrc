@@ -27,13 +27,16 @@ if s:can_neobundle
 	source ~/dotfiles/config/unite.vimrc
 	source ~/dotfiles/config/quickrun.vimrc
 	source ~/dotfiles/config/tinymode.vimrc
-	source ~/dotfiles/config/neocomplcache.vimrc
 	source ~/dotfiles/config/neosnippet.vimrc
 	source ~/dotfiles/config/fugitive.vimrc
 	source ~/dotfiles/config/switch.vimrc
 	source ~/dotfiles/config/vim-powerline.vimrc
 	source ~/dotfiles/config/operator-camelize.vimrc
 	source ~/dotfiles/config/syntastic.vimrc
+
+	if has('lua')
+		source ~/dotfiles/config/neocomplete.vimrc
+	end
 
 	if has('python') || has('python3')
 		source ~/dotfiles/config/vim-minimap.vimrc
