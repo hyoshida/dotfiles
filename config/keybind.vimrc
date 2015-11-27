@@ -60,9 +60,17 @@ nnoremap <silent> <C-w>" :split<CR>
 " Ctrl-!でアクティブなウィンドウ以外を閉じる
 nnoremap <silent> <C-w>! :only<CR>
 
-" タブと空白をトグルする
+" タブと空白をトグルする: 空白(2) => 空白(4) => タブ(8)
 " (from http://vim.wikia.com/wiki/Toggle_between_tabs_and_spaces)
 function TabToggle()
+	if &expandtab && &shiftwidth == 2
+		set shiftwidth=4
+		set softtabstop=4
+		set tabstop=4
+		set expandtab
+		return
+	endif
+
 	if &expandtab
 		set shiftwidth=8
 		set softtabstop=0
