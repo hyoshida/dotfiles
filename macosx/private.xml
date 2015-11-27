@@ -8,6 +8,7 @@
     <equal>org.pqrs.unknownapp.conkeror</equal>
     <equal>com.github.atom</equal>
     <equal>com.jetbrains.rubymine</equal>
+    <equal>com.xamarin.monodevelop</equal>
   </appdef>
 
   <item>
