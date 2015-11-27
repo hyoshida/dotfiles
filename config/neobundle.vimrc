@@ -35,9 +35,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'chrisbra/csv.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'tpope/vim-dispatch' " for OmniSharp
-if (v:version >= 703) && has('lua')
-	NeoBundle 'Shougo/neocomplete'
-endif
+NeoBundle 'Shougo/neocomplete'
 
 " Text-editing
 NeoBundle 'vim-scripts/VisIncr'
@@ -53,9 +51,7 @@ NeoBundle 'Shougo/neomru.vim'
 " UI
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'lilydjwg/colorizer'
-if has('python') || has('python3')
-	NeoBundle 'severin-lemaignan/vim-minimap'
-endif
+NeoBundle 'severin-lemaignan/vim-minimap'
 
 " Snippets
 NeoBundle 'Shougo/neosnippet'
@@ -78,16 +74,14 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'hyoshida/vim-artemis'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'joker1007/vim-ruby-heredoc-syntax'
-if has('python') || has('python3')
-	NeoBundleLazy 'OmniSharp/omnisharp-vim', {
-	\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
-	\   'build': {
-	\     'windows' : 'msbuild server/OmniSharp.sln',
-	\     'mac': 'xbuild server/OmniSharp.sln',
-	\     'unix': 'xbuild server/OmniSharp.sln',
-	\   },
-	\ }
-endif
+NeoBundleLazy 'OmniSharp/omnisharp-vim', {
+\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
+\   'build': {
+\     'windows' : 'msbuild server/OmniSharp.sln',
+\     'mac': 'xbuild server/OmniSharp.sln',
+\     'unix': 'xbuild server/OmniSharp.sln',
+\   },
+\ }
 
 " Colros
 NeoBundle 'ujihisa/unite-colorscheme'
@@ -96,10 +90,34 @@ NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'sickill/vim-monokai'
 
 " Lint
-NeoBundle 'scrooloose/syntastic.git'
+NeoBundle 'scrooloose/syntastic'
 
 " hyoshida plugins
 NeoBundle 'hyoshida/unite-cmus'
+
+" Load Settings
+function s:source_lazy(name, path)
+	let bundle = neobundle#get(a:name)
+	execute join([
+		\ 'function! bundle.hooks.on_post_source(bundle)',
+		\ '	source ' . a:path,
+		\ 'endfunction',
+		\ ], "\n")
+endfunction
+call s:source_lazy('vimshell', '~/dotfiles/config/vimshell.vimrc')
+call s:source_lazy('vimfiler', '~/dotfiles/config/vimfiler.vimrc')
+call s:source_lazy('unite.vim', '~/dotfiles/config/unite.vimrc')
+call s:source_lazy('vim-quickrun', '~/dotfiles/config/quickrun.vimrc')
+call s:source_lazy('tinymode.vim', '~/dotfiles/config/tinymode.vimrc')
+call s:source_lazy('neosnippet', '~/dotfiles/config/neosnippet.vimrc')
+call s:source_lazy('vim-fugitive', '~/dotfiles/config/fugitive.vimrc')
+call s:source_lazy('switch.vim', '~/dotfiles/config/switch.vimrc')
+call s:source_lazy('vim-powerline', '~/dotfiles/config/vim-powerline.vimrc')
+call s:source_lazy('operator-camelize.vim', '~/dotfiles/config/operator-camelize.vimrc')
+call s:source_lazy('syntastic', '~/dotfiles/config/syntastic.vimrc')
+call s:source_lazy('neocomplete', '~/dotfiles/config/neocomplete.vimrc')
+call s:source_lazy('omnisharp-vim', '~/dotfiles/config/omnisharp.vimrc')
+call s:source_lazy('vim-minimap', '~/dotfiles/config/vim-minimap.vimrc')
 
 call neobundle#end()
 

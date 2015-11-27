@@ -20,29 +20,3 @@ source ~/dotfiles/config/vim-matchit.vimrc
 if s:is_supported_tabline
 	source ~/dotfiles/config/tabline.vimrc
 endif
-
-if s:can_neobundle
-	source ~/dotfiles/config/vimshell.vimrc
-	source ~/dotfiles/config/vimfiler.vimrc
-	source ~/dotfiles/config/unite.vimrc
-	source ~/dotfiles/config/quickrun.vimrc
-	source ~/dotfiles/config/tinymode.vimrc
-	source ~/dotfiles/config/neosnippet.vimrc
-	source ~/dotfiles/config/fugitive.vimrc
-	source ~/dotfiles/config/switch.vimrc
-	source ~/dotfiles/config/vim-powerline.vimrc
-	source ~/dotfiles/config/operator-camelize.vimrc
-	source ~/dotfiles/config/syntastic.vimrc
-
-	if exists('g:loaded_neocomplete')
-		source ~/dotfiles/config/neocomplete.vimrc
-	endif
-
-	if exists('g:OmniSharp_loaded')
-		source ~/dotfiles/config/omnisharp.vimrc
-	endif
-
-	if exists('g:loaded_minimap')
-		source ~/dotfiles/config/vim-minimap.vimrc
-	endif
-endif
