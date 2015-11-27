@@ -34,12 +34,15 @@ if s:can_neobundle
 	source ~/dotfiles/config/operator-camelize.vimrc
 	source ~/dotfiles/config/syntastic.vimrc
 
-	if has('lua')
+	if exists('g:loaded_neocomplete')
 		source ~/dotfiles/config/neocomplete.vimrc
-	end
+	endif
 
-	if has('python') || has('python3')
+	if exists('g:OmniSharp_loaded')
 		source ~/dotfiles/config/omnisharp.vimrc
+	endif
+
+	if exists('g:loaded_minimap')
 		source ~/dotfiles/config/vim-minimap.vimrc
-	end
+	endif
 endif

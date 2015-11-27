@@ -16,7 +16,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Utils
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimproc', {
@@ -36,6 +35,9 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'chrisbra/csv.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'tpope/vim-dispatch' " for OmniSharp
+if (v:version >= 703) && has('lua')
+	NeoBundle 'Shougo/neocomplete'
+endif
 
 " Text-editing
 NeoBundle 'vim-scripts/VisIncr'
@@ -51,7 +53,9 @@ NeoBundle 'Shougo/neomru.vim'
 " UI
 NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'lilydjwg/colorizer'
-NeoBundle 'severin-lemaignan/vim-minimap'
+if has('python') || has('python3')
+	NeoBundle 'severin-lemaignan/vim-minimap'
+endif
 
 " Snippets
 NeoBundle 'Shougo/neosnippet'
@@ -74,14 +78,16 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'hyoshida/vim-artemis'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'joker1007/vim-ruby-heredoc-syntax'
-NeoBundleLazy 'OmniSharp/omnisharp-vim', {
-\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
-\   'build': {
-\     'windows' : 'msbuild server/OmniSharp.sln',
-\     'mac': 'xbuild server/OmniSharp.sln',
-\     'unix': 'xbuild server/OmniSharp.sln',
-\   },
-\ }
+if has('python') || has('python3')
+	NeoBundleLazy 'OmniSharp/omnisharp-vim', {
+	\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
+	\   'build': {
+	\     'windows' : 'msbuild server/OmniSharp.sln',
+	\     'mac': 'xbuild server/OmniSharp.sln',
+	\     'unix': 'xbuild server/OmniSharp.sln',
+	\   },
+	\ }
+endif
 
 " Colros
 NeoBundle 'ujihisa/unite-colorscheme'
