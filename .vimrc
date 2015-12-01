@@ -5,6 +5,7 @@ let s:can_neobundle = (v:version >= 702)
 filetype off
 if s:can_neobundle
 	source ~/dotfiles/vimrc/neobundle.vimrc
+	source ~/dotfiles/vimrc/neobundle-settings.vimrc
 endif
 syntax on
 " ===== /NeoBundle ======
