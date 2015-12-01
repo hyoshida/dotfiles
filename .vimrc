@@ -4,19 +4,19 @@ let s:can_neobundle = (v:version >= 702)
 " ===== NeoBundle =====
 filetype off
 if s:can_neobundle
-	source ~/dotfiles/config/neobundle.vimrc
+	source ~/dotfiles/vimrc/neobundle.vimrc
 endif
 syntax on
 " ===== /NeoBundle ======
 
-source ~/dotfiles/config/setting.vimrc
-source ~/dotfiles/config/encoding.vimrc
-source ~/dotfiles/config/color.vimrc
-source ~/dotfiles/config/keybind.vimrc
-source ~/dotfiles/config/binary.vimrc
-source ~/dotfiles/config/mark.vimrc
-source ~/dotfiles/config/vim-matchit.vimrc
+source ~/dotfiles/vimrc/setting.vimrc
+source ~/dotfiles/vimrc/encoding.vimrc
+source ~/dotfiles/vimrc/color.vimrc
+source ~/dotfiles/vimrc/keybind.vimrc
+source ~/dotfiles/vimrc/binary.vimrc
+source ~/dotfiles/vimrc/mark.vimrc
+source ~/dotfiles/vimrc/vim-matchit.vimrc
 
 if s:is_supported_tabline
-	source ~/dotfiles/config/tabline.vimrc
+	source ~/dotfiles/vimrc/tabline.vimrc
 endif
