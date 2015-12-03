@@ -9,6 +9,7 @@
     <equal>com.github.atom</equal>
     <equal>com.jetbrains.rubymine</equal>
     <equal>com.xamarin.monodevelop</equal>
+    <equal>org.eclipse.eclipse</equal>
   </appdef>
 
   <item>
