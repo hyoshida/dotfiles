@@ -1,0 +1,15 @@
+" 検索の時に大文字小文字を区別しない
+set ignorecase
+" 検索の時に大文字が含まれている場合は区別して検索する
+set smartcase
+" 最後まで検索したら先頭に戻る
+set wrapscan
+" インクリメンタルサーチを有効にする
+set incsearch
+" 検索結果文字列のハイライトを有効にする
+set hlsearch
+" <Esc> で素早くノーマルモードに移行
+set timeout timeoutlen=1000 ttimeoutlen=50
+" <Esc> 連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nmap <C-[><C-[> :nohlsearch<CR><Esc>

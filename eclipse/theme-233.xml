@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<colorTheme id="233" name="MonokaiLoveKai" modified="2015-12-06 18:16:35" author="hyoshida">
+    <searchResultIndication color="#5B5A50" />
+    <filteredSearchResultIndication color="#5B5A50" />
+    <occurrenceIndication color="#5B5A50" />
+    <writeOccurrenceIndication color="#5B5A50" />
+    <findScope color="#5B5A50" />
+    <deletionIndication color="#F9F9F5" />
+    <sourceHoverBackground color="#F9F9F5" />
+    <singleLineComment color="#75715E" />
+    <multiLineComment color="#75715E" />
+    <commentTaskTag color="#75715E" />
+    <javadoc color="#75715E" />
+    <javadocLink color="#75715E" />
+    <javadocTag color="#FF3D83" />
+    <javadocKeyword color="#FF3D83" />
+    <class color="#71E1F1" underline="false" />
+    <interface color="#FF3D83" />
+    <method color="#71E1F1" />
+    <methodDeclaration color="#71E1F1" />
+    <bracket color="#F9F9F5" />
+    <number color="#BF9AF9" />
+    <string color="#EBDF91" />
+    <operator color="#FF3D83" />
+    <keyword color="#FF3D83" />
+    <annotation color="#BF9AF9" />
+    <staticMethod color="#B0E35A" />
+    <localVariable color="#FFA542" />
+    <localVariableDeclaration color="#F9F9F5" />
+    <field color="#F9F9F5" />
+    <staticField color="#F9F9F5" />
+    <staticFinalField color="#B0E35A" />
+    <deprecatedMember color="#B0E35A" />
+    <enum color="#F9F9F5" />
+    <inheritedMethod color="#B0E35A" />
+    <abstractMethod color="#B0E35A" />
+    <parameterVariable color="#F9F9F5" />
+    <typeArgument color="#FFA542" />
+    <typeParameter color="#F9F9F5" />
+    <constant color="#BF9AF9" />
+    <background color="#000000" />
+    <currentLine color="#000000" />
+    <foreground color="#F9F9F5" />
+    <lineNumber color="#F9F9F5" />
+    <selectionBackground color="#3C3d37" />
+    <selectionForeground color="#5B5A50" />
+</colorTheme>
