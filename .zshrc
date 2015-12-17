@@ -105,7 +105,6 @@ alias cmus='env TERM=xterm-256color cmus'
 alias euc='env LANG=ja_JP.eucJP'
 alias processing='env LANG=C processing'
 alias m=mplayer
-alias percol="${HOME}/dotfiles/percol/bin/percol"
 alias evil='emacs -f evil-mode'
 
 # for npm
@@ -157,31 +156,6 @@ fi
 if [[ -x $HOME/.pyenv/bin/pyenv ]]; then
     export PATH=$HOME/.pyenv/bin:$PATH
     eval "$(pyenv init -)"
-fi
-
-######################################################################
-#### Settings for percol.
-#### refs: https://github.com/mooz/percol#zsh-history-search
-######################################################################
-function exists { which $1 &> /dev/null }
-
-# refs: http://stackoverflow.com/questions/11532157/unix-removing-duplicate-lines-without-sorting
-function uniq_without_sort { awk ' !x[$0]++' }
-
-if exists percol; then
-    function percol_select_history() {
-        local tac
-        exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
-        BUFFER=$(fc -l -n 1 | uniq_without_sort | eval $tac | percol --query "$LBUFFER")
-        CURSOR=$#BUFFER         # move cursor
-        # FreeBSD(or MacOSX?)だとpromptが表示されなくなるのでreset-promptで代用
-        # refs: https://twitter.com/shiba_yu36/status/386383666592497664
-        #zle -R -c               # refresh
-        zle reset-prompt
-    }
-
-    zle -N percol_select_history
-    bindkey '^R' percol_select_history
 fi
 
 ######################################################################
