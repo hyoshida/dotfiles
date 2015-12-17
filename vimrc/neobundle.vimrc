@@ -82,6 +82,7 @@ NeoBundleLazy 'OmniSharp/omnisharp-vim', {
 \     'unix': 'xbuild server/OmniSharp.sln',
 \   },
 \ }
+NeoBundle 'jeroenbourgois/vim-actionscript'
 
 " Colros
 NeoBundle 'ujihisa/unite-colorscheme'
