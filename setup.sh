@@ -70,6 +70,6 @@ done
 cd - > /dev/null
 
 # Install fzf
-sh $CURRENT_DIR/.fzf/install
+$CURRENT_DIR/.fzf/install --all
 
 print 'Successed!'
