@@ -3,7 +3,7 @@
 # Direct Link: https://github.com/hyoshida/dotfiles/blob/master/oh-my-zsh-custom/themes/hyoshida.zsh-theme
 
 # support 256 color
-TERM=xterm-256color
+TERM=screen-256color
 
 # local time, color coded by last return code
 time_enabled="%(?.%F{236}.%F{197})%*%f"
