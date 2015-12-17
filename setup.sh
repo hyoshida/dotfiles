@@ -69,4 +69,7 @@ for config_file in *; do
 done
 cd - > /dev/null
 
+# Install fzf
+sh $CURRENT_DIR/.fzf/install
+
 print 'Successed!'

@@ -31,3 +31,6 @@
 [submodule "percol"]
 	path = percol
 	url = git://github.com/mooz/percol.git
+[submodule ".fzf"]
+	path = .fzf
+	url = https://github.com/junegunn/fzf.git
