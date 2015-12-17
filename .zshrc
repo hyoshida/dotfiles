@@ -106,6 +106,7 @@ alias euc='env LANG=ja_JP.eucJP'
 alias processing='env LANG=C processing'
 alias m=mplayer
 alias evil='emacs -f evil-mode'
+alias f=fzf
 
 # for npm
 if which npm &> /dev/null; then
