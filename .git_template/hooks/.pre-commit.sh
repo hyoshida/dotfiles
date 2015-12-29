@@ -11,6 +11,11 @@ now=$(date '+%Y%m%d%H%M%S')
 
 # Find files with trailing whitespace
 for file in `exec git diff-index --check --cached $against -- | sed '/^[+-]/d' | cut -f1 -d: | uniq`; do
+  # Ignore .unity, .meta and .asset file
+  if [[ $file == *.unity || $file == *.meta || $file == *.asset ]]; then
+    continue;
+  fi
+
   # Backup changes
   mv -f "$file" "$file.save"
   git checkout -- "$file"
