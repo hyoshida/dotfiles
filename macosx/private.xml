@@ -1,6 +1,19 @@
 <?xml version="1.0"?>
 <root>
   <appdef>
+    <appname>RDP</appname>
+    <equal>com.microsoft.rdc.mac</equal>
+  </appdef>
+
+  <item>
+    <name>Swap Control and Command (only in RDP)</name>
+    <only>RDP</only>
+    <identifier>private.swap_control_and_command_in_rdp</identifier>
+    <autogen>__KeyToKey__ KeyCode::CONTROL_L, KeyCode::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::CONTROL_L</autogen>
+  </item>
+
+  <appdef>
     <appname>EMACS</appname>
     <equal>org.gnu.Emacs</equal>
     <equal>org.gnu.AquamacsEmacs</equal>
