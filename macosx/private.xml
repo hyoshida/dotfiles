@@ -3,6 +3,7 @@
   <appdef>
     <appname>RDP</appname>
     <equal>com.microsoft.rdc.mac</equal>
+    <equal>com.apple.ScreenSharing</equal>
   </appdef>
 
   <item>
