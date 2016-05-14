@@ -13,7 +13,7 @@
 #9::
 {
   Send #{Tab}
-  Sleep 50
+  Sleep 150
   StringTrimLeft count, A_ThisHotkey, 1
   moveToDesktop(count)
   return

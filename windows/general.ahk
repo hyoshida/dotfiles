@@ -1,6 +1,6 @@
+#If !WinActive("ahk_class cygwin") and !WinActive("ahk_class mintty")
 ^h::Send {Backspace}
 ^m::Send {Enter}
-^p::Send {Up}
-^n::Send {Down}
 ^[::Send {Escape}
 #Space::#s
+#If
