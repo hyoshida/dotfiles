@@ -3,8 +3,6 @@ backups/*
 .vim/.netrwhist
 .vim/bundle
 !.vim/bundle/neobundle.vim
-.emacs.d/elpa
-.emacs.d/url
 .moc/*
 !.moc/config
 !.moc/keymap
