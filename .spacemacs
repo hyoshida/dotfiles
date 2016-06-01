@@ -40,7 +40,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(helm-ls-git)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -249,6 +249,9 @@ you should place your code here."
 
   ;; Disable the mouse support
   (xterm-mouse-mode -1)
+
+  ;; Listing the files in a git repo.
+  (spacemacs/set-leader-keys "fF" 'helm-ls-git-ls)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
