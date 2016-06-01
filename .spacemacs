@@ -260,6 +260,9 @@ you should place your code here."
   ;; Disable current line highlight
   (global-hl-line-mode -1)
 
+  ;; Close a tab
+  (evil-ex-define-cmd "q[uit]" 'kill-this-buffer)
+
   ;; Settings for tabbar
   ;; TODO: 設定の整理
   ;; -------------------
