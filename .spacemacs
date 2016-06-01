@@ -257,6 +257,9 @@ you should place your code here."
   ;; Listing the files in a git repo.
   (spacemacs/set-leader-keys "fF" 'helm-ls-git-ls)
 
+  ;; Disable current line highlight
+  (global-hl-line-mode -1)
+
   ;; Settings for tabbar
   ;; TODO: 設定の整理
   ;; -------------------
