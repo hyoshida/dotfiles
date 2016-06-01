@@ -234,6 +234,9 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+
+  ;; Set evil-toggle-key to C-\ to free up C-z for suspending
+  (setq-default evil-toggle-key "C-\\")
   )
 
 (defun dotspacemacs/user-config ()
