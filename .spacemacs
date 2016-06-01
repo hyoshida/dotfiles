@@ -340,3 +340,10 @@ you should place your code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+
+
+;; Custom set faces
+;; ----------------
+(custom-set-faces
+ '(default ((t ( :background "color-232" ))))
+ )
