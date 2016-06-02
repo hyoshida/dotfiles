@@ -263,6 +263,9 @@ you should place your code here."
   ;; Close a tab
   (evil-ex-define-cmd "q[uit]" 'kill-this-buffer)
 
+  ;; Disable magic comment auto insertion in ruby-mode
+  (setq ruby-insert-encoding-magic-comment nil)
+
   ;; Settings for tabbar
   ;; TODO: 設定の整理
   ;; -------------------
