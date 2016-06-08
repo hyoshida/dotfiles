@@ -17,7 +17,7 @@ dotfilesとは.vimrcや.cshrcなどの設定ファイルの総称です。
 * tmux: 1.4 以上
 * git: 1.7.11 以上
 * vim: 7.2 以上
-* emacs: 22 以上
+* emacs: 24.4 以上 (Needed for spacemacs)
 * cmus: 2.4.x
 * screen: 4.00 (compiled with the *--enable-colors256* option)
 
