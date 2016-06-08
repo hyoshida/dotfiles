@@ -266,6 +266,29 @@ you should place your code here."
   ;; Disable magic comment auto insertion in ruby-mode
   (setq ruby-insert-encoding-magic-comment nil)
 
+  ;; C-h is Backspace
+  (keyboard-translate ?\C-h ?\C-?)
+  (global-set-key (kbd "C-h") nil)
+
+  ;; C-x n to open temporary buffer
+  (defun generate-temporary-buffer ()
+    (interactive)
+    (switch-to-buffer
+      (generate-new-buffer "*untitled*")))
+  (global-set-key (kbd "C-x n") 'generate-temporary-buffer)
+
+  ;; C-w like shell
+  ;; from http://qiita.com/k_ui/items/e6978008253ba70c037c
+  (defun backward-kill-word-or-kill-region ()
+    (interactive)
+    (if (or (not transient-mark-mode) (region-active-p))
+        (kill-region (region-beginning) (region-end))
+      (backward-kill-word 1)))
+  (global-set-key (kbd "C-w") 'backward-kill-word-or-kill-region)
+
+  ;; C-u like tcsh
+  (global-set-key (kbd "C-u") 'kill-whole-line)
+
   ;; Settings for tabbar
   ;; TODO: 設定の整理
   ;; -------------------
