@@ -1,2 +1,2 @@
-#!/bin/zsh -l
-exec vim `git gr "$@" | awk -F':' '{print "+" $2 " " $1}'`
+#!/bin/sh
+exec git gr "$@" | awk -F':' '{print "+" $2 " " $1}' | xargs --no-run-if-empty vim -p
