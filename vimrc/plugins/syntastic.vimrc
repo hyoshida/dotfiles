@@ -9,8 +9,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
-" for Ruby
-if has('ruby')
-	let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-	let g:syntastic_ruby_rubocop_exec = expand('~/dotfiles/.bin/rubocop')
-end
+" Comment out the following code to use Rubocop for Ruby
+"if has('ruby')
+"	let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+"	let g:syntastic_ruby_rubocop_exec = expand('~/dotfiles/.bin/rubocop')
+"end
