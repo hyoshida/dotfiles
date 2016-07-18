@@ -63,3 +63,5 @@
 	log = diff-highlight | (nkf -w 2> /dev/null || cat) | less
 	show = diff-highlight | (nkf -w 2> /dev/null || cat) | less
 	diff = diff-highlight | (nkf -w 2> /dev/null || cat) | less
+[diff]
+	renames = copies
