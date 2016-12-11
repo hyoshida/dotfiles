@@ -30,4 +30,15 @@ for file in `exec git diff-index --check --cached $against -- | sed '/^[+-]/d' |
   rm "$file.save"
 done
 
+# Change the file permissions (only Windows)
+case "$OSTYPE" in
+  *cygwin*)
+    files=`git diff --cached --name-only`
+    if [ "$file" != "" ]; then
+      chmod --silent 644 $files
+      git add $file || :
+    fi
+    ;;
+esac
+
 exit
