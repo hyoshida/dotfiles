@@ -106,11 +106,6 @@
     </autogen>
     <autogen>
       __KeyToKey__
-      KeyCode::H, ModifierFlag::COMMAND_L,
-      KeyCode::DELETE
-    </autogen>
-    <autogen>
-      __KeyToKey__
       KeyCode::I, ModifierFlag::COMMAND_L,
       KeyCode::TAB
     </autogen>
