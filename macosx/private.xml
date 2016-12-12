@@ -25,6 +25,7 @@
     <equal>com.xamarin.monodevelop</equal>
     <equal>org.eclipse.eclipse</equal>
     <equal>com.runningwithcrayons.Alfred-2</equal>
+    <equal>com.microsoft.VSCode</equal>
   </appdef>
 
   <item>
