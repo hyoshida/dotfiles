@@ -21,3 +21,5 @@ source ~/dotfiles/vimrc/vim-matchit.vimrc
 if s:is_supported_tabline
 	source ~/dotfiles/vimrc/tabline.vimrc
 endif
+
+let g:vimfiler_enable_auto_cd = 1
