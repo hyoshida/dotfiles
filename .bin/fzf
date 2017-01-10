@@ -1,2 +1,2 @@
 #!/bin/sh
-exec ${HOME}/dotfiles/.fzf/bin/fzf --exact --multi "$@"
+exec ${HOME}/dotfiles/.fzf/bin/fzf --extended-exact --multi "$@"
