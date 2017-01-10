@@ -65,6 +65,7 @@ if minimap:
 EOF
 endfunction
 
+function! DefineFindMap()
 python << EOF
 def FindMinimap():
   import vim
@@ -81,3 +82,8 @@ def FindMinimap():
 
   return minimap
 EOF
+endfunction
+
+if has('python')
+  DefineFindMap()
+endif
