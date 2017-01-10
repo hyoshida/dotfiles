@@ -85,5 +85,5 @@ EOF
 endfunction
 
 if has('python')
-  DefineFindMap()
+  call DefineFindMap()
 endif
