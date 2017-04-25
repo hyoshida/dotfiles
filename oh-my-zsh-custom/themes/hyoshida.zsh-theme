@@ -19,7 +19,16 @@ local pwd='%~'
 local time=$time_disabled
 local return_code=$return_code_disabled
 
-PROMPT='${username}@${hostname}[$(git_prompt_info)${pwd}]%% '
+function git_branch() {
+    if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+        local dirty="$(git diff --no-ext-diff --quiet --exit-code || echo '*')"
+        echo -n "%B$(git rev-parse --abbrev-ref HEAD)${dirty}%b:"
+    else
+        echo -n ''
+    fi
+}
+
+PROMPT='${username}@${hostname}[$(git_branch)${pwd}]%% '
 RPROMPT='${return_code} ${time}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX='%B'

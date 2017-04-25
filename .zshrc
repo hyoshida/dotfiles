@@ -45,7 +45,7 @@ ZSH_CUSTOM=$HOME/dotfiles/oh-my-zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +107,7 @@ alias processing='env LANG=C processing'
 alias m=mplayer
 alias evil='emacs -f evil-mode'
 alias f=fzf
+alias g='git'
 alias gg='git gr'
 
 # for npm
