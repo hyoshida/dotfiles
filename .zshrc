@@ -45,7 +45,7 @@ ZSH_CUSTOM=$HOME/dotfiles/oh-my-zsh-custom
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
+plugins=(thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
