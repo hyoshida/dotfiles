@@ -50,7 +50,7 @@ cd - > /dev/null
 print 'Install diff-highlight...'
 cd $CURRENT_DIR/.bin > /dev/null
 rm -f diff-highlight
-wget --no-check-certificate -q https://raw.github.com/git/git/master/contrib/diff-highlight/diff-highlight
+wget --no-check-certificate -q https://gist.githubusercontent.com/hyoshida/d79849b0316f1ea1540083b0d89c6a45/raw/9a5315bdc5af90daee4ee07d629e848e7f5efc57/diff-highlight
 chmod +x diff-highlight
 cd - > /dev/null
 
