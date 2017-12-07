@@ -26,6 +26,8 @@
     <equal>org.eclipse.eclipse</equal>
     <equal>com.runningwithcrayons.Alfred-2</equal>
     <equal>com.microsoft.VSCode</equal>
+    <equal>com.jetbrains.rider</equal>
+    <equal>com.jetbrains.rider-EAP</equal>
   </appdef>
 
   <item>
