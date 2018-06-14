@@ -83,6 +83,7 @@ NeoBundleLazy 'OmniSharp/omnisharp-vim', {
 \   },
 \ }
 NeoBundle 'jeroenbourgois/vim-actionscript'
+NeoBundle 'rust-lang/rust.vim'
 
 " Colros
 NeoBundle 'ujihisa/unite-colorscheme'

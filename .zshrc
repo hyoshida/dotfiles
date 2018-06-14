@@ -209,4 +209,21 @@ precmd() {
 ######################################################################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+######################################################################
+#### Settings for the fuck.
+######################################################################
 eval $(thefuck --alias)
+
+######################################################################
+#### Settings for language.
+######################################################################
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+
+# Rust
+source $HOME/.cargo/env
+
+# Go
+export GOROOT=/usr/lib/golang
+export GOPATH=/usr/local/gocode
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
