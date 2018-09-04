@@ -11,8 +11,8 @@ now=$(date '+%Y%m%d%H%M%S')
 
 # Find files with trailing whitespace
 for file in `exec git diff-index --check --cached $against -- | sed '/^[+-]/d' | cut -f1 -d: | uniq`; do
-  # Ignore .unity, .meta and .asset file
-  if echo $file | grep -e '\.unity$' -e '\.meta$' -e '\.asset$' -e '\.csv$'; then
+  # Ignore .unity, .meta, .prefab and .asset file
+  if echo $file | grep -e '\.unity$' -e '\.meta$' -e '\.prefab$' -e '\.asset$' -e '\.csv$'; then
     continue;
   fi
 
