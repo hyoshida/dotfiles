@@ -4,6 +4,7 @@ export PATH=${PATH}:${HOME}/dotfiles/.bin
 alias ls="ls -Fa"
 alias ll="ls -l"
 alias g="git"
+alias tm="tmux -2 attach"
 
 # Based on su10's settings
 source ${HOME}/dotfiles/windows/git-prompt.sh
