@@ -1,0 +1,23 @@
+BoldAsFont=-1
+Font=MeiryoKe_Gothic
+FontHeight=14
+CursorType=block
+Locale=en_US
+Charset=UTF-8
+FontSmoothing=default
+Term=xterm
+BellType=0
+BackspaceSendsBS=no
+#
+# Based on https://github.com/oumu/mintty-color-schemes/blob/master/base16-monokai-mod.minttyrc
+#
+Red=249,38,114
+BoldRed=204,6,78
+Green=166,226,46
+BoldGreen=122,172,24
+Blue=102,217,239
+BoldBlue=33,199,233
+Magenta=174,129,255
+BoldMagenta=126,51,255
+Cyan=161,239,228
+BoldCyan=95,227,210
