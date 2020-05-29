@@ -220,6 +220,21 @@ eval $(thefuck --alias)
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
+
+######################################################################
+#### crontab -r is sealed!
+######################################################################
+crontab() {
+  local opt
+  for opt in "$@"; do
+    if [[ $opt == -r ]]; then
+      echo 'crontab -r is sealed!'
+      return 1
+    fi
+  done
+  command crontab "$@"
+}
+
 # Rust
 source $HOME/.cargo/env
 
