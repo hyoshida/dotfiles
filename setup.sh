@@ -43,7 +43,7 @@ vim :NeoBundleInstall +q
 # git-flowをインストール
 print 'Install git-flow...'
 cd $WORKING_DIR > /dev/null
-wget --no-check-certificate -q -O - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | INSTALL_PREFIX=$CURRENT_DIR/.bin bash -s install
+curl -sLo - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | INSTALL_PREFIX=$CURRENT_DIR/.bin bash -s install
 cd - > /dev/null
 
 # diff-highlightをインストール
