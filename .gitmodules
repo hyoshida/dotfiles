@@ -28,3 +28,6 @@
 [submodule ".emacs.d"]
 	path = .emacs.d
 	url = https://github.com/syl20bnr/spacemacs.git
+[submodule "windows/win-10-virtual-desktop-enhancer"]
+	path = windows/win-10-virtual-desktop-enhancer
+	url = https://github.com/sdias/win-10-virtual-desktop-enhancer.git
