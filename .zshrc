@@ -115,10 +115,14 @@ if which npm &> /dev/null; then
   alias ne="env PATH='${PATH}:$(npm root)/.bin:$(npm -g root)/.bin'"
 fi
 
-# alias for BSD
 case "$OSTYPE" in
+# alias for BSD
 *bsd* | *darwin* )
     alias top='top -u'
+    ;;
+# for cygwin
+*cygwin*)
+    alias pbcopy='cat >/dev/clipboard'
     ;;
 esac
 

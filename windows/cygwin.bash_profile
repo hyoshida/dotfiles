@@ -5,6 +5,7 @@ alias ls="ls -Fa"
 alias ll="ls -l"
 alias g="git"
 alias tm="tmux -2 attach"
+alias pbcopy='cat >/dev/clipboard'
 
 # Based on su10's settings
 source ${HOME}/dotfiles/windows/git-prompt.sh
