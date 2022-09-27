@@ -18,15 +18,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
-NeoBundle 'Shougo/vimproc', {
+NeoBundle 'Shougo/vimproc.vim', {
 	\ 'build' : {
 	\     'windows' : 'tools\\update-dll-mingw',
-	\     'cygwin'  : 'make -f make_cygwin.mak',
-	\     'mac'     : 'make -f make_mac.mak',
-	\     'linux'   : 'make',
-	\     'unix'    : 'gmake',
-	\ },
-\ }
+	\     'cygwin' : 'make -f make_cygwin.mak',
+	\     'mac' : 'make',
+	\     'linux' : 'make',
+	\     'unix' : 'gmake',
+	\    },
+	\ }
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
@@ -74,14 +74,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'hyoshida/vim-artemis'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'joker1007/vim-ruby-heredoc-syntax'
-NeoBundleLazy 'OmniSharp/omnisharp-vim', {
-\   'autoload': { 'filetypes': [ 'cs', 'csi', 'csx' ] },
-\   'build': {
-\     'windows' : 'msbuild server/OmniSharp.sln',
-\     'mac': 'xbuild server/OmniSharp.sln',
-\     'unix': 'xbuild server/OmniSharp.sln',
-\   },
-\ }
+NeoBundle 'OmniSharp/omnisharp-vim'
 NeoBundle 'jeroenbourgois/vim-actionscript'
 NeoBundle 'rust-lang/rust.vim'
 
