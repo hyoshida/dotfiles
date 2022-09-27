@@ -28,7 +28,6 @@ NeoBundle 'Shougo/vimproc.vim', {
 	\    },
 	\ }
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'tomtom/tlib_vim'
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tinymode.vim'
 NeoBundle 'tpope/vim-fugitive'
