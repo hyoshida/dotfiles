@@ -11,9 +11,9 @@ fi
 case "$OSTYPE" in
   *cygwin*)
     files=`git diff --cached --name-only`
-    if [ "$file" != "" ]; then
+    if [ "$files" != "" ]; then
       chmod --silent 644 $files
-      git add $file || :
+      git add $files || :
     fi
     ;;
 esac
