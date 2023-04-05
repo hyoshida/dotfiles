@@ -12,7 +12,11 @@ case "$OSTYPE" in
   *cygwin*)
     files=`git diff --cached --name-only`
     if [ "$files" != "" ]; then
-      git update-index --chmod=-x $files
+      echo "$files" | while read file; do
+        if [ "$(head -c 2 "$file")" != "#!" ]; then
+          git update-index --chmod=-x $file
+        fi
+      done
     fi
     ;;
 esac
