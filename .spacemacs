@@ -536,6 +536,7 @@ you should place your code here."
       bind-map
       evil
       monokai-theme
+      disable-mouse
     )
   )
 )
