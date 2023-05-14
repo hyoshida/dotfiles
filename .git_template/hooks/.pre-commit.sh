@@ -14,7 +14,8 @@ case "$OSTYPE" in
     if [ "$files" != "" ]; then
       echo "$files" | while read file; do
         if [ "$(head -c 2 "$file")" != "#!" ]; then
-          git update-index --chmod=-x $file
+          chmod --silent -x "$file"
+          git update-index --chmod=-x "$file"
         fi
       done
     fi
