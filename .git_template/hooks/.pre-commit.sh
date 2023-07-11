@@ -13,7 +13,7 @@ case "$OSTYPE" in
     files=`git diff --cached --name-only`
     if [ "$files" != "" ]; then
       echo "$files" | while read file; do
-        if [ "$(head -c 2 "$file")" != "#!" ]; then
+        if [ -f "$file" ] && [ "$(head -c 2 "$file")" != "#!" ]; then
           chmod --silent -x "$file"
           git update-index --chmod=-x "$file"
         fi
