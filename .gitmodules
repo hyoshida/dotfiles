@@ -1,18 +1,18 @@
 [submodule ".rbenv"]
 	path = .rbenv
-	url = git://github.com/sstephenson/rbenv.git
+	url = https://github.com/sstephenson/rbenv.git
 [submodule ".rbenv_plugins/ruby-build"]
 	path = .rbenv_plugins/ruby-build
-	url = git://github.com/sstephenson/ruby-build.git
+	url = https://github.com/sstephenson/ruby-build.git
 [submodule ".tmux/tmux-powerline"]
 	path = .tmux/tmux-powerline
-	url = git://github.com/erikw/tmux-powerline.git
+	url = https://github.com/erikw/tmux-powerline.git
 [submodule ".vim/bundle/neobundle.vim"]
 	path = .vim/bundle/neobundle.vim
-	url = git://github.com/Shougo/neobundle.vim.git
+	url = https://github.com/Shougo/neobundle.vim.git
 [submodule ".pyenv"]
 	path = .pyenv
-	url = git://github.com/yyuu/pyenv.git
+	url = https://github.com/yyuu/pyenv.git
 [submodule "powerline"]
 	path = powerline
 	url = https://github.com/Lokaltog/powerline.git
