@@ -10,14 +10,10 @@ fi
 # Change the file permissions (only Windows)
 case "$OSTYPE" in
   *cygwin*)
-    files=`git diff --cached --name-only`
+    files=`git diff --cached --name-only | xargs -d "\n" -r ls 2>/dev/null`
     if [ "$files" != "" ]; then
-      echo "$files" | while read file; do
-        if [ -f "$file" ] && [ "$(head -c 2 "$file")" != "#!" ]; then
-          chmod --silent -x "$file"
-          git update-index --chmod=-x "$file"
-        fi
-      done
+      echo "$files" | xargs -d "\n" chmod -x
+      echo "$files" | xargs -d "\n" git update-index --chmod=-x
     fi
     ;;
 esac
