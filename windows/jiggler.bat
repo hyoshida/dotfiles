@@ -1,7 +1,7 @@
 @powershell -NoProfile -ExecutionPolicy Unrestricted "&([ScriptBlock]::Create((cat -encoding utf8 \"%~f0\" | ? {$_.ReadCount -gt 2}) -join \"`n\"))" %*
 @exit /b
 
-Param($minutes = 600)
+Param($morningMinutes = 180, $lunchMinutes = 60, $eveningMinutes = 300)
 
 $myWindowsID = [System.Security.Principal.WindowsIdentity]::GetCurrent()
 $myWindowsPrincipal = new-object System.Security.Principal.WindowsPrincipal($myWindowsID)
@@ -55,8 +55,19 @@ public class Win32SendInput {
 "@
 Add-Type -Language CSharp -TypeDefinition $cs
 
+for ($i = 0; $i -lt $morningMinutes; $i++) {
+  Write-Host Morning $i
+  Start-Sleep -Seconds 60
+  [Win32SendInput]::PreventScreenSaver()
+}
+
 for ($i = 0; $i -lt $minutes; $i++) {
-  Write-Host $i
+  Write-Host Lunch $i
+  Start-Sleep -Seconds 60
+}
+
+for ($i = 0; $i -lt $eveningMinutes; $i++) {
+  Write-Host Evening $i
   Start-Sleep -Seconds 60
   [Win32SendInput]::PreventScreenSaver()
 }
