@@ -241,7 +241,7 @@ crontab() {
 }
 
 # Rust
-source $HOME/.cargo/env
+[ -f ~/.cargo/env ] && source ~/.cargo/env
 
 # Go
 export GOROOT=/usr/lib/golang
