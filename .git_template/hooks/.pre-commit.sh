@@ -13,7 +13,6 @@ case "$OSTYPE" in
     files=`git diff --cached --name-only | xargs -d "\n" -r ls 2>/dev/null`
     if [ "$files" != "" ]; then
       echo "$files" | xargs -d "\n" chmod -x
-      echo "$files" | xargs -d "\n" git update-index --chmod=-x
     fi
     ;;
 esac
