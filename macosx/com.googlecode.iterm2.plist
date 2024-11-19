@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Control</key>
-	<integer>7</integer>
+	<integer>2</integer>
 	<key>Default Bookmark Guid</key>
 	<string>21207B94-B499-4DF1-808C-091992E177A6</string>
 	<key>GlobalKeyMap</key>
@@ -41,7 +41,7 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0x31-0x40000-0x0</key>
+		<key>0x31-0x80000-0x12</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -52,7 +52,7 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0x32-0x40000-0x0</key>
+		<key>0x32-0x80000-0x13</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -63,7 +63,7 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0x33-0x40000-0x0</key>
+		<key>0x33-0x80000-0x14</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -74,7 +74,7 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0x34-0x40000-0x0</key>
+		<key>0x34-0x80000-0x15</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -85,7 +85,7 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0x35-0x40000-0x0</key>
+		<key>0x35-0x80000-0x17</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -96,7 +96,7 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0x36-0x40000-0x0</key>
+		<key>0x36-0x80000-0x16</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -107,7 +107,7 @@
 			<key>Version</key>
 			<integer>0</integer>
 		</dict>
-		<key>0x38-0x40000-0x0</key>
+		<key>0x37-0x80000-0x1a</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -116,9 +116,20 @@
 			<key>Text</key>
 			<string></string>
 			<key>Version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
-		<key>0x39-0x40000-0x0</key>
+		<key>0x38-0x80000-0x1c</key>
+		<dict>
+			<key>Action</key>
+			<integer>22</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<key>0x39-0x80000-0x19</key>
 		<dict>
 			<key>Action</key>
 			<integer>22</integer>
@@ -301,6 +312,8 @@
 	<true/>
 	<key>LeftCommand</key>
 	<integer>1</integer>
+	<key>LeftOption</key>
+	<integer>7</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
