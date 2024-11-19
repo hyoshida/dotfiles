@@ -119,6 +119,7 @@ case "$OSTYPE" in
 # alias for BSD
 *bsd* | *darwin* )
     alias top='top -u'
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     ;;
 # for cygwin
 *cygwin*)
