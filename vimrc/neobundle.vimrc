@@ -75,6 +75,7 @@ NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'sickill/vim-monokai'
 
 " Lint
+NeoBundle 'dense-analysis/ale'
 
 " hyoshida plugins
 NeoBundle 'hyoshida/unite-cmus'
