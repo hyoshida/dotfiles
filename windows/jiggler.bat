@@ -61,7 +61,7 @@ for ($i = 0; $i -lt $morningMinutes; $i++) {
   [Win32SendInput]::PreventScreenSaver()
 }
 
-for ($i = 0; $i -lt $minutes; $i++) {
+for ($i = 0; $i -lt $lunchMinutes; $i++) {
   Write-Host Lunch $i
   Start-Sleep -Seconds 60
 }
