@@ -247,3 +247,7 @@ source $HOME/.cargo/env
 export GOROOT=/usr/lib/golang
 export GOPATH=/usr/local/gocode
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# .NET
+export DOTNET_ROOT=/usr/local/share/dotnet
+export PATH=$PATH:$DOTNET_ROOT
