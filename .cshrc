@@ -156,6 +156,7 @@ alias cmus	'env TERM=xterm-256color cmus'
 alias euc	'env LANG=ja_JP.eucJP'
 alias processing	'env LANG=C processing'
 alias m		mplayer
+alias g		git
 
 # alias for BSD
 switch ("$OSTYPE")
