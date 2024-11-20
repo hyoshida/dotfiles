@@ -7,14 +7,4 @@ else
   against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
 fi
 
-# Change the file permissions (only Windows)
-case "$OSTYPE" in
-  *cygwin*)
-    files=`git diff --cached --name-only | xargs -d "\n" -r ls 2>/dev/null`
-    if [ "$files" != "" ]; then
-      echo "$files" | xargs -d "\n" chmod -x
-    fi
-    ;;
-esac
-
-exit
+# To do something...
