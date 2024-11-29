@@ -26,6 +26,7 @@ NeoBundle 'chrisbra/csv.vim'
 NeoBundle 'thinca/vim-qfreplace'
 NeoBundle 'tpope/vim-dispatch' " for OmniSharp
 NeoBundle 'Shougo/neocomplete'
+NeoBundle 'airblade/vim-localorie'
 
 " Text-editing
 NeoBundle 'vim-scripts/VisIncr'

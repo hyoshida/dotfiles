@@ -94,3 +94,8 @@ nnoremap <C-]> g<C-]>
 " Quickly select text you just pasted
 " from: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 noremap v` `[v`]
+
+" for vim-localorie
+nnoremap <silent> <leader>lt :call localorie#translate()<CR>
+nnoremap <silent> <leader>le :echo localorie#expand_key()<CR>
+autocmd CursorMoved *.yml echo localorie#expand_key()
