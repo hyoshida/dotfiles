@@ -51,6 +51,7 @@ nnoremap <silent> [unite-rails]v :<C-u>Unite -buffer-name=rails/view rails/view 
 nnoremap <silent> [unite-rails]h :<C-u>Unite -buffer-name=rails/helper rails/helper -vertical<CR>
 nnoremap <silent> [unite-rails]l :<C-u>Unite -buffer-name=rails/lib rails/lib -vertical<CR>
 nnoremap <silent> [unite-rails]d :<C-u>Unite -buffer-name=rails/db rails/db -vertical<CR>
+nnoremap <silent> [unite-rails]t :<C-u>Unite -buffer-name=rails/test rails/minitest -vertical<CR>
 nnoremap <silent> [unite-rails]s :<C-u>Unite -buffer-name=rails/spec rails/spec -vertical<CR>
 nnoremap <silent> [unite-rails]a :<C-u>Unite -buffer-name=rails/asset rails/asset -vertical<CR>
 nnoremap <silent> [unite-rails]b :<C-u>Unite -buffer-name=rails/bundle rails/bundled_gem -vertical<CR>
