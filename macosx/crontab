@@ -3,3 +3,7 @@
 
 # At every 30 minutes.
 */30 * * * * /usr/bin/curl --silent -X PATCH localhost:8000/api/rankings/1 > /dev/null
+
+# Every day
+6 0 * * * shortcuts run "Grayscale Off" > /dev/null 2>&1
+0 19 * * * shortcuts run "Grayscale On" > /dev/null 2>&1
