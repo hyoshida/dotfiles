@@ -15,3 +15,4 @@ export PS1='\u@\h[$(__git_ps1 \[\033[01m\]%s\[\033[00m\]:)\w]% '
 
 # for Git
 git config --global core.filemode false
+git config --global core.autocrlf input
