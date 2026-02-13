@@ -40,12 +40,6 @@ ln -s $CURRENT_DIR/.rbenv_plugins $CURRENT_DIR/.rbenv/plugins
 print 'Install NeoBundle for vim...'
 vim :NeoBundleInstall +q
 
-# git-flowをインストール
-print 'Install git-flow...'
-cd $WORKING_DIR > /dev/null
-curl -sLo - https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | INSTALL_PREFIX=$CURRENT_DIR/.bin bash -s install
-cd - > /dev/null
-
 # diff-highlightをインストール
 print 'Install diff-highlight...'
 cd $CURRENT_DIR/.bin > /dev/null
